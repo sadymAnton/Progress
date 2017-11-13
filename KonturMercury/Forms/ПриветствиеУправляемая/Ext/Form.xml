@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="ПолеКартинки1" id="1">
+			<Width>42</Width>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле картинки1</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Abs>Picture.png</xr:Abs>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="ПолеКартинки1КонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПолеКартинки1РасширеннаяПодсказка" id="28"/>
+		</PictureDecoration>
+		<LabelDecoration name="Приветствие" id="4">
+			<Width>42</Width>
+			<Font ref="style:TextFont" faceName="New Century Schoolbook" kind="StyleItem"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модуль "Меркурий" не предназначен для интерактивного запуска. 
+Работа предусмотрена только режиме "подключения" к модулю 
+Контур.EDI.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПриветствиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ПриветствиеРасширеннаяПодсказка" id="29"/>
+		</LabelDecoration>
+		<UsualGroup name="Группа2" id="15">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация1" id="17">
+					<Width>15</Width>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="31"/>
+				</PictureDecoration>
+				<UsualGroup name="Группа1" id="13">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация3" id="23">
+							<ContextMenu name="Декорация3КонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="33"/>
+						</LabelDecoration>
+						<LabelDecoration name="ПодключитьМодульEDI" id="7">
+							<Width>10</Width>
+							<Font bold="true" kind="AutoFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключить</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<ContextMenu name="ПодключитьМодульEDIКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПодключитьМодульEDIРасширеннаяПодсказка" id="34"/>
+							<Events>
+								<Event name="Click">ПодключитьМодульEDIНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="Отключить" id="10">
+							<Width>10</Width>
+							<Font bold="true" kind="AutoFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отключить</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<ContextMenu name="ОтключитьКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ОтключитьРасширеннаяПодсказка" id="35"/>
+							<Events>
+								<Event name="Click">ОтключитьМодульEDIНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<PictureDecoration name="Декорация2" id="20">
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="36"/>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="МнеНужнаПомощь" id="26">
+			<Font height="7" kind="AutoFont"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мне нужна помощь</v8:content>
+				</v8:item>
+			</Title>
+			<Hyperlink>true</Hyperlink>
+			<ContextMenu name="МнеНужнаПомощьКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="МнеНужнаПомощьРасширеннаяПодсказка" id="37"/>
+			<Events>
+				<Event name="Click">МнеНужнаПомощьНажатие</Event>
+			</Events>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.КонтурEDI_МодульМеркурий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="АдресХранилища">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="МодальностьЗапрещена">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ИмяОбработки">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

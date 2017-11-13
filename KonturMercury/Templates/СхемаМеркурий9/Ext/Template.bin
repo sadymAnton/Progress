@@ -1,0 +1,407 @@
+﻿<xs:schema xmlns:ns1="http://api.vetrf.ru/schema/cdm/mercury/vet-document" xmlns:ns2="http://api.vetrf.ru/schema/cdm/argus/common" xmlns:ns3="http://api.vetrf.ru/schema/cdm/application" xmlns:ns4="http://api.vetrf.ru/schema/cdm/base" xmlns:ns5="http://api.vetrf.ru/schema/cdm/cerberus/enterprise" xmlns:ns6="http://api.vetrf.ru/schema/cdm/argus/production" xmlns:tns="http://api.vetrf.ru/schema/cdm/mercury/applications" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://api.vetrf.ru/schema/cdm/mercury/applications" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/mercury/vet-document"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/argus/common"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/application"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/base"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/cerberus/enterprise"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/argus/production"/>
+	<xs:element name="modifyActivityLocationsResponse" type="tns:ModifyActivityLocationsResponse"/>
+	<xs:element name="getStockEntryVersionListResponse" type="tns:getStockEntryVersionListResponse"/>
+	<xs:element name="modifyProducerStockListResponse" type="tns:ModifyProducerStockListResponse"/>
+	<xs:element name="processIncomingConsignmentResponse" type="tns:ProcessIncomingConsignmentResponse"/>
+	<xs:element name="processIncomingConsignmentRequest" type="tns:ProcessIncomingConsignmentRequest"/>
+	<xs:element name="modifyActivityLocationsRequest" type="tns:ModifyActivityLocationsRequest"/>
+	<xs:element name="getStockEntryVersionListRequest" type="tns:getStockEntryVersionListRequest"/>
+	<xs:element name="getVetDocumentListResponse" type="tns:getVetDocumentListResponse"/>
+	<xs:element name="modifyBusinessEntityRequest" type="tns:ModifyBusinessEntityRequest"/>
+	<xs:element name="getVetDocumentListRequest" type="tns:getVetDocumentListRequest"/>
+	<xs:element name="modifyProducerStockListRequest" type="tns:ModifyProducerStockListRequest"/>
+	<xs:element name="resolveDiscrepancyResponse" type="tns:ResolveDiscrepancyResponse"/>
+	<xs:element name="getStockEntryListResponse" type="tns:getStockEntryListResponse"/>
+	<xs:element name="resolveDiscrepancyRequest" type="tns:ResolveDiscrepancyRequest"/>
+	<xs:element name="getVetDocumentByUuidResponse" type="tns:getVetDocumentByUuidResponse"/>
+	<xs:element name="mergeStockEntriesRequest" type="tns:MergeStockEntriesRequest"/>
+	<xs:element name="modifyEnterpriseRequest" type="tns:ModifyEnterpriseRequest"/>
+	<xs:element name="getStockEntryListRequest" type="tns:getStockEntryListRequest"/>
+	<xs:element name="registerProductiveBatchResponse" type="tns:RegisterProductiveBatchResponse"/>
+	<xs:element name="mergeStockEntriesResponse" type="tns:MergeStockEntriesResponse"/>
+	<xs:element name="registerProductiveBatchRequest" type="tns:RegisterProductiveBatchRequest"/>
+	<xs:element name="withdrawVetDocumentResponse" type="tns:WithdrawVetDocumentResponse"/>
+	<xs:element name="getStockEntryChangesListResponse" type="tns:getStockEntryChangesListResponse"/>
+	<xs:element name="getVetDocumentByUuidRequest" type="tns:getVetDocumentByUuidRequest"/>
+	<xs:element name="getStockEntryChangesListRequest" type="tns:getStockEntryChangesListRequest"/>
+	<xs:element name="modifyBusinessEntityResponse" type="tns:ModifyBusinessEntityResponse"/>
+	<xs:element name="withdrawVetDocumentRequest" type="tns:WithdrawVetDocumentRequest"/>
+	<xs:element name="getStockEntryByGuidResponse" type="tns:getStockEntryByGuidResponse"/>
+	<xs:element name="getStockEntryByUuidResponse" type="tns:getStockEntryByUuidResponse"/>
+	<xs:element name="modifyEnterpriseResponse" type="tns:ModifyEnterpriseResponse"/>
+	<xs:element name="getVetDocumentChangesListResponse" type="tns:getVetDocumentChangesListResponse"/>
+	<xs:element name="getStockEntryByGuidRequest" type="tns:getStockEntryByGuidRequest"/>
+	<xs:element name="prepareOutcomingConsignmentResponse" type="tns:PrepareOutcomingConsignmentResponse"/>
+	<xs:element name="getStockEntryByUuidRequest" type="tns:getStockEntryByUuidRequest"/>
+	<xs:element name="prepareOutcomingConsignmentRequest" type="tns:PrepareOutcomingConsignmentRequest"/>
+	<xs:element name="getVetDocumentChangesListRequest" type="tns:getVetDocumentChangesListRequest"/>
+	<xs:complexType name="MercuryApplicationRequest">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationData">
+				<xs:sequence>
+					<xs:element name="localTransactionId" type="ns4:Identifier"/>
+					<xs:element name="initiator" type="ns2:User"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MergeStockEntriesRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element name="enterprise" type="ns5:Enterprise"/>
+					<xs:element name="mergeOperation" type="ns1:MergeStockEntriesOperation"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MergeStockEntriesResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element name="stockEntryList" type="ns1:StockEntryList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ModifyActivityLocationsRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element name="modificationOperation" type="ns5:BEActivityLocationsModificationOperation"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ModifyActivityLocationsResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element name="businessEntity" type="ns5:BusinessEntity" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ModifyBusinessEntityRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element name="modificationOperation" type="ns5:BEModificationOperation"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ModifyBusinessEntityResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element name="businessEntity" type="ns5:BusinessEntity" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ModifyEnterpriseRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element name="modificationOperation" type="ns5:ENTModificationOperation"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ModifyEnterpriseResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element name="enterprise" type="ns5:Enterprise" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ModifyProducerStockListRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element name="modificationOperation" type="ns6:PSLModificationOperation"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ModifyProducerStockListResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element name="productItemList" type="ns6:ProductItemList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PrepareOutcomingConsignmentRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element name="delivery" type="ns1:Delivery" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="PrepareOutcomingConsignmentResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element name="stockEntry" type="ns1:StockEntry" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="vetDocument" type="ns1:VetDocument" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProcessIncomingConsignmentRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element name="delivery" type="ns1:Delivery"/>
+					<xs:element name="deliveryFacts" type="ns1:DeliveryFactList"/>
+					<xs:element name="discrepancyReport" type="ns1:DiscrepancyReport" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="returnedDelivery" type="ns1:Delivery" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProcessIncomingConsignmentResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element name="stockEntry" type="ns1:StockEntry" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="vetDocument" type="ns1:VetDocument" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RegisterProductiveBatchRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element name="enterprise" type="ns5:Enterprise"/>
+					<xs:element name="productionOperation" type="ns1:ProductionOperation"/>
+					<xs:element name="vetDocument" type="ns1:VetDocument" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RegisterProductiveBatchResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element name="stockEntryList" type="ns1:StockEntryList"/>
+					<xs:element name="vetDocument" type="ns1:VetDocument" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ResolveDiscrepancyRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element name="enterprise" type="ns5:Enterprise"/>
+					<xs:element name="inventoryDate" type="xs:dateTime"/>
+					<xs:element name="responsible" type="ns2:User"/>
+					<xs:element name="stockDiscrepancy" type="ns1:StockDiscrepancy" maxOccurs="unbounded"/>
+					<xs:element name="discrepancyReport" type="ns1:DiscrepancyReport" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ResolveDiscrepancyResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element name="stockEntryList" type="ns1:StockEntryList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WithdrawVetDocumentRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element name="vetDocumentId" type="ns4:UUID"/>
+					<xs:element name="withdrawReason" type="ns1:WithdrawReason"/>
+					<xs:element name="withdrawDate" type="xs:dateTime"/>
+					<xs:element name="vetDoctor" type="ns2:User" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WithdrawVetDocumentResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element name="vetDocument" type="ns1:VetDocument" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getStockEntryByGuidRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element ref="ns4:guid"/>
+					<xs:element ref="ns5:enterpriseGuid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getStockEntryByGuidResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element ref="ns1:stockEntry"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getStockEntryByUuidRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element ref="ns4:uuid"/>
+					<xs:element ref="ns5:enterpriseGuid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getStockEntryByUuidResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element ref="ns1:stockEntry"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getStockEntryChangesListRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element ref="ns4:listOptions" minOccurs="0"/>
+					<xs:element ref="ns4:updateDateInterval"/>
+					<xs:element ref="ns5:enterpriseGuid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getStockEntryChangesListResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element ref="ns1:stockEntryList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getStockEntryListRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element ref="ns4:listOptions" minOccurs="0"/>
+					<xs:element ref="ns5:enterpriseGuid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getStockEntryListResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element ref="ns1:stockEntryList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getStockEntryVersionListRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element ref="ns4:listOptions" minOccurs="0"/>
+					<xs:element ref="ns4:guid"/>
+					<xs:element ref="ns5:enterpriseGuid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getStockEntryVersionListResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element ref="ns1:stockEntryList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getVetDocumentByUuidRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element ref="ns4:uuid"/>
+					<xs:element ref="ns5:enterpriseGuid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getVetDocumentByUuidResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element ref="ns1:vetDocument"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getVetDocumentChangesListRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element ref="ns4:listOptions" minOccurs="0"/>
+					<xs:element ref="ns4:updateDateInterval"/>
+					<xs:element ref="ns5:enterpriseGuid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getVetDocumentChangesListResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element ref="ns1:vetDocumentList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getVetDocumentListRequest">
+		<xs:complexContent>
+			<xs:extension base="tns:MercuryApplicationRequest">
+				<xs:sequence>
+					<xs:element ref="ns4:listOptions" minOccurs="0"/>
+					<xs:element ref="ns1:vetDocumentType" minOccurs="0"/>
+					<xs:element ref="ns1:vetDocumentStatus" minOccurs="0"/>
+					<xs:element ref="ns5:enterpriseGuid"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="getVetDocumentListResponse">
+		<xs:complexContent>
+			<xs:extension base="ns3:ApplicationResultData">
+				<xs:sequence>
+					<xs:element ref="ns1:vetDocumentList"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

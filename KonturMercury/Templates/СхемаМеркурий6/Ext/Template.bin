@@ -1,0 +1,174 @@
+﻿<xs:schema xmlns:ns1="http://api.vetrf.ru/schema/cdm/ikar" xmlns:ns2="http://api.vetrf.ru/schema/cdm/base" xmlns:tns="http://api.vetrf.ru/schema/cdm/cerberus/enterprise" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://api.vetrf.ru/schema/cdm/cerberus/enterprise" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/ikar"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/base"/>
+	<xs:element name="businessEntityList" type="tns:BusinessEntityList"/>
+	<xs:element name="enterpriseGroup" type="tns:EnterpriseGroup"/>
+	<xs:element name="enterpriseGuid" type="ns2:UUID"/>
+	<xs:element name="enterprise" type="tns:Enterprise"/>
+	<xs:element name="businessEntity" type="tns:BusinessEntity"/>
+	<xs:element name="enterpriseList" type="tns:EnterpriseList"/>
+	<xs:complexType name="ActivityLocation">
+		<xs:sequence>
+			<xs:element name="enterprise" type="tns:Enterprise"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BEActivityLocationsModificationOperation">
+		<xs:sequence>
+			<xs:element name="type" type="ns2:RegisterModificationType"/>
+			<xs:element name="businessEntity" type="tns:BusinessEntity"/>
+			<xs:element name="enterpriseList" type="tns:EnterpriseList" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BEModificationOperation">
+		<xs:sequence>
+			<xs:element name="type" type="ns2:RegisterModificationType"/>
+			<xs:element name="affectedList" type="tns:BusinessEntityList" minOccurs="0"/>
+			<xs:element name="resultingList" type="tns:BusinessEntityList" minOccurs="0"/>
+			<xs:element name="reason" type="tns:BEModificationReason" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="BEModificationReason">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="BusinessEntity">
+		<xs:complexContent>
+			<xs:extension base="ns2:GenericVersioningEntity">
+				<xs:sequence>
+					<xs:element name="type" type="tns:BusinessEntityType" minOccurs="0"/>
+					<xs:element name="name" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="incorporationForm" type="tns:IncorporationForm" minOccurs="0"/>
+					<xs:element name="fullName" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="fio" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="passport" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="inn" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="kpp" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="ogrn" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="juridicalAddress" type="ns1:Address" minOccurs="0"/>
+					<xs:element name="activityLocation" type="tns:ActivityLocation" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BusinessEntityList">
+		<xs:complexContent>
+			<xs:extension base="ns2:EntityList">
+				<xs:sequence>
+					<xs:element name="businessEntity" type="tns:BusinessEntity" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="BusinessEntityType">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="BusinessMember">
+		<xs:sequence>
+			<xs:element name="businessEntity" type="tns:BusinessEntity"/>
+			<xs:element name="enterprise" type="tns:Enterprise"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ENTModificationOperation">
+		<xs:sequence>
+			<xs:element name="type" type="ns2:RegisterModificationType"/>
+			<xs:element name="affectedList" type="tns:EnterpriseList" minOccurs="0"/>
+			<xs:element name="resultingList" type="tns:EnterpriseList" minOccurs="0"/>
+			<xs:element name="reason" type="tns:ENTModificationReason" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ENTModificationReason">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="Enterprise">
+		<xs:complexContent>
+			<xs:extension base="ns2:GenericVersioningEntity">
+				<xs:sequence>
+					<xs:element name="name" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="englishName" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="type" type="tns:EnterpriseType" minOccurs="0"/>
+					<xs:element name="numberList" type="tns:EnterpriseNumberList" minOccurs="0"/>
+					<xs:element name="address" type="ns1:Address" minOccurs="0"/>
+					<xs:element name="activityList" type="tns:EnterpriseActivityList" minOccurs="0"/>
+					<xs:element name="owner" type="tns:BusinessEntity" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EnterpriseActivity">
+		<xs:complexContent>
+			<xs:extension base="ns2:GenericEntity">
+				<xs:sequence>
+					<xs:element name="name" type="ns2:String255" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EnterpriseActivityList">
+		<xs:complexContent>
+			<xs:extension base="ns2:EntityList">
+				<xs:sequence>
+					<xs:element name="activity" type="tns:EnterpriseActivity" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="EnterpriseGroup">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="EnterpriseList">
+		<xs:complexContent>
+			<xs:extension base="ns2:EntityList">
+				<xs:sequence>
+					<xs:element name="enterprise" type="tns:Enterprise" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="EnterpriseNumberList">
+		<xs:sequence>
+			<xs:element name="enterpriseNumber" type="ns2:String255" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="EnterpriseRole">
+		<xs:restriction base="ns2:String255">
+			<xs:enumeration value="UNKNOWN"/>
+			<xs:enumeration value="PRODUCER"/>
+			<xs:enumeration value="SLAUGHTER_HOUSE"/>
+			<xs:enumeration value="CUTTING_PLANT"/>
+			<xs:enumeration value="COLD_STORE"/>
+			<xs:enumeration value="PACKAGING_PLANT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EnterpriseType">
+		<xs:restriction base="xs:integer"/>
+	</xs:simpleType>
+	<xs:complexType name="IncorporationForm">
+		<xs:complexContent>
+			<xs:extension base="ns2:GenericEntity">
+				<xs:sequence>
+					<xs:element name="name" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="code" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="shortName" type="ns2:String255" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Producer">
+		<xs:sequence>
+			<xs:element name="enterprise" type="tns:Enterprise"/>
+			<xs:element name="role" type="tns:EnterpriseRole" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProducerList">
+		<xs:sequence>
+			<xs:element name="producer" type="tns:Producer" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,310 @@
+﻿<xs:schema xmlns:ns1="http://api.vetrf.ru/schema/cdm/argus/common" xmlns:ns2="http://api.vetrf.ru/schema/cdm/argus/shipment" xmlns:ns3="http://api.vetrf.ru/schema/cdm/base" xmlns:ns4="http://api.vetrf.ru/schema/cdm/ikar" xmlns:ns5="http://api.vetrf.ru/schema/cdm/cerberus/enterprise" xmlns:ns6="http://api.vetrf.ru/schema/cdm/argus/production" xmlns:tns="http://api.vetrf.ru/schema/cdm/mercury/vet-document" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://api.vetrf.ru/schema/cdm/mercury/vet-document" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/argus/common"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/argus/shipment"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/base"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/ikar"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/cerberus/enterprise"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/argus/production"/>
+	<xs:element name="vetDocument" type="tns:VetDocument"/>
+	<xs:element name="vetDocumentList" type="tns:VetDocumentList"/>
+	<xs:element name="stockEntry" type="tns:StockEntry"/>
+	<xs:element name="vetDocumentType" type="tns:VetDocumentType"/>
+	<xs:element name="stockEntryList" type="tns:StockEntryList"/>
+	<xs:element name="vetDocumentStatus" type="tns:VetDocumentStatus"/>
+	<xs:simpleType name="AnimalSpentPeriod">
+		<xs:restriction base="ns3:String255">
+			<xs:enumeration value="FROM_BIRTH"/>
+			<xs:enumeration value="NOT_LESS_SIX_MONTHS"/>
+			<xs:enumeration value="IN_MONTHS"/>
+			<xs:enumeration value="ZERO"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Batch">
+		<xs:sequence>
+			<xs:element name="productType" type="ns6:ProductType" minOccurs="0"/>
+			<xs:element name="product" type="ns6:Product" minOccurs="0"/>
+			<xs:element name="subProduct" type="ns6:SubProduct" minOccurs="0"/>
+			<xs:element name="productItem" type="ns6:ProductItem" minOccurs="0"/>
+			<xs:element name="volume" type="ns3:Decimal" minOccurs="0"/>
+			<xs:element name="unit" type="ns1:Unit" minOccurs="0"/>
+			<xs:element name="packingList" type="ns1:PackingFormList" minOccurs="0"/>
+			<xs:element name="packingAmount" type="xs:int" minOccurs="0"/>
+			<xs:element name="dateOfProduction" type="tns:GoodsDate" minOccurs="0"/>
+			<xs:element name="expiryDate" type="tns:GoodsDate" minOccurs="0"/>
+			<xs:element name="productionOperationId" type="ns3:Identifier" minOccurs="0"/>
+			<xs:element name="perishable" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="countryOfOrigin" type="ns4:Country" minOccurs="0"/>
+			<xs:element name="producerList" type="ns5:ProducerList" minOccurs="0"/>
+			<xs:element name="productMarkingList" type="tns:ProductMarkingList" minOccurs="0"/>
+			<xs:element name="lowGradeCargo" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="owner" type="ns5:BusinessEntity" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Consignment">
+		<xs:complexContent>
+			<xs:extension base="tns:Batch">
+				<xs:sequence>
+					<xs:element name="productName" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="productCode" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="sourceStockEntry" type="tns:StockEntry" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID"/>
+				<xs:attribute name="partOf" type="xs:IDREF"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ConsignmentDocumentList">
+		<xs:sequence>
+			<xs:element name="waybill" type="ns2:Waybill"/>
+			<xs:element name="vetCertificate" type="tns:VetDocument" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Delivery">
+		<xs:complexContent>
+			<xs:extension base="ns3:GenericEntity">
+				<xs:sequence>
+					<xs:element name="deliveryDate" type="xs:dateTime" minOccurs="0"/>
+					<xs:element name="consignor" type="ns5:BusinessMember" minOccurs="0"/>
+					<xs:element name="consignee" type="ns5:BusinessMember" minOccurs="0"/>
+					<xs:element name="consignment" type="tns:Consignment" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="accompanyingForms" type="tns:ConsignmentDocumentList" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="DeliveryDecision">
+		<xs:restriction base="ns3:String255">
+			<xs:enumeration value="ACCEPT_ALL"/>
+			<xs:enumeration value="PARTIALLY"/>
+			<xs:enumeration value="RETURN_ALL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DeliveryFactList">
+		<xs:sequence>
+			<xs:element name="vetCertificatePresence" type="ns1:DocumentNature"/>
+			<xs:element name="docInspection" type="tns:DeliveryInspection"/>
+			<xs:element name="vetInspection" type="tns:DeliveryInspection"/>
+			<xs:element name="decision" type="tns:DeliveryDecision"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DeliveryInspection">
+		<xs:sequence>
+			<xs:element name="responsible" type="ns1:User"/>
+			<xs:element name="result" type="tns:DeliveryInspectionResult"/>
+			<xs:element name="info" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="DeliveryInspectionResult">
+		<xs:restriction base="ns3:String255">
+			<xs:enumeration value="CORRESPONDS"/>
+			<xs:enumeration value="MISMATCH"/>
+			<xs:enumeration value="UNSUPERVISED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DiscrepancyReason">
+		<xs:complexContent>
+			<xs:extension base="ns3:GenericEntity">
+				<xs:sequence>
+					<xs:element name="name" type="ns3:String255" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DiscrepancyReport">
+		<xs:sequence>
+			<xs:element name="issueSeries" type="ns3:String255" minOccurs="0"/>
+			<xs:element name="issueNumber" type="ns3:String255" minOccurs="0"/>
+			<xs:element name="issueDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="reason" type="tns:DiscrepancyReason" minOccurs="0"/>
+			<xs:element name="description" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="for" type="xs:IDREF"/>
+	</xs:complexType>
+	<xs:complexType name="GoodsDate">
+		<xs:sequence>
+			<xs:element name="firstDate" type="ns3:ComplexDate" minOccurs="0"/>
+			<xs:element name="secondDate" type="ns3:ComplexDate" minOccurs="0"/>
+			<xs:element name="informalDate" type="ns3:String255" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MergeStockEntriesOperation">
+		<xs:sequence>
+			<xs:element name="type" type="ns3:RegisterModificationType" minOccurs="0"/>
+			<xs:element name="sourceStockEntry" type="tns:StockEntry" maxOccurs="unbounded"/>
+			<xs:element name="batch" type="tns:Batch" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProductMarking">
+		<xs:simpleContent>
+			<xs:extension base="ns3:String255">
+				<xs:attribute name="class" type="tns:ProductMarkingClass" default="UNDEFINED"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ProductMarkingClass">
+		<xs:restriction base="ns3:String255">
+			<xs:enumeration value="UNDEFINED"/>
+			<xs:enumeration value="BN"/>
+			<xs:enumeration value="SSCC"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ProductMarkingList">
+		<xs:sequence>
+			<xs:element name="productMarking" type="tns:ProductMarking" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProductionOperation">
+		<xs:sequence>
+			<xs:element name="operationId" type="ns3:Identifier" minOccurs="0"/>
+			<xs:element name="rawBatch" type="tns:RawBatch" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="productiveBatch" type="tns:ProductiveBatch" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="finalizeOperation" type="xs:boolean" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProductiveBatch">
+		<xs:complexContent>
+			<xs:extension base="tns:Batch">
+				<xs:attribute name="id" type="xs:ID"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="RawBatch">
+		<xs:sequence>
+			<xs:element name="sourceStockEntry" type="tns:StockEntry" minOccurs="0"/>
+			<xs:element name="volume" type="ns3:Decimal" minOccurs="0"/>
+			<xs:element name="unit" type="ns1:Unit" minOccurs="0"/>
+			<xs:element name="packingList" type="ns1:PackingFormList" minOccurs="0"/>
+			<xs:element name="packingAmount" type="xs:int" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StockDiscrepancy">
+		<xs:sequence>
+			<xs:element name="affectedList" type="tns:StockEntryList" minOccurs="0"/>
+			<xs:element name="resultingList" type="tns:StockEntryList" minOccurs="0"/>
+			<xs:element name="reason" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID"/>
+	</xs:complexType>
+	<xs:complexType name="StockEntry">
+		<xs:complexContent>
+			<xs:extension base="ns3:GenericVersioningEntity">
+				<xs:sequence>
+					<xs:element name="entryNumber" type="tns:StockEntryNumber" minOccurs="0"/>
+					<xs:element name="batch" type="tns:Batch" minOccurs="0"/>
+					<xs:element name="vetDocument" type="tns:VetDocument" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="StockEntryList">
+		<xs:complexContent>
+			<xs:extension base="ns3:EntityList">
+				<xs:sequence>
+					<xs:element name="stockEntry" type="tns:StockEntry" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="StockEntryNumber">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="VetDocument">
+		<xs:complexContent>
+			<xs:extension base="ns3:GenericEntity">
+				<xs:sequence>
+					<xs:element name="issueSeries" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="issueNumber" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="issueDate" type="xs:date" minOccurs="0"/>
+					<xs:element name="form" type="tns:VetDocumentForm" minOccurs="0"/>
+					<xs:element name="type" type="tns:VetDocumentType" minOccurs="0"/>
+					<xs:element name="status" type="tns:VetDocumentStatus" minOccurs="0"/>
+					<xs:element name="finalized" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="consignor" type="ns5:BusinessMember" minOccurs="0"/>
+					<xs:element name="consignee" type="ns5:BusinessMember" minOccurs="0"/>
+					<xs:element name="batch" type="tns:Batch" minOccurs="0"/>
+					<xs:element name="productName" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="productCode" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="purpose" type="ns1:Purpose" minOccurs="0"/>
+					<xs:element name="broker" type="ns5:BusinessEntity" minOccurs="0"/>
+					<xs:element name="transportInfo" type="ns2:TransportInfo" minOccurs="0"/>
+					<xs:element name="transportStorageType" type="ns2:TransportationStorageType" minOccurs="0"/>
+					<xs:element name="cargoReloadingPointList" type="ns2:ShipmentRoute" minOccurs="0"/>
+					<xs:element name="waybillSeries" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="waybillNumber" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="waybillDate" type="xs:date" minOccurs="0"/>
+					<xs:element name="waybillType" type="ns2:WaybillType" minOccurs="0"/>
+					<xs:element name="cargoInspected" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="cargoExpertized" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="expertiseInfo" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="confirmedBy" type="ns1:User" minOccurs="0"/>
+					<xs:element name="confirmedDate" type="xs:dateTime" minOccurs="0"/>
+					<xs:element name="locationProsperity" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="animalSpentPeriod" type="tns:AnimalSpentPeriod" minOccurs="0"/>
+					<xs:element name="monthsSpent" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="quarantinePlace" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="quarantineDays" type="xs:int" minOccurs="0"/>
+					<xs:element name="immunizationInfo" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="precedingVetDocuments" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="importPermit" type="ns1:Document" minOccurs="0"/>
+					<xs:element name="transferPermit" type="ns1:Document" minOccurs="0"/>
+					<xs:element name="specialMarks" type="ns3:String255" minOccurs="0"/>
+					<xs:element name="withdrawedBy" type="ns1:User" minOccurs="0"/>
+					<xs:element name="withdrawDate" type="xs:dateTime" minOccurs="0"/>
+					<xs:element name="withdrawReason" type="tns:WithdrawReason" minOccurs="0"/>
+					<xs:element name="utilizedBy" type="ns1:User" minOccurs="0"/>
+					<xs:element name="utilizeDate" type="xs:dateTime" minOccurs="0"/>
+					<xs:element name="finalizeDate" type="xs:dateTime" minOccurs="0"/>
+					<xs:element name="lastUpdateDate" type="xs:dateTime" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="for" type="xs:IDREF"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="VetDocumentForm">
+		<xs:restriction base="ns3:String255">
+			<xs:enumeration value="CERTCU1"/>
+			<xs:enumeration value="LIC1"/>
+			<xs:enumeration value="CERTCU2"/>
+			<xs:enumeration value="LIC2"/>
+			<xs:enumeration value="CERTCU3"/>
+			<xs:enumeration value="LIC3"/>
+			<xs:enumeration value="NOTE4"/>
+			<xs:enumeration value="CERT5I"/>
+			<xs:enumeration value="CERT61"/>
+			<xs:enumeration value="CERT62"/>
+			<xs:enumeration value="CERT63"/>
+			<xs:enumeration value="PRODUCTIVE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="VetDocumentList">
+		<xs:complexContent>
+			<xs:extension base="ns3:EntityList">
+				<xs:sequence>
+					<xs:element name="vetDocument" type="tns:VetDocument" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="VetDocumentStatus">
+		<xs:restriction base="ns3:String255">
+			<xs:enumeration value="CREATED"/>
+			<xs:enumeration value="CONFIRMED"/>
+			<xs:enumeration value="WITHDRAWN"/>
+			<xs:enumeration value="UTILIZED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="VetDocumentType">
+		<xs:restriction base="ns3:String255">
+			<xs:enumeration value="TRANSPORT"/>
+			<xs:enumeration value="PRODUCTIVE"/>
+			<xs:enumeration value="RETURNABLE"/>
+			<xs:enumeration value="INCOMING"/>
+			<xs:enumeration value="OUTGOING"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WithdrawReason">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+</xs:schema>

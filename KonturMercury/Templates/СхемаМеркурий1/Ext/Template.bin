@@ -1,0 +1,131 @@
+﻿<xs:schema xmlns:tns="http://api.vetrf.ru/schema/cdm/base" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://api.vetrf.ru/schema/cdm/base" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:element name="listOptions" type="tns:ListOptions"/>
+	<xs:element name="updateDateInterval" type="tns:DateInterval"/>
+	<xs:element name="guid" type="tns:UUID"/>
+	<xs:element name="uuid" type="tns:UUID"/>
+	<xs:complexType name="ComplexDate">
+		<xs:sequence>
+			<xs:element name="year" type="tns:Year" minOccurs="0"/>
+			<xs:element name="month" type="tns:Month" minOccurs="0"/>
+			<xs:element name="day" type="tns:Day" minOccurs="0"/>
+			<xs:element name="hour" type="tns:Hour" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DateInterval">
+		<xs:sequence>
+			<xs:element name="beginDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="endDate" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Day">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="31"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Decimal">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="EntityList">
+		<xs:attribute name="count" type="xs:int" use="required"/>
+		<xs:attribute name="total" type="xs:long" use="required"/>
+		<xs:attribute name="offset" type="xs:int" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="Error">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="code" type="xs:NCName" use="required"/>
+				<xs:attribute name="qualifier" type="tns:Identifier"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="FaultInfo">
+		<xs:sequence>
+			<xs:element name="message" type="xs:string"/>
+			<xs:element name="error" type="tns:Error" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GenericEntity">
+		<xs:sequence>
+			<xs:element name="uuid" type="tns:UUID" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GenericVersioningEntity">
+		<xs:complexContent>
+			<xs:extension base="tns:GenericEntity">
+				<xs:sequence>
+					<xs:element name="guid" type="tns:UUID" minOccurs="0"/>
+					<xs:element name="active" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="last" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="status" type="tns:VersionStatus" minOccurs="0"/>
+					<xs:element name="createDate" type="xs:dateTime" minOccurs="0"/>
+					<xs:element name="updateDate" type="xs:dateTime" minOccurs="0"/>
+					<xs:element name="previous" type="tns:UUID" minOccurs="0"/>
+					<xs:element name="next" type="tns:UUID" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="Hour">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="23"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Identifier">
+		<xs:restriction base="xs:token">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ListOptions">
+		<xs:sequence>
+			<xs:element name="count" type="xs:nonNegativeInteger" minOccurs="0"/>
+			<xs:element name="offset" type="xs:nonNegativeInteger" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="Month">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RegisterModificationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CREATE"/>
+			<xs:enumeration value="FIND_OR_CREATE"/>
+			<xs:enumeration value="UPDATE"/>
+			<xs:enumeration value="DELETE"/>
+			<xs:enumeration value="MERGE"/>
+			<xs:enumeration value="ATTACH"/>
+			<xs:enumeration value="SPLIT"/>
+			<xs:enumeration value="FORK"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String255">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="String32">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="32"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UUID">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="VersionStatus">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[1-4][0-9][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Year">
+		<xs:restriction base="xs:int">
+			<xs:pattern value="[1-2][0-9][0-9][0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

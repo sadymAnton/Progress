@@ -1,0 +1,99 @@
+﻿<xs:schema xmlns:ns1="http://api.vetrf.ru/schema/cdm/cerberus/enterprise" xmlns:ns2="http://api.vetrf.ru/schema/cdm/base" xmlns:tns="http://api.vetrf.ru/schema/cdm/argus/production" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://api.vetrf.ru/schema/cdm/argus/production" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/cerberus/enterprise"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/base"/>
+	<xs:element name="productGuid" type="ns2:UUID"/>
+	<xs:element name="productItemList" type="tns:ProductItemList"/>
+	<xs:element name="product" type="tns:Product"/>
+	<xs:element name="subProductGuid" type="ns2:UUID"/>
+	<xs:element name="subProduct" type="tns:SubProduct"/>
+	<xs:element name="productList" type="tns:ProductList"/>
+	<xs:element name="productType" type="tns:ProductType"/>
+	<xs:element name="subProductList" type="tns:SubProductList"/>
+	<xs:element name="productItem" type="tns:ProductItem"/>
+	<xs:complexType name="PSLModificationOperation">
+		<xs:sequence>
+			<xs:element name="type" type="ns2:RegisterModificationType"/>
+			<xs:element name="enterprise" type="ns1:Enterprise"/>
+			<xs:element name="affectedList" type="tns:ProductItemList" minOccurs="0"/>
+			<xs:element name="resultingList" type="tns:ProductItemList" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Product">
+		<xs:complexContent>
+			<xs:extension base="ns2:GenericVersioningEntity">
+				<xs:sequence>
+					<xs:element name="name" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="code" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="englishName" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="productType" type="tns:ProductType" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProductItem">
+		<xs:complexContent>
+			<xs:extension base="ns2:GenericVersioningEntity">
+				<xs:sequence>
+					<xs:element name="name" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="code" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="productType" type="tns:ProductType" minOccurs="0"/>
+					<xs:element name="product" type="tns:Product" minOccurs="0"/>
+					<xs:element name="subProduct" type="tns:SubProduct" minOccurs="0"/>
+					<xs:element name="correspondToGost" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="gost" type="ns2:String255" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProductItemList">
+		<xs:complexContent>
+			<xs:extension base="ns2:EntityList">
+				<xs:sequence>
+					<xs:element name="productItem" type="tns:ProductItem" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ProductList">
+		<xs:complexContent>
+			<xs:extension base="ns2:EntityList">
+				<xs:sequence>
+					<xs:element name="product" type="tns:Product" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="ProductType">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="7"/>
+			<xs:enumeration value="8"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="SubProduct">
+		<xs:complexContent>
+			<xs:extension base="ns2:GenericVersioningEntity">
+				<xs:sequence>
+					<xs:element name="name" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="code" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="englishName" type="ns2:String255" minOccurs="0"/>
+					<xs:element name="productGuid" type="ns2:UUID" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SubProductList">
+		<xs:complexContent>
+			<xs:extension base="ns2:EntityList">
+				<xs:sequence>
+					<xs:element name="subProduct" type="tns:SubProduct" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

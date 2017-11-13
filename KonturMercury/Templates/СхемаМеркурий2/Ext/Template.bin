@@ -1,0 +1,57 @@
+﻿<xs:schema xmlns:ns1="http://api.vetrf.ru/schema/cdm/base" xmlns:tns="http://api.vetrf.ru/schema/cdm/application" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://api.vetrf.ru/schema/cdm/application" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/base"/>
+	<xs:element name="application" type="tns:Application"/>
+	<xs:element name="applicationData" type="tns:ApplicationData"/>
+	<xs:element name="applicationResultData" type="tns:ApplicationResultData"/>
+	<xs:element name="businessError" type="tns:BusinessError"/>
+	<xs:element name="errorList" type="tns:BusinessErrorList"/>
+	<xs:simpleType name="APIKey">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="Application">
+		<xs:sequence>
+			<xs:element name="applicationId" type="ns1:UUID" minOccurs="0"/>
+			<xs:element name="status" type="tns:ApplicationStatus" minOccurs="0"/>
+			<xs:element name="serviceId" type="xs:NCName" minOccurs="0"/>
+			<xs:element name="issuerId" type="ns1:UUID" minOccurs="0"/>
+			<xs:element name="issueDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="rcvDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="prdcRsltDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="data" type="tns:ApplicationDataWrapper" minOccurs="0"/>
+			<xs:element name="result" type="tns:ApplicationResultWrapper" minOccurs="0"/>
+			<xs:element name="errors" type="tns:BusinessErrorList" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ApplicationData" abstract="true"/>
+	<xs:complexType name="ApplicationDataWrapper">
+		<xs:sequence>
+			<xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="ApplicationResultData" abstract="true"/>
+	<xs:complexType name="ApplicationResultWrapper">
+		<xs:sequence>
+			<xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:simpleType name="ApplicationStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ACCEPTED"/>
+			<xs:enumeration value="IN_PROCESS"/>
+			<xs:enumeration value="COMPLETED"/>
+			<xs:enumeration value="REJECTED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="BusinessError">
+		<xs:complexContent>
+			<xs:extension base="ns1:Error"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BusinessErrorList">
+		<xs:sequence>
+			<xs:element name="error" type="tns:BusinessError" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

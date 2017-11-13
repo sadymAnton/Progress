@@ -1,0 +1,75 @@
+﻿<xs:schema xmlns:ns1="http://api.vetrf.ru/schema/cdm/base" xmlns:ns2="http://api.vetrf.ru/schema/cdm/cerberus/enterprise" xmlns:ns3="http://api.vetrf.ru/schema/cdm/argus/common" xmlns:tns="http://api.vetrf.ru/schema/cdm/argus/shipment" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://api.vetrf.ru/schema/cdm/argus/shipment" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/base"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/cerberus/enterprise"/>
+	<xs:import namespace="http://api.vetrf.ru/schema/cdm/argus/common"/>
+	<xs:complexType name="CargoReloadingPoint">
+		<xs:sequence>
+			<xs:element name="name" type="ns1:String255" minOccurs="0"/>
+			<xs:element name="nextTransport" type="tns:TransportInfo" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShipmentRoute">
+		<xs:sequence>
+			<xs:element name="cargoReloadingPoint" type="tns:CargoReloadingPoint" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TransportInfo">
+		<xs:sequence>
+			<xs:element name="transportType" type="tns:TransportType" minOccurs="0"/>
+			<xs:element name="transportNumber" type="tns:TransportNumber" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TransportNumber">
+		<xs:sequence>
+			<xs:element name="containerNumber" type="ns1:String255" minOccurs="0"/>
+			<xs:element name="wagonNumber" type="ns1:String255" minOccurs="0"/>
+			<xs:element name="vehicleNumber" type="ns1:String255" minOccurs="0"/>
+			<xs:element name="trailerNumber" type="ns1:String255" minOccurs="0"/>
+			<xs:element name="shipName" type="ns1:String255" minOccurs="0"/>
+			<xs:element name="flightNumber" type="ns1:String255" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TransportType">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TransportationStorageType">
+		<xs:restriction base="ns1:String255">
+			<xs:enumeration value="FROZEN"/>
+			<xs:enumeration value="CHILLED"/>
+			<xs:enumeration value="COOLED"/>
+			<xs:enumeration value="VENTILATED"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Waybill">
+		<xs:complexContent>
+			<xs:extension base="ns1:GenericEntity">
+				<xs:sequence>
+					<xs:element name="issueSeries" type="ns1:String255" minOccurs="0"/>
+					<xs:element name="issueNumber" type="ns1:String255" minOccurs="0"/>
+					<xs:element name="issueDate" type="xs:date" minOccurs="0"/>
+					<xs:element name="type" type="tns:WaybillType"/>
+					<xs:element name="consignor" type="ns2:BusinessMember" minOccurs="0"/>
+					<xs:element name="consignee" type="ns2:BusinessMember" minOccurs="0"/>
+					<xs:element name="broker" type="ns2:BusinessEntity" minOccurs="0"/>
+					<xs:element name="transportInfo" type="tns:TransportInfo" minOccurs="0"/>
+					<xs:element name="transportStorageType" type="tns:TransportationStorageType" minOccurs="0"/>
+					<xs:element name="cargoReloadingPointList" type="tns:ShipmentRoute" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="WaybillType">
+		<xs:restriction base="xs:integer">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
