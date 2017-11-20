@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Обновление модуля</v8:content>
+		</v8:item>
+	</Title>
+	<Width>50</Width>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Панель1" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="Панель1РасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<Page name="УстановленнаяВерсия" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установленная версия</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установленная версия</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ExtendedTooltip name="УстановленнаяВерсияРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="6">
+							<Width>48</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="51"/>
+							<ChildItems>
+								<InputField name="НомерУстановленногоРелиза" id="3">
+									<DataPath>НомерУстановленногоРелиза</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер релиза</v8:content>
+										</v8:item>
+									</Title>
+									<Width>15</Width>
+									<ContextMenu name="НомерУстановленногоРелизаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="НомерУстановленногоРелизаРасширеннаяПодсказка" id="52"/>
+								</InputField>
+								<Button name="СправкаОВерсии" id="5">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<Width>20</Width>
+									<CommandName>Form.Command.СправкаОВерсии</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.Help</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Справка</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СправкаОВерсииРасширеннаяПодсказка" id="53"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Автообновление" id="7">
+							<DataPath>Автообновление</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>48</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="АвтообновлениеКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="АвтообновлениеРасширеннаяПодсказка" id="54"/>
+						</InputField>
+						<UsualGroup name="Группа2" id="10">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<Button name="ПроверитьНаличиеИВозможностьОбновления" id="9">
+									<Type>UsualButton</Type>
+									<Width>48</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.ПроверитьНаличиеИВозможностьОбновления</CommandName>
+									<ExtendedTooltip name="ПроверитьНаличиеИВозможностьОбновленияРасширеннаяПодсказка" id="56"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРезультатПроверки" id="11">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Результат проверки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа результат проверки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаРезультатПроверкиРасширеннаяПодсказка" id="57"/>
+							<ChildItems>
+								<InputField name="ПолеСообщений" id="12">
+									<DataPath>ПолеСообщений</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Height>4</Height>
+									<VerticalStretch>true</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ПолеСообщенийКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ПолеСообщенийРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<Button name="ЗабытьСообщения" id="14">
+									<Type>UsualButton</Type>
+									<Width>48</Width>
+									<CommandName>Form.Command.ЗабытьСообщения</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Игнорировать сообщения</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЗабытьСообщенияРасширеннаяПодсказка" id="59"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ДополнительныеСведения" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные сведения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные сведения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДополнительныеСведенияРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<InputField name="МодульИзменен" id="18">
+							<DataPath>МодульИзменен</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="МодульИзмененКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="МодульИзмененРасширеннаяПодсказка" id="61"/>
+						</InputField>
+						<InputField name="ЕстьПодключаемыйМодуль" id="20">
+							<DataPath>ЕстьПодключаемыйМодуль</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ЕстьПодключаемыйМодульКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ЕстьПодключаемыйМодульРасширеннаяПодсказка" id="62"/>
+						</InputField>
+						<InputField name="РежимИспользования" id="22">
+							<DataPath>РежимИспользования</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>28</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="РежимИспользованияКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="РежимИспользованияРасширеннаяПодсказка" id="63"/>
+						</InputField>
+						<InputField name="ИмяФайлаОбработки" id="24">
+							<DataPath>ИмяФайлаОбработки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>28</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ИмяФайлаОбработкиКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ИмяФайлаОбработкиРасширеннаяПодсказка" id="64"/>
+						</InputField>
+						<Button name="ИсторияТекущейВерсии" id="26">
+							<Type>UsualButton</Type>
+							<Width>48</Width>
+							<CommandName>Form.Command.ИсторияТекущейВерсии</CommandName>
+							<ExtendedTooltip name="ИсторияТекущейВерсииРасширеннаяПодсказка" id="65"/>
+						</Button>
+						<Button name="НастроитьАвтоматическоеОбновление" id="27">
+							<Type>UsualButton</Type>
+							<Width>48</Width>
+							<CommandName>Form.Command.НастроитьАвтоматическоеОбновление</CommandName>
+							<ExtendedTooltip name="НастроитьАвтоматическоеОбновлениеРасширеннаяПодсказка" id="66"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="ВсеВерсии" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все версии</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все версии</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ВсеВерсииРасширеннаяПодсказка" id="67"/>
+					<ChildItems>
+						<CommandBar name="КоманднаяПанельСписокРелизов" id="29">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель список релизов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель список релизов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="КоманднаяПанельСписокРелизовРасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<Button name="УстановитьВерсию" id="30">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.УстановитьВерсию</CommandName>
+									<ExtendedTooltip name="УстановитьВерсиюРасширеннаяПодсказка" id="69"/>
+								</Button>
+								<Button name="ЗагрузитьВерсию" id="31">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗагрузитьВерсию</CommandName>
+									<ExtendedTooltip name="ЗагрузитьВерсиюРасширеннаяПодсказка" id="70"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<UsualGroup name="ГруппаСписокВерсий" id="45">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа список версий</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа список версий</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСписокВерсийРасширеннаяПодсказка" id="71"/>
+							<ChildItems>
+								<Table name="СписокВерсий" id="32">
+									<Representation>List</Representation>
+									<ReadOnly>true</ReadOnly>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>СписокВерсий</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СписокВерсийКонтекстноеМеню" id="33"/>
+									<AutoCommandBar name="СписокВерсийКоманднаяПанель" id="34">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокВерсийРасширеннаяПодсказка" id="72"/>
+									<SearchStringAddition name="СписокВерсийСтрокаПоиска" id="73">
+										<AdditionSource>
+											<Item>СписокВерсий</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокВерсийСтрокаПоискаКонтекстноеМеню" id="74"/>
+										<ExtendedTooltip name="СписокВерсийСтрокаПоискаРасширеннаяПодсказка" id="75"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокВерсийСостояниеПросмотра" id="76">
+										<AdditionSource>
+											<Item>СписокВерсий</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокВерсийСостояниеПросмотраКонтекстноеМеню" id="77"/>
+										<ExtendedTooltip name="СписокВерсийСостояниеПросмотраРасширеннаяПодсказка" id="78"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокВерсийУправлениеПоиском" id="79">
+										<AdditionSource>
+											<Item>СписокВерсий</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокВерсийУправлениеПоискомКонтекстноеМеню" id="80"/>
+										<ExtendedTooltip name="СписокВерсийУправлениеПоискомРасширеннаяПодсказка" id="81"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="СписокВерсийНомерРелиза" id="35">
+											<DataPath>СписокВерсий.НомерРелиза</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокВерсийНомерРелизаКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="СписокВерсийНомерРелизаРасширеннаяПодсказка" id="82"/>
+										</InputField>
+										<InputField name="СписокВерсийДатаВыхода" id="37">
+											<DataPath>СписокВерсий.ДатаВыхода</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокВерсийДатаВыходаКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="СписокВерсийДатаВыходаРасширеннаяПодсказка" id="83"/>
+										</InputField>
+										<InputField name="СписокВерсийОписание" id="39">
+											<DataPath>СписокВерсий.Описание</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокВерсийОписаниеКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="СписокВерсийОписаниеРасширеннаяПодсказка" id="84"/>
+										</InputField>
+										<InputField name="СписокВерсийКонтрольнаяСумма" id="41">
+											<DataPath>СписокВерсий.КонтрольнаяСумма</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокВерсийКонтрольнаяСуммаКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="СписокВерсийКонтрольнаяСуммаРасширеннаяПодсказка" id="85"/>
+										</InputField>
+										<InputField name="СписокВерсийИмяФайла" id="43">
+											<DataPath>СписокВерсий.ИмяФайла</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокВерсийИмяФайлаКонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="СписокВерсийИмяФайлаРасширеннаяПодсказка" id="86"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОписание" id="46">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа описание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="87"/>
+							<ChildItems>
+								<InputField name="Поле1" id="47">
+									<DataPath>Items.СписокВерсий.CurrentData.Описание</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Height>3</Height>
+									<VerticalStretch>true</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="Поле1КонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="88"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="Группа3" id="16">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="89"/>
+			<ChildItems>
+				<Button name="Закрыть" id="15">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>50</Width>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Close</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="90"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурEDI</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НомерУстановленногоРелиза" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер установленного релиза</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Автообновление" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автообновление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолеСообщений" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МодульИзменен" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модуль изменен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПодключаемыйМодуль" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть подключаемый модуль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимИспользования" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяФайлаОбработки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запущенный файл</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокВерсий" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список версий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НомерРелиза" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер релиза</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаВыхода" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата выхода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Описание" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КонтрольнаяСумма" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрольная сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>32</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяФайла" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПутьКФормам" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к формам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СправкаОВерсии" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка о версии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка о версии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СправкаОВерсии</Action>
+		</Command>
+		<Command name="ПроверитьНаличиеИВозможностьОбновления" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить наличие и возможность обновления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить наличие и возможность обновления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьНаличиеИВозможностьОбновления</Action>
+		</Command>
+		<Command name="ЗабытьСообщения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Забыть сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Забыть сообщения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗабытьСообщения</Action>
+		</Command>
+		<Command name="ИсторияТекущейВерсии" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История версий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История текущей версии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсторияТекущейВерсии</Action>
+		</Command>
+		<Command name="НастроитьАвтоматическоеОбновление" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить модуль для автоматического обновления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить автоматическое обновление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьАвтоматическоеОбновление</Action>
+		</Command>
+		<Command name="УстановитьВерсию" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить выбранную версию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьВерсию</Action>
+		</Command>
+		<Command name="ЗагрузитьВерсию" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить выбранную версию на диск</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьВерсию</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="IDОсновнойФормы">
+			<Type/>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="МодальностьЗапрещена">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="КэшироватьМодульОбъекта">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="АдресХранилища">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ДополнительнаяОбработкаСсылка">
+			<Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

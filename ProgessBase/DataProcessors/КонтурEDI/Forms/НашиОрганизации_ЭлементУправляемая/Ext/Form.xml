@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Наша организация</v8:content>
+		</v8:item>
+	</Title>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КнопкаВыполнитьНажатие" id="23">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<Picture>
+					<xr:Abs>Picture.png</xr:Abs>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="КнопкаВыполнитьНажатиеРасширеннаяПодсказка" id="55"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="24">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="56"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="25">
+			<DataPath>Наименование</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="57"/>
+		</InputField>
+		<InputField name="partyId" id="27">
+			<DataPath>partyId</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="partyIdКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="partyIdРасширеннаяПодсказка" id="58"/>
+		</InputField>
+		<InputField name="GLN" id="29">
+			<DataPath>GLN</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="GLNКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="GLNРасширеннаяПодсказка" id="59"/>
+		</InputField>
+		<InputField name="УчетнаяЗапись" id="31">
+			<DataPath>УчетнаяЗапись</DataPath>
+			<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="60"/>
+		</InputField>
+		<Table name="ТранспортныеЯщики" id="33">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<SkipOnInput>false</SkipOnInput>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТранспортныеЯщики</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТранспортныеЯщикиКонтекстноеМеню" id="34"/>
+			<AutoCommandBar name="ТранспортныеЯщикиКоманднаяПанель" id="35">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ТранспортныеЯщикиУстановитьОсновнойЯщик" id="44">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.УстановитьОсновнойЯщик</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.ExecuteTask</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Установить основным</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТранспортныеЯщикиУстановитьОсновнойЯщикРасширеннаяПодсказка" id="61"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТранспортныеЯщикиРасширеннаяПодсказка" id="62"/>
+			<SearchStringAddition name="ТранспортныеЯщикиСтрокаПоиска" id="63">
+				<AdditionSource>
+					<Item>ТранспортныеЯщики</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТранспортныеЯщикиСтрокаПоискаКонтекстноеМеню" id="64"/>
+				<ExtendedTooltip name="ТранспортныеЯщикиСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТранспортныеЯщикиСостояниеПросмотра" id="66">
+				<AdditionSource>
+					<Item>ТранспортныеЯщики</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТранспортныеЯщикиСостояниеПросмотраКонтекстноеМеню" id="67"/>
+				<ExtendedTooltip name="ТранспортныеЯщикиСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТранспортныеЯщикиУправлениеПоиском" id="69">
+				<AdditionSource>
+					<Item>ТранспортныеЯщики</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТранспортныеЯщикиУправлениеПоискомКонтекстноеМеню" id="70"/>
+				<ExtendedTooltip name="ТранспортныеЯщикиУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТранспортныеЯщикиВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТранспортныеЯщикиСсылка" id="36">
+					<DataPath>ТранспортныеЯщики.Ссылка</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТранспортныеЯщикиСсылкаКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ТранспортныеЯщикиСсылкаРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<InputField name="ТранспортныеЯщикиНаименование" id="38">
+					<DataPath>ТранспортныеЯщики.Наименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование (box_id)</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТранспортныеЯщикиНаименованиеКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТранспортныеЯщикиНаименованиеРасширеннаяПодсказка" id="73"/>
+				</InputField>
+				<InputField name="ТранспортныеЯщикиlastEventId" id="40">
+					<DataPath>ТранспортныеЯщики.lastEventId</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ID/дата последнего сообщения</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТранспортныеЯщикиlastEventIdКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ТранспортныеЯщикиlastEventIdРасширеннаяПодсказка" id="74"/>
+				</InputField>
+				<CheckBoxField name="ТранспортныеЯщикиНеАктивный" id="42">
+					<DataPath>ТранспортныеЯщики.НеАктивный</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Неактивный</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТранспортныеЯщикиНеАктивныйКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ТранспортныеЯщикиНеАктивныйРасширеннаяПодсказка" id="75"/>
+				</CheckBoxField>
+				<CheckBoxField name="ТранспортныеЯщикиОсновной" id="49">
+					<DataPath>ТранспортныеЯщики.Основной</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТранспортныеЯщикиОсновнойКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ТранспортныеЯщикиОсновнойРасширеннаяПодсказка" id="76"/>
+				</CheckBoxField>
+				<InputField name="ТранспортныеЯщикиGLNЯщика" id="51">
+					<DataPath>ТранспортныеЯщики.GLNЯщика</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТранспортныеЯщикиGLNЯщикаКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ТранспортныеЯщикиGLNЯщикаРасширеннаяПодсказка" id="77"/>
+				</InputField>
+				<CheckBoxField name="ТранспортныеЯщикиТестовый" id="53">
+					<DataPath>ТранспортныеЯщики.Тестовый</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТранспортныеЯщикиТестовыйКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ТранспортныеЯщикиТестовыйРасширеннаяПодсказка" id="78"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<CheckBoxField name="Неактивная" id="45">
+			<DataPath>Неактивная</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеактивнаяКонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="НеактивнаяРасширеннаяПодсказка" id="79"/>
+		</CheckBoxField>
+		<InputField name="ОсновнойЯщик" id="47">
+			<DataPath>ОсновнойЯщик</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="ОсновнойЯщикКонтекстноеМеню" id="48"/>
+			<ExtendedTooltip name="ОсновнойЯщикРасширеннаяПодсказка" id="80"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурEDI</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Наименование" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="partyId" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Party id</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="GLN" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>GLN</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>13</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УчетнаяЗапись" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная запись</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>80</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТранспортныеЯщики" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Транспортные ящики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>80</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="lastEventId" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Last event id</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НеАктивный" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не активный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Основной" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основной</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="GLNЯщика" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>GLN</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>13</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Тестовый" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тестовый</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Неактивная" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неактивная</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОсновнойЯщик" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основной ящик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>80</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ссылка" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>80</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКФормам" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к формам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КнопкаВыполнитьНажатие</Action>
+		</Command>
+		<Command name="УстановитьОсновнойЯщик" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить основной ящик</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить основной ящик</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьОсновнойЯщик</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="СсылкаУчетнойЗаписи">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Новая">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="МодальностьЗапрещена">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

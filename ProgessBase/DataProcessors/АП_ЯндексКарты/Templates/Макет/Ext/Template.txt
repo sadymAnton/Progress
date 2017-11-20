@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Примеры. Знакомство с JavaScript API. Простой вызов карты.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://api-maps.yandex.ru/1.1/index.xml?key=AJ_G30sBAAAAPGjNUwIAd33aJVgstDjaSjmlPoejDe-QLSYAAAAAAAAAAADLNUtNAWc3HuTC21N5xxG5a7OODA=="
+	type="text/javascript"></script>
+    <script type="text/javascript">
+        var map;
+        var router;
+        var placemark;
+        
+        window.onload = function () {
+            map = new YMaps.Map(document.getElementById("YMapsID"));
+            map.setCenter(new YMaps.GeoPoint(37.61, 55.75), 5);
+            
+            map.addControl(new YMaps.TypeControl());
+            map.addControl(new YMaps.ToolBar());
+            map.addControl(new YMaps.Zoom(10));
+            map.addControl(new YMaps.ScaleLine());
+            map.enableScrollZoom();
+		}
+
+	function AddPlacemark(Name, Descr, Cont, Att, Latt, Params)	{
+		
+		// Создает метку в центре Москвы
+		placemark = new YMaps.Placemark(new YMaps.GeoPoint(Latt, Att), Params);
+
+		// Устанавливает содержимое балуна
+		placemark.name = Name;
+		placemark.description = Descr;
+
+		if (Cont != "") {
+		placemark.setIconContent(Cont);
+		}
+
+		// Добавляет метку на карту
+		map.addOverlay(placemark);
+		
+		return placemark;
+    	}
+	
+	function AddPlacemarkByAddress(Name, Descr, Cont, Address, Params)	{
+	
+		geocoder = new YMaps.Geocoder(Address, {results: 1});	
+	    
+	    YMaps.Events.observe(geocoder, geocoder.Events.Load, function () {
+	    
+			// Создает метку в центре Москвы
+			placemark = new YMaps.Placemark(this.get(0).getGeoPoint(), Params);
+
+			// Устанавливает содержимое балуна
+			placemark.name = Name;
+			placemark.description = Descr;
+
+			if (Cont != "") {
+			placemark.setIconContent(Cont);
+			}
+
+			map.addOverlay(placemark);
+    		});
+    	}
+	function AddGroup(Name, Descr, Cont, Latt, Att, Params)	{
+		
+    	}
+    	
+	function AddRoute(wayPoint1, wayPoint2)	{
+		
+		router = new YMaps.Router([wayPoint1, wayPoint2],
+                               [1]);
+                               
+        map.addOverlay(router);
+    	
+        return router;                       
+        }
+    </script>
+</head>
+<body>
+    <div id="YMapsID" style="width:100%;height:100%"></div>
+</body>
+</html>

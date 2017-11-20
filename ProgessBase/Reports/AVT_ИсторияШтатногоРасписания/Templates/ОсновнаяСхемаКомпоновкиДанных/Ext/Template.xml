@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AVT_СистемаОплаты</dataPath>
+			<field>AVT_СистемаОплаты</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AVT_СистемаОплатыНаВремяИспСрока</dataPath>
+			<field>AVT_СистемаОплатыНаВремяИспСрока</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AVT_ТарифнаяСтавкаНаВремяИспСрока</dataPath>
+			<field>AVT_ТарифнаяСтавкаНаВремяИспСрока</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>AVTШтатноеРасписание</dataPath>
+			<field>AVTШтатноеРасписание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаТарифнойСтавки</dataPath>
+			<field>ВалютаТарифнойСтавки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидТарифнойСтавки</dataPath>
+			<field>ВидТарифнойСтавки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоСтавок</dataPath>
+			<field>КоличествоСтавок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МаксимальнаяТарифнаяСтавка</dataPath>
+			<field>МаксимальнаяТарифнаяСтавка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МинимальнаяТарифнаяСтавка</dataPath>
+			<field>МинимальнаяТарифнаяСтавка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсобыеУсловияТруда</dataPath>
+			<field>ОсобыеУсловияТруда</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПодразделениеОрганизации</dataPath>
+			<field>ПодразделениеОрганизации</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГрафикРаботы</dataPath>
+			<field>ГрафикРаботы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбособленноеПодразделение</dataPath>
+			<field>ОбособленноеПодразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодЗавершения</dataPath>
+			<field>ПериодЗавершения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаИзмененияСостояния</dataPath>
+			<field>ПричинаИзмененияСостояния</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:EnumRef.ПричиныИзмененияСостояния</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должность</dataPath>
+			<field>Должность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтатноеРасписание</dataPath>
+			<field>ШтатноеРасписание</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ШтатноеРасписаниеОрганизаций.Период КАК Дата,
+	ШтатноеРасписаниеОрганизаций.Регистратор КАК Документ,
+	ШтатноеРасписаниеОрганизаций.ПодразделениеОрганизации.Владелец КАК Организация,
+	NULL КАК Сотрудник,
+	ШтатноеРасписаниеОрганизаций.ПодразделениеОрганизации КАК ПодразделениеОрганизации,
+	ШтатноеРасписаниеОрганизаций.AVTШтатноеРасписание КАК ШтатноеРасписание,
+	ШтатноеРасписаниеОрганизаций.КоличествоСтавок,
+	ШтатноеРасписаниеОрганизаций.МинимальнаяТарифнаяСтавка,
+	ШтатноеРасписаниеОрганизаций.МаксимальнаяТарифнаяСтавка,
+	ШтатноеРасписаниеОрганизаций.ВидТарифнойСтавки,
+	ШтатноеРасписаниеОрганизаций.ВалютаТарифнойСтавки,
+	ШтатноеРасписаниеОрганизаций.ОсобыеУсловияТруда,
+	ШтатноеРасписаниеОрганизаций.AVT_СистемаОплаты,
+	ШтатноеРасписаниеОрганизаций.AVT_ТарифнаяСтавкаНаВремяИспСрока,
+	ШтатноеРасписаниеОрганизаций.AVT_СистемаОплатыНаВремяИспСрока,
+	NULL КАК ОбособленноеПодразделение,
+	NULL КАК ГрафикРаботы,
+	NULL КАК ПериодЗавершения,
+	NULL КАК ПричинаИзмененияСостояния
+ИЗ
+	РегистрСведений.ШтатноеРасписаниеОрганизаций КАК ШтатноеРасписаниеОрганизаций
+ГДЕ
+	ШтатноеРасписаниеОрганизаций.AVTШтатноеРасписание = &amp;AVTШтатноеРасписание
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РаботникиОрганизаций.Период,
+	РаботникиОрганизаций.Регистратор,
+	РаботникиОрганизаций.Организация,
+	РаботникиОрганизаций.Сотрудник,
+	РаботникиОрганизаций.ПодразделениеОрганизации,
+	РаботникиОрганизаций.AVTШтатноеРасписание,
+	РаботникиОрганизаций.ЗанимаемыхСтавок,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	ВЫБОР
+		КОГДА РаботникиОрганизаций.ОбособленноеПодразделение = РаботникиОрганизаций.Организация
+			ТОГДА NULL
+		ИНАЧЕ РаботникиОрганизаций.ОбособленноеПодразделение
+	КОНЕЦ,
+	РаботникиОрганизаций.ГрафикРаботы,
+	РаботникиОрганизаций.ПериодЗавершения,
+	РаботникиОрганизаций.ПричинаИзмененияСостояния
+ИЗ
+	РегистрСведений.РаботникиОрганизаций КАК РаботникиОрганизаций
+ГДЕ
+	РаботникиОрганизаций.AVTШтатноеРасписание = &amp;AVTШтатноеРасписание
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗанятыеШтатныеЕдиницыОрганизацийОстаткиИОбороты.Период,
+	ЗанятыеШтатныеЕдиницыОрганизацийОстаткиИОбороты.Регистратор,
+	ЗанятыеШтатныеЕдиницыОрганизацийОстаткиИОбороты.Регистратор.Организация,
+	NULL,
+	ЗанятыеШтатныеЕдиницыОрганизацийОстаткиИОбороты.ПодразделениеОрганизации,
+	ЗанятыеШтатныеЕдиницыОрганизацийОстаткиИОбороты.AVTШтатноеРасписание,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	"ОСВОБОЖДЕНИЕ СТАВКИ"
+ИЗ
+	РегистрНакопления.ЗанятыеШтатныеЕдиницыОрганизаций.ОстаткиИОбороты(, , Регистратор, , ) КАК ЗанятыеШтатныеЕдиницыОрганизацийОстаткиИОбороты
+ГДЕ
+	ЗанятыеШтатныеЕдиницыОрганизацийОстаткиИОбороты.КоличествоСтавокКонечныйОстаток = 0
+	И ЗанятыеШтатныеЕдиницыОрганизацийОстаткиИОбороты.AVTШтатноеРасписание = &amp;AVTШтатноеРасписание</query>
+	</dataSet>
+	<parameter>
+		<name>AVTШтатноеРасписание</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>AVTШтатное расписание</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.AVT_ШтатноеРасписание</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.AVT_ШтатноеРасписание.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПричинаИзмененияСостояния</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Документ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВалютаТарифнойСтавки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидТарифнойСтавки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГрафикРаботы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПериодЗавершения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоСтавок</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МаксимальнаяТарифнаяСтавка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МинимальнаяТарифнаяСтавка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсобыеУсловияТруда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбособленноеПодразделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПодразделениеОрганизации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>AVT_СистемаОплаты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>AVT_СистемаОплатыНаВремяИспСрока</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>AVT_ТарифнаяСтавкаНаВремяИспСрока</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ШтатноеРасписание</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>AVTШтатноеРасписание</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.AVT_ШтатноеРасписание.ПустаяСсылка</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ШтатноеРасписание</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Организация</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

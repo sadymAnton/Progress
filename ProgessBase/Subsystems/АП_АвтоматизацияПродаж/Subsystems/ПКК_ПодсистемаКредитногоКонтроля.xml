@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Subsystem uuid="94940711-98c1-4ff8-ad59-5d4c6cf64051">
+		<Properties>
+			<Name>ПКК_ПодсистемаКредитногоКонтроля</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсистема кредитного контроля</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(ПКК) Подсистема кредитного контроля</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПКК_ВидИсторийСверки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктСверкиВзаиморасчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПКК_ГрафикПроведенияСверок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_ГрафикПроведенияСверок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_ОтчетОПроведенныхСверках</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_ПланФактныйАнализПроведенияСверок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПКК_ФормированиеАктовСверок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПКК_ГрафикиПроведенияСверок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПКК_АктыСверкиСКонтрагентом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПКК_КредитныйКонтроль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.ПКК_КредитныйКонтроль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПКК_СтатусыСверки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПКК_АктНачисленияБонусовУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПКК_СтатусыДебиторскойЗадолженности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПКК_ПричиныБлокировкиОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПКК_ПричиныБлокировкиОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПКК_СтатусыДЗ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КП_СтатусыСогласованияЗаказа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПКК_СогласованиеКредитныйКонтролем</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПКК_Бонусы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПКК_МаркетинговыеУсловия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПКК_ПричиныБлокировкиЗаказа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ВзаиморасчетыСКонтрагентами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УниверсальныйОтчетПРГ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АП_ВедомостьПоДебиторскойЗадолженности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПКК_КредитныйКонтроль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПКК_ГарантийноеПисьмо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПКК_ГарантийныеПисьма</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_ВедомостьПоГарантийныймПисьмам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПКК_ГрафикНачисленияВыплатыБонусовИМаркетинговыхУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПКК_ВедомостьПоРасчетуБонусовУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПКК_РезервПоБонусамУслугам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПКК_СтатусГрафикаБонусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПКК_МетодПредоставленияБонуса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПКК_ТипГрафика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПКК_ТипБонуса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПКК_СтатусВедомостиПоРасчетуБонусовУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПКК_ФормированиеИнформационныхПисем</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_ГрафикНачисленияВыплатыБонусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_РеестрДоговоровИДопСоглашений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_СписокДопДоговоровИСоглашений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_РеестрНачисленныхБонусовУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_СписокБонусныхАктов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_РезервПоБонусамУслугам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_ПланФактныйАнализНачисленияВыплатыБонусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_Реестр_ПДЗ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПКК_ГрафикНачисленияВыплатыБонусовУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПКК_ВедомостиБонусовУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПРГ_ВидыУчредительныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПКК_РаспределенныйБюджетБонусовУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПКК_ВидРасчетнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.НСИ_ОтчетПоКлиентам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_РеестрПредоставленныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АП_ДебиторскаяЗадолженностьПоСрокамДолга</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_КредитноеРасписание</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_СтопЛист</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПКК_БлокировкаРазблокировкаКлиентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПКК_АктыБонусовУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПКК_БазыДляРасчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПКК_СценарийДляПолученияПланов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_ОтчетПоСтатьямЗатрат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПКК_РезервПоБонусамУслугам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_БонуснаяВедомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПКК_НастройкаНачисленияШтрафов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПКК_НастройкаПодсистемыКредитногоКонтроля</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПКК_РасчетКредитногоЛимита</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПродажиСКД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_КарточкаКлиента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПКК_БюджетированиеБонусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПКК_БюджетРетроБонусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПРГ_ОстаткиПоБюджетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПКК_ПереносБюджета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПКК_БюджетБонусовУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_БюджетРетроБонусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_РаспределениеБюджетаРетроБонусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаявкаНаРасходованиеСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_ГарантийныеПисьма</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПКК_ЗагрузкаБюджетовРетробонусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПКК_КредитнаяИстория</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПКК_ЗакрытыеАктыСверки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПКК_ПроверимВозможностьФормированияДокументовПоЗакрытымАктамСверки</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

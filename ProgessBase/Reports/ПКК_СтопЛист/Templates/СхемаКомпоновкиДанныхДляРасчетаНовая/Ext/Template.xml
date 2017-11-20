@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДнейПросрочки</dataPath>
+			<field>ДнейПросрочки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Задолженность</dataPath>
+			<field>Задолженность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказКонтрагентКод</dataPath>
+			<field>ЗаказКонтрагентКод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КомментарийКСтатусуБух</dataPath>
+			<field>КомментарийКСтатусуБух</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КомментарийКСтатусуОКК</dataPath>
+			<field>КомментарийКСтатусуОКК</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КредитныйЛимит</dataPath>
+			<field>КредитныйЛимит</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отделение</dataPath>
+			<field>Отделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отсрочка</dataPath>
+			<field>Отсрочка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаБлокировкиПоСтатусуБух</dataPath>
+			<field>ПричинаБлокировкиПоСтатусуБух</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаБлокировкиПоСтатусуОКК</dataPath>
+			<field>ПричинаБлокировкиПоСтатусуОКК</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПросроченнаяЗадолженность</dataPath>
+			<field>ПросроченнаяЗадолженность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусБлокировкиКлиента</dataPath>
+			<field>СтатусБлокировкиКлиента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусБух</dataPath>
+			<field>СтатусБух</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусБухУстановленАвтоматически</dataPath>
+			<field>СтатусБухУстановленАвтоматически</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусДЗ</dataPath>
+			<field>СтатусДЗ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусЗаказа</dataPath>
+			<field>СтатусЗаказа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусОКК</dataPath>
+			<field>СтатусОКК</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусОККУстановленАвтоматически</dataPath>
+			<field>СтатусОККУстановленАвтоматически</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаЗаказа</dataPath>
+			<field>СуммаЗаказа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаЗаказаРуб</dataPath>
+			<field>СуммаЗаказаРуб</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УстановилСтатусБух</dataPath>
+			<field>УстановилСтатусБух</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УстановилСтатусОКК</dataPath>
+			<field>УстановилСтатусОКК</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕдиницаИзмерения</dataPath>
+			<field>ЕдиницаИзмерения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПокупателя</dataPath>
+			<field>ЗаказПокупателя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеУсловияАвтоматическойСкидки</dataPath>
+			<field>ЗначениеУсловияАвтоматическойСкидки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентАвтоматическихСкидок</dataPath>
+			<field>ПроцентАвтоматическихСкидок</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентСкидкиНаценки</dataPath>
+			<field>ПроцентСкидкиНаценки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусПартии</dataPath>
+			<field>СтатусПартии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УсловиеАвтоматическойСкидки</dataPath>
+			<field>УсловиеАвтоматическойСкидки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаЗаказа</dataPath>
+			<field>ВалютаЗаказа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВсехЗаказов</dataPath>
+			<field>СуммаВсехЗаказов</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ТаблЗаказов.Контрагент,
+	ТаблЗаказов.Грузополучатель,
+	ТаблЗаказов.ДоговорКонтрагента,
+	ТаблЗаказов.ЗаказПокупателя,
+	СУММА(ТаблЗаказов.СуммаЗаказа) КАК СуммаЗаказа,
+	ТаблЗаказов.ЗаказПокупателя.СуммаДокумента КАК СуммаДокумента,
+	ТаблЗаказов.ЗаказПокупателя.КП_Отделение КАК КП_Отделение,
+	ТаблЗаказов.Контрагент.Код КАК ЗаказКонтрагентКод,
+	ВЫБОР
+		КОГДА ТаблЗаказов.ВалютаДокумента = &amp;мРубли
+			ТОГДА ТаблЗаказов.ЗаказПокупателя.СуммаДокумента
+		ИНАЧЕ ТаблЗаказов.ЗаказПокупателя.СуммаДокумента * ТаблЗаказов.КурсВзаиморасчетов / ВЫБОР
+				КОГДА ТаблЗаказов.КратностьВзаиморасчетов = 0
+					ТОГДА 1
+				ИНАЧЕ ТаблЗаказов.КратностьВзаиморасчетов
+			КОНЕЦ
+	КОНЕЦ КАК СуммаЗаказаРуб,
+	ТаблЗаказов.ВалютаДокумента
+ПОМЕСТИТЬ ТаблЗаказов
+ИЗ
+	(ВЫБРАТЬ
+		ЗаказыПокупателейОстатки.ДоговорКонтрагента.Владелец КАК Контрагент,
+		ЗаказыПокупателейОстатки.ЗаказПокупателя.Грузополучатель КАК Грузополучатель,
+		ЗаказыПокупателейОстатки.ДоговорКонтрагента КАК ДоговорКонтрагента,
+		ЗаказыПокупателейОстатки.ЗаказПокупателя КАК ЗаказПокупателя,
+		ЗаказыПокупателейОстатки.СуммаУпрОстаток КАК СуммаЗаказа,
+		ЗаказыПокупателейОстатки.ЗаказПокупателя.ВалютаДокумента КАК ВалютаДокумента,
+		ЗаказыПокупателейОстатки.ЗаказПокупателя.КурсВзаиморасчетов КАК КурсВзаиморасчетов,
+		ЗаказыПокупателейОстатки.ЗаказПокупателя.КратностьВзаиморасчетов КАК КратностьВзаиморасчетов
+	ИЗ
+		РегистрНакопления.ЗаказыПокупателей.Остатки(, ) КАК ЗаказыПокупателейОстатки
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗаказыПокупателейОбороты.ДоговорКонтрагента.Владелец,
+		ЗаказыПокупателейОбороты.ЗаказПокупателя.Грузополучатель,
+		ЗаказыПокупателейОбороты.ДоговорКонтрагента,
+		ЗаказыПокупателейОбороты.ЗаказПокупателя,
+		ЗаказыПокупателейОбороты.СуммаУпрПриход,
+		ЗаказыПокупателейОбороты.ЗаказПокупателя.ВалютаДокумента,
+		ЗаказыПокупателейОбороты.ЗаказПокупателя.КурсВзаиморасчетов,
+		ЗаказыПокупателейОбороты.ЗаказПокупателя.КратностьВзаиморасчетов
+	ИЗ
+		РегистрНакопления.ЗаказыПокупателей.Обороты(, , , ) КАК ЗаказыПокупателейОбороты
+	ГДЕ
+		ЗаказыПокупателейОбороты.СуммаУпрПриход &gt; 0) КАК ТаблЗаказов
+ГДЕ
+	ТаблЗаказов.ЗаказПокупателя.ПКК_СогласованиеКредитнымКонтролем &lt;&gt; &amp;СтатусНеСогласован
+
+СГРУППИРОВАТЬ ПО
+	ТаблЗаказов.Контрагент,
+	ТаблЗаказов.Грузополучатель,
+	ТаблЗаказов.ДоговорКонтрагента,
+	ТаблЗаказов.ЗаказПокупателя,
+	ТаблЗаказов.ЗаказПокупателя.СуммаДокумента,
+	ТаблЗаказов.ЗаказПокупателя.КП_Отделение,
+	ТаблЗаказов.Контрагент.Код,
+	ТаблЗаказов.ВалютаДокумента,
+	ВЫБОР
+		КОГДА ТаблЗаказов.ВалютаДокумента = &amp;мРубли
+			ТОГДА ТаблЗаказов.ЗаказПокупателя.СуммаДокумента
+		ИНАЧЕ ТаблЗаказов.ЗаказПокупателя.СуммаДокумента * ТаблЗаказов.КурсВзаиморасчетов / ВЫБОР
+				КОГДА ТаблЗаказов.КратностьВзаиморасчетов = 0
+					ТОГДА 1
+				ИНАЧЕ ТаблЗаказов.КратностьВзаиморасчетов
+			КОНЕЦ
+	КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблЗаказов.Контрагент,
+	СУММА(ТаблЗаказов.СуммаЗаказаРуб) КАК СуммаВсехЗаказов
+ПОМЕСТИТЬ ТаблКонтр
+ИЗ
+	ТаблЗаказов КАК ТаблЗаказов
+
+СГРУППИРОВАТЬ ПО
+	ТаблЗаказов.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТаблЗаказов.ЗаказПокупателя КАК Заказ,
+	ПРЕДСТАВЛЕНИЕ(ТаблЗаказов.ЗаказПокупателя) КАК ЗаказПредставление,
+	КП_СтатусыСогласованияОКК.СогласованиеКредитнымКонтролем КАК СтатусОКК,
+	КП_СтатусыСогласованияОКК.Ответственный КАК УстановилСтатусОКК,
+	КП_СтатусыСогласованияОКК.Комментарий КАК КомментарийКСтатусуОКК,
+	КП_СтатусыСогласованияОКК.Автоматически КАК СтатусОККУстановленАвтоматически,
+	КП_СтатусыСогласованияОКК.ПричинаБлокировки КАК ПричинаБлокировкиПоСтатусуОКК,
+	ТаблЗаказов.Контрагент КАК Контрагент,
+	ТаблЗаказов.ДоговорКонтрагента КАК ДоговорКонтрагента,
+	МАКСИМУМ(ТаблЗаказов.СуммаДокумента) КАК СуммаЗаказа,
+	МАКСИМУМ(ТаблЗаказов.СуммаЗаказаРуб) КАК СуммаЗаказаРуб,
+	КП_СтатусыСогласованияБухгалтерия.СогласованиеБухгалтерией КАК СтатусБух,
+	КП_СтатусыСогласованияБухгалтерия.Ответственный КАК УстановилСтатусБух,
+	КП_СтатусыСогласованияБухгалтерия.Комментарий КАК КомментарийКСтатусуБух,
+	КП_СтатусыСогласованияБухгалтерия.Автоматически КАК СтатусБухУстановленАвтоматически,
+	КП_СтатусыСогласованияБухгалтерия.ПричинаБлокировки КАК ПричинаБлокировкиПоСтатусуБух,
+	АП_СтатусыДокументовСрезПоследних.Статус КАК СтатусЗаказа,
+	ТаблЗаказов.ЗаказПокупателя.КП_Отделение КАК Отделение,
+	ПКК_СтатусыДЗСрезПоследних.СтатусДЗ КАК СтатусДЗ,
+	ПКК_ПричиныБлокировкиОтгрузкиСрезПоследних.ПричинаБлокировкиОтгрузки КАК СтатусБлокировкиКлиента,
+	ПКК_ИсторияИзмененияКредитногоЛимитаКонтрагент.ДопустимаяСуммаЗадолженности КАК КредитныйЛимит,
+	ЕСТЬNULL(ПКК_ИсторияИзмененияКредитногоЛимитаАП.ДопустимоеЧислоДнейЗадолженности, ПКК_ИсторияИзмененияКредитногоЛимитаДоговор.ДопустимоеЧислоДнейЗадолженности) КАК Отсрочка,
+	0 КАК Задолженность,
+	0 КАК ПросроченнаяЗадолженность,
+	0 КАК ДнейПросрочки,
+	ТаблЗаказов.ЗаказКонтрагентКод КАК ЗаказКонтрагентКод,
+	ТаблЗаказов.ВалютаДокумента КАК ВалютаЗаказа,
+	ТаблКонтр.СуммаВсехЗаказов
+{ВЫБРАТЬ
+	Заказ.*,
+	СтатусОКК.*,
+	УстановилСтатусОКК.*,
+	КомментарийКСтатусуОКК,
+	СтатусОККУстановленАвтоматически,
+	ПричинаБлокировкиПоСтатусуОКК.*,
+	Контрагент.*,
+	ДоговорКонтрагента.*,
+	СуммаЗаказа,
+	СуммаЗаказаРуб,
+	СтатусБух.*,
+	УстановилСтатусБух.*,
+	КомментарийКСтатусуБух,
+	СтатусБухУстановленАвтоматически,
+	ПричинаБлокировкиПоСтатусуБух.*,
+	СтатусЗаказа.*,
+	Отделение.*,
+	СтатусДЗ.*,
+	СтатусБлокировкиКлиента.*,
+	КредитныйЛимит,
+	Отсрочка,
+	Задолженность,
+	ПросроченнаяЗадолженность,
+	ДнейПросрочки,
+	ЗаказКонтрагентКод}
+ИЗ
+	ТаблЗаказов КАК ТаблЗаказов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КП_СтатусыСогласованияЗаказа.СрезПоследних(, Статус = 1) КАК КП_СтатусыСогласованияОКК
+		ПО ТаблЗаказов.ЗаказПокупателя = КП_СтатусыСогласованияОКК.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КП_СтатусыСогласованияЗаказа.СрезПоследних(, Статус = 2) КАК КП_СтатусыСогласованияБухгалтерия
+		ПО ТаблЗаказов.ЗаказПокупателя = КП_СтатусыСогласованияБухгалтерия.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.АП_СтатусыДокументов.СрезПоследних(, ) КАК АП_СтатусыДокументовСрезПоследних
+		ПО ТаблЗаказов.ЗаказПокупателя = АП_СтатусыДокументовСрезПоследних.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_СтатусыДЗ.СрезПоследних(, ) КАК ПКК_СтатусыДЗСрезПоследних
+		ПО ТаблЗаказов.ЗаказПокупателя = ПКК_СтатусыДЗСрезПоследних.Контрагент
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ПричиныБлокировкиОтгрузки.СрезПоследних(, ) КАК ПКК_ПричиныБлокировкиОтгрузкиСрезПоследних
+		ПО ТаблЗаказов.Контрагент = ПКК_ПричиныБлокировкиОтгрузкиСрезПоследних.Контрагент
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа.СрезПоследних(, ) КАК ПКК_ИсторияИзмененияКредитногоЛимитаДоговор
+		ПО ТаблЗаказов.ДоговорКонтрагента = ПКК_ИсторияИзмененияКредитногоЛимитаДоговор.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа.СрезПоследних(, ) КАК ПКК_ИсторияИзмененияКредитногоЛимитаКонтрагент
+		ПО ТаблЗаказов.Контрагент = ПКК_ИсторияИзмененияКредитногоЛимитаКонтрагент.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа.СрезПоследних(, ) КАК ПКК_ИсторияИзмененияКредитногоЛимитаАП
+		ПО ТаблЗаказов.Грузополучатель = ПКК_ИсторияИзмененияКредитногоЛимитаАП.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ ТаблКонтр КАК ТаблКонтр
+		ПО ТаблЗаказов.Контрагент = ТаблКонтр.Контрагент
+
+СГРУППИРОВАТЬ ПО
+	ТаблЗаказов.ЗаказПокупателя,
+	КП_СтатусыСогласованияОКК.ПричинаБлокировки,
+	КП_СтатусыСогласованияОКК.Ответственный,
+	КП_СтатусыСогласованияОКК.СогласованиеКредитнымКонтролем,
+	КП_СтатусыСогласованияБухгалтерия.Автоматически,
+	КП_СтатусыСогласованияБухгалтерия.ПричинаБлокировки,
+	ТаблЗаказов.Контрагент,
+	ТаблЗаказов.ДоговорКонтрагента,
+	КП_СтатусыСогласованияОКК.Автоматически,
+	КП_СтатусыСогласованияБухгалтерия.Комментарий,
+	КП_СтатусыСогласованияБухгалтерия.СогласованиеБухгалтерией,
+	АП_СтатусыДокументовСрезПоследних.Статус,
+	ПКК_ПричиныБлокировкиОтгрузкиСрезПоследних.ПричинаБлокировкиОтгрузки,
+	КП_СтатусыСогласованияОКК.Комментарий,
+	ТаблЗаказов.ЗаказКонтрагентКод,
+	КП_СтатусыСогласованияБухгалтерия.Ответственный,
+	ПКК_СтатусыДЗСрезПоследних.СтатусДЗ,
+	ПКК_ИсторияИзмененияКредитногоЛимитаКонтрагент.ДопустимаяСуммаЗадолженности,
+	ТаблЗаказов.ЗаказПокупателя.КП_Отделение,
+	ЕСТЬNULL(ПКК_ИсторияИзмененияКредитногоЛимитаАП.ДопустимоеЧислоДнейЗадолженности, ПКК_ИсторияИзмененияКредитногоЛимитаДоговор.ДопустимоеЧислоДнейЗадолженности),
+	ТаблЗаказов.ВалютаДокумента,
+	ТаблКонтр.СуммаВсехЗаказов</query>
+	</dataSet>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>мРубли</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>М рубли</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СтатусНеСогласован</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статус не согласован</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ПКК_СогласованиеКредитныйКонтролем</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ПКК_СогласованиеКредитныйКонтролем.НеСогласован</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВалютаЗаказа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДнейПросрочки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДоговорКонтрагента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Задолженность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заказ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаказКонтрагентКод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КомментарийКСтатусуБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КомментарийКСтатусуОКК</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КредитныйЛимит</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Отделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Отсрочка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПричинаБлокировкиПоСтатусуБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПричинаБлокировкиПоСтатусуОКК</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПросроченнаяЗадолженность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусБлокировкиКлиента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусБухУстановленАвтоматически</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусДЗ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусЗаказа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусОКК</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусОККУстановленАвтоматически</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаВсехЗаказов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаЗаказа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаЗаказаРуб</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УстановилСтатусБух</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УстановилСтатусОКК</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

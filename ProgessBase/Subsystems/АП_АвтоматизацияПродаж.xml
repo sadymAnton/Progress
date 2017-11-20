@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Subsystem uuid="4a74f154-bc0e-412d-850c-2074914aa135">
+		<Properties>
+			<Name>АП_АвтоматизацияПродаж</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматизация продаж</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(АП) Разработки по проекту Автоматизация продаж</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_Администратор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АП_НастройкаПривязкиСотрудниковКДивизионам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АП_РолиПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АП_РолиПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АП_СтатусыИРолиПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АП_РезервированиеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АП_ОбщегоНазначенияСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АП_ИсторияСтатусовДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АП_ТСД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОбработкаТабличнойЧастиТовары</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.АП_Полный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_ПолныеПрава</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АП_СрокиРезервов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.АП_Администрирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.НастройкиПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АП_ЦветСтатусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыОперацийРезервированиеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АП_НазначениеРезервов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПроцедурыКонтроляОстатков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеКонтактами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АП_ВыгрузкаДанныхВКубыФорматCSV</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АП_ЯндексКарты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.АП_ПроверкаНаВозможностьОтраженияВБУУчете</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеЗаказами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.АП_ПередЗаписьюСправочникаРегистрацияОбъектаИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.АП_ПередЗаписьюДокументаРегистрацияОбъектаИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.АП_ПриЗаписиОбъектаРегистрацияОбъектаИнформационнойБазы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПередЗаписьюДокументаДатаЗапретаРедактирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Продажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АП_НастройкаПодсистемыПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбработкаТабличныхЧастей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ИсторияИзмененийОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_Версионирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_СотрудникОхраны</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.АП_СотрудникОхраны</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыАвтоматическогоОбменаДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Штрихкоды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбщегоНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.НастройкаПравДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_СотрудникФЭО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_ФормированиеОтгрузочныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_ФормированиеПоступленией</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_ФормированиеПеремещений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_ФормированиеКомплектаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПР_ФормированиеТиповыхДокументовПоРекламациям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_СотрудникДПА</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_ИнвентаризацияТоваровНаСкладе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_СотрудникБухгалтерии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ВнутренниеЗаказы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПКК_РуководительОКК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_СотрудникПроизводства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.АП_ПересчетЦенВЗакрытомЗаказе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПередЗаписьюРегистраНакопленияДатаЗапретаРедактирования</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>НСИ_ПодсистемаНормативноСправочнойИнформации</Subsystem>
+			<Subsystem>КП_КоммерческаяПодсистема</Subsystem>
+			<Subsystem>ПКК_ПодсистемаКредитногоКонтроля</Subsystem>
+			<Subsystem>ПЦ_ПодсистемаЦенообразования</Subsystem>
+			<Subsystem>ПТЛ_ПодсистемаТранспортнойЛогистики</Subsystem>
+			<Subsystem>СП_СкладскаяПодсистема</Subsystem>
+			<Subsystem>ПР_ПодсистемаРекламации</Subsystem>
+			<Subsystem>ППП_ПодсистемаПланированияПродаж</Subsystem>
+			<Subsystem>КонтурEDI</Subsystem>
+			<Subsystem>МобильнаяТорговля</Subsystem>
+			<Subsystem>СОЛВО</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

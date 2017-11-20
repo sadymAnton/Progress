@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<ButtonGroup name="ФормаГруппаСтандартныеКоманды" id="65">
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ФормаГруппаСтандартныеКомандыРасширеннаяПодсказка" id="88"/>
+				<ChildItems>
+					<Button name="ФормаСправочникСертификатыЭЦПСохранитьСертификатВФайл" id="76">
+						<Type>CommandBarButton</Type>
+						<OnlyInAllActions>false</OnlyInAllActions>
+						<CommandName>Catalog.СертификатыЭЦП.Command.СохранитьСертификатВФайл</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаСправочникСертификатыЭЦПСохранитьСертификатВФайлРасширеннаяПодсказка" id="89"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="ФормаТестСертификата" id="75">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ТестНастроекСертификата</CommandName>
+				<ExtendedTooltip name="ФормаТестСертификатаРасширеннаяПодсказка" id="90"/>
+			</Button>
+			<ButtonGroup name="ФормаГруппаОтозван" id="64">
+				<ExtendedTooltip name="ФормаГруппаОтозванРасширеннаяПодсказка" id="91"/>
+				<ChildItems>
+					<Button name="ФормаКнопкаОтозван" id="63">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<OnlyInAllActions>false</OnlyInAllActions>
+						<CommandName>Form.Command.СертификатОтозван</CommandName>
+						<ExtendedTooltip name="ФормаКнопкаОтозванРасширеннаяПодсказка" id="92"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="ФормаСправка" id="74">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="93"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="94"/>
+			<ChildItems>
+				<InputField name="Наименование" id="1">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="95"/>
+				</InputField>
+				<InputField name="Организация" id="6">
+					<DataPath>Объект.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="96"/>
+				</InputField>
+				<UsualGroup name="ГруппаФИО" id="81">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кому выдан</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ФИО</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаФИОРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<InputField name="Фамилия" id="82">
+							<DataPath>Объект.Фамилия</DataPath>
+							<ContextMenu name="ФамилияКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="98"/>
+						</InputField>
+						<InputField name="Имя" id="84">
+							<DataPath>Объект.Имя</DataPath>
+							<ContextMenu name="ИмяКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="Отчество" id="86">
+							<DataPath>Объект.Отчество</DataPath>
+							<ContextMenu name="ОтчествоКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="100"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Назначение" id="3">
+					<DataPath>Объект.Назначение</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<MultiLine>true</MultiLine>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="НазначениеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НазначениеРасширеннаяПодсказка" id="101"/>
+					<Events>
+						<Event name="Opening">НазначениеОткрытие</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ВидыДокументовИИсполнители" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды документов и исполнители</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды документов и исполнители</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ВидыДокументовИИсполнителиРасширеннаяПодсказка" id="102"/>
+			<ChildItems>
+				<Page name="ГруппаВидыДокументов" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виды документов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа виды документов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВидыДокументовРасширеннаяПодсказка" id="103"/>
+					<ChildItems>
+						<Table name="ВидыДокументов" id="21">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ВидыДокументов</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВидыДокументовКонтекстноеМеню" id="22"/>
+							<AutoCommandBar name="ВидыДокументовКоманднаяПанель" id="23">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<ButtonGroup name="ВидыДокументовВыделение" id="79">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Виды документов выделение</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Виды документов выделение</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ВидыДокументовВыделениеРасширеннаяПодсказка" id="104"/>
+										<ChildItems>
+											<Button name="ВыделитьВсе" id="30">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ВыделитьВсе</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.CheckAll</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="ВыделитьВсеРасширеннаяПодсказка" id="105"/>
+											</Button>
+											<Button name="СнятьВсе" id="31">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СнятьВсе</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="СнятьВсеРасширеннаяПодсказка" id="106"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ВидыДокументовСтандартные" id="80">
+										<Visible>false</Visible>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Виды документов стандартные</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Виды документов стандартные</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>Item.ВидыДокументов</CommandSource>
+										<ExtendedTooltip name="ВидыДокументовСтандартныеРасширеннаяПодсказка" id="107"/>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВидыДокументовРасширеннаяПодсказка" id="108"/>
+							<SearchStringAddition name="ВидыДокументовСтрокаПоиска" id="109">
+								<AdditionSource>
+									<Item>ВидыДокументов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВидыДокументовСтрокаПоискаКонтекстноеМеню" id="110"/>
+								<ExtendedTooltip name="ВидыДокументовСтрокаПоискаРасширеннаяПодсказка" id="111"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВидыДокументовСостояниеПросмотра" id="112">
+								<AdditionSource>
+									<Item>ВидыДокументов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВидыДокументовСостояниеПросмотраКонтекстноеМеню" id="113"/>
+								<ExtendedTooltip name="ВидыДокументовСостояниеПросмотраРасширеннаяПодсказка" id="114"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВидыДокументовУправлениеПоиском" id="115">
+								<AdditionSource>
+									<Item>ВидыДокументов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВидыДокументовУправлениеПоискомКонтекстноеМеню" id="116"/>
+								<ExtendedTooltip name="ВидыДокументовУправлениеПоискомРасширеннаяПодсказка" id="117"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьДляПодписи" id="28">
+									<DataPath>Объект.ВидыДокументов.ИспользоватьДляПодписи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьДляПодписиКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ИспользоватьДляПодписиРасширеннаяПодсказка" id="118"/>
+								</CheckBoxField>
+								<InputField name="ВидДокумента" id="26">
+									<DataPath>Объект.ВидыДокументов.ВидДокумента</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВидДокументаКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="119"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИсполнители" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состав исполнителей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнители</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаИсполнителиРасширеннаяПодсказка" id="120"/>
+					<ChildItems>
+						<CheckBoxField name="ПроверятьСоставИсполнителей" id="58">
+							<DataPath>Объект.ПроверятьСоставИсполнителей</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверять состав исполнителей</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроверятьСоставИсполнителейКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ПроверятьСоставИсполнителейРасширеннаяПодсказка" id="121"/>
+							<Events>
+								<Event name="OnChange">ПроверятьСоставИсполнителейПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<Table name="СоставИсполнителей" id="51">
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СоставИсполнителей</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СоставИсполнителейКонтекстноеМеню" id="52"/>
+							<AutoCommandBar name="СоставИсполнителейКоманднаяПанель" id="53"/>
+							<ExtendedTooltip name="СоставИсполнителейРасширеннаяПодсказка" id="122"/>
+							<SearchStringAddition name="СоставИсполнителейСтрокаПоиска" id="123">
+								<AdditionSource>
+									<Item>СоставИсполнителей</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставИсполнителейСтрокаПоискаКонтекстноеМеню" id="124"/>
+								<ExtendedTooltip name="СоставИсполнителейСтрокаПоискаРасширеннаяПодсказка" id="125"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СоставИсполнителейСостояниеПросмотра" id="126">
+								<AdditionSource>
+									<Item>СоставИсполнителей</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставИсполнителейСостояниеПросмотраКонтекстноеМеню" id="127"/>
+								<ExtendedTooltip name="СоставИсполнителейСостояниеПросмотраРасширеннаяПодсказка" id="128"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СоставИсполнителейУправлениеПоиском" id="129">
+								<AdditionSource>
+									<Item>СоставИсполнителей</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставИсполнителейУправлениеПоискомКонтекстноеМеню" id="130"/>
+								<ExtendedTooltip name="СоставИсполнителейУправлениеПоискомРасширеннаяПодсказка" id="131"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НомерСтроки" id="54">
+									<DataPath>Объект.СоставИсполнителей.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="132"/>
+								</LabelField>
+								<InputField name="Исполнитель" id="56">
+									<DataPath>Объект.СоставИсполнителей.Исполнитель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИсполнительКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ИсполнительРасширеннаяПодсказка" id="133"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаГоризонтальная" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонтальнаяРасширеннаяПодсказка" id="134"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛево" id="77">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="135"/>
+					<ChildItems>
+						<CheckBoxField name="ОграничитьДоступКСертификату" id="67">
+							<DataPath>Объект.ОграничитьДоступКСертификату</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ограничить доступ к сертификату.</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОграничитьДоступКСертификатуКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ОграничитьДоступКСертификатуРасширеннаяПодсказка" id="136"/>
+							<Events>
+								<Event name="OnChange">ОграничитьДоступКСертификатуПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ЗапомнитьПарольКСертификату" id="69">
+							<DataPath>Объект.ЗапомнитьПарольКСертификату</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запомнить пароль закрытого ключа.</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запомнить пароль закрытого ключа.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗапомнитьПарольКСертификатуКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="ЗапомнитьПарольКСертификатуРасширеннаяПодсказка" id="137"/>
+							<Events>
+								<Event name="OnChange">СохранитьПарольКСертификатуПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраво" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="138"/>
+					<ChildItems>
+						<Button name="КнопкаПользователь" id="72">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.КомандаВыбратьПользователя</CommandName>
+							<ExtendedTooltip name="КнопкаПользовательРасширеннаяПодсказка" id="139"/>
+						</Button>
+						<Button name="КнопкаПароль" id="73">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.КомандаУстановитьПароль</CommandName>
+							<ExtendedTooltip name="КнопкаПарольРасширеннаяПодсказка" id="140"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СертификатыЭЦП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыделитьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыделитьВсе</Action>
+		</Command>
+		<Command name="СнятьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьВсе</Action>
+		</Command>
+		<Command name="СертификатОтозван" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сертификат отозван</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сертификат отозван</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СертификатОтозван</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="КомандаВыбратьПользователя" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать пользователя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыбратьПользователя</Action>
+		</Command>
+		<Command name="КомандаУстановитьПароль" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить пароль</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести новый пароль</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаУстановитьПароль</Action>
+		</Command>
+		<Command name="ТестНастроекСертификата" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест настроек сертификата</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест настроек сертификата</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Информация</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ТестНастроекСертификата</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Catalog.СертификатыЭЦП.Command.СохранитьСертификатВФайл</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

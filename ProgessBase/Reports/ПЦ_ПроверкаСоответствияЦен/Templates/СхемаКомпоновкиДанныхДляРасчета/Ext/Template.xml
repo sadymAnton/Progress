@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресПоставки</dataPath>
+			<field>АдресПоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Накладная</dataPath>
+			<field>Накладная</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СкидкаПродажи</dataPath>
+			<field>СкидкаПродажи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаПродажи</dataPath>
+			<field>ЦенаПродажи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЦеныПродажа</dataPath>
+			<field>ТипЦеныПродажа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КаналПродаж</dataPath>
+			<field>КаналПродаж</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектГП</dataPath>
+			<field>ПроектГП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регион</dataPath>
+			<field>Регион</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Скидка</dataPath>
+			<field>Скидка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЦены</dataPath>
+			<field>ТипЦены</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УсловиеПоставки</dataPath>
+			<field>УсловиеПоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапрос.Накладная,
+	ВложенныйЗапрос.Номенклатура,
+	ВложенныйЗапрос.Контрагент,
+	ВложенныйЗапрос.АдресПоставки,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_Регион
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_Регион
+	КОНЕЦ КАК Регион,
+	ВложенныйЗапрос.Контрагент.НСИ_КаналПродаж КАК КаналПродаж,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_УсловияПоставки
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_УсловияПоставки
+	КОНЕЦ КАК УсловиеПоставки,
+	МАКСИМУМ(ВложенныйЗапрос.ЦенаПродажи) КАК ЦенаПродажи,
+	МАКСИМУМ(ВложенныйЗапрос.СкидкаПродажи) КАК СкидкаПродажи,
+	ВложенныйЗапрос.ТипЦеныПродажа,
+	ВложенныйЗапрос.Номенклатура.Проект КАК ПроектГП,
+	МАКСИМУМ(0) КАК Цена,
+	МАКСИМУМ(ЕСТЬNULL(СкидкиНаценкиНоменклатурыСрезПоследних.ПроцентСкидкиНаценки, 0)) КАК Скидка,
+	ЗНАЧЕНИЕ(Справочник.ТипыЦенНоменклатуры.ПустаяСсылка) КАК ТипЦены,
+	ВложенныйЗапрос.СтавкаНДС
+ИЗ
+	(ВЫБРАТЬ
+		РеализацияТоваровУслугТовары.Ссылка КАК Накладная,
+		РеализацияТоваровУслугТовары.Номенклатура КАК Номенклатура,
+		РеализацияТоваровУслугТовары.Ссылка.Контрагент КАК Контрагент,
+		РеализацияТоваровУслугТовары.Ссылка.Грузополучатель КАК АдресПоставки,
+		РеализацияТоваровУслугТовары.Цена КАК ЦенаПродажи,
+		РеализацияТоваровУслугТовары.ПроцентАвтоматическихСкидок КАК СкидкаПродажи,
+		РеализацияТоваровУслугТовары.ПЦ_ТипЦен КАК ТипЦеныПродажа,
+		РеализацияТоваровУслугТовары.СтавкаНДС КАК СтавкаНДС
+	ИЗ
+		Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
+	ГДЕ
+		РеализацияТоваровУслугТовары.Ссылка.Проведен = ИСТИНА
+		И РеализацияТоваровУслугТовары.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+		И НЕ РеализацияТоваровУслугТовары.Ссылка.СП_ЗаданиеНаПодбор = ЗНАЧЕНИЕ(Документ.СП_ЗаданиеНаПодбор.ПустаяСсылка)) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СкидкиНаценкиНоменклатуры.СрезПоследних({(&amp;КонецПериода)}, ) КАК СкидкиНаценкиНоменклатурыСрезПоследних
+		ПО (СкидкиНаценкиНоменклатурыСрезПоследних.ДатаОкончания &gt;= ВложенныйЗапрос.Накладная.Дата И СкидкиНаценкиНоменклатурыСрезПоследних.Период &lt;= ВложенныйЗапрос.Накладная.Дата)
+			И (ВложенныйЗапрос.Номенклатура = СкидкиНаценкиНоменклатурыСрезПоследних.Номенклатура
+				ИЛИ СкидкиНаценкиНоменклатурыСрезПоследних.Номенклатура = ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка)
+					И (СкидкиНаценкиНоменклатурыСрезПоследних.ПЦ_ТоварнаяКатегория = ВложенныйЗапрос.Номенклатура.НСИ_ТоварнаяКатегория
+						ИЛИ СкидкиНаценкиНоменклатурыСрезПоследних.ПЦ_Брендообъем = ВложенныйЗапрос.Номенклатура.НСИ_Брендообъем))
+			И (СкидкиНаценкиНоменклатурыСрезПоследних.ПолучательСкидки = ВложенныйЗапрос.Контрагент
+				ИЛИ СкидкиНаценкиНоменклатурыСрезПоследних.ПолучательСкидки.Владелец = ВложенныйЗапрос.Контрагент)
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.Накладная,
+	ВложенныйЗапрос.Номенклатура,
+	ВложенныйЗапрос.Контрагент,
+	ВложенныйЗапрос.АдресПоставки,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_Регион
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_Регион
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_КаналПродаж
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_КаналПродаж
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_УсловияПоставки
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_УсловияПоставки
+	КОНЕЦ,
+	ВложенныйЗапрос.ТипЦеныПродажа,
+	ВложенныйЗапрос.Номенклатура.Проект,
+	ВложенныйЗапрос.Контрагент.НСИ_КаналПродаж,
+	ВложенныйЗапрос.СтавкаНДС</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ОтклонениеЦены</dataPath>
+		<expression>ЦенаПродажи-Цена</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отклонение цены</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ОтклонениеСкидки</dataPath>
+		<expression>СкидкаПродажи-Скидка</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отклонение скидки</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АдресПоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Накладная</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроектГП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регион</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КаналПродаж</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УсловиеПоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаПродажи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Скидка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СкидкаПродажи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипЦены</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипЦеныПродажа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтавкаНДС</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

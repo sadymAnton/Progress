@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 10.00.9200.17183"></meta></head><body>
+<p>Формат строки запуска 1С для выполнения обмена с последующим завершением сеанса для клиент-серверной базы 1С:<br>&lt;Путь до исполняемого файла 1С&gt; ENTERPRISE /S"&lt;имя кластера серверов 1С&gt;\&lt;имя базы в кластере&gt;" /N"&lt;имя пользователя&gt;" /P"&lt;пароль&gt;" /Execute "&lt;полное имя файла обработки СТ_Автообмен&gt;" /C"Exchange" /DisableStartupMessages </p>
+<p>Для файловой базы 1С:<br>&lt;Путь до исполняемого файла 1С&gt; ENTERPRISE /F"&lt;каталог информационной базы&gt;" /N"&lt;имя пользователя&gt;" /P"&lt;пароль&gt;" /Execute "&lt;полное имя файла обработки СТ_Автообмен&gt;" /C"Exchange" /DisableStartupMessages</p>
+<p>Описание параметров:</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>/Execute  - предназначен для того, чтобы при открытии 1С была открыта указанная обработка</p>
+<p>/C - передача параметров в сеанс 1С. Параметр "Exchange" служит флагом для обработка автообмена, что нужно выполнить обмен и завершить сеанс 1С. </p>
+<p>/DisableStartupMessages - отключает возможные служебные сообщения при старте сеанса 1С</p></blockquote>
+<p> </p>
+<p>Пример строки запуска 1С:<br>"C:\Program Files (x86)\1cv81\bin\1cv8.exe" ENTERPRISE /S"V-PANOV-M\Cherk" /N"Администратор" /P"123456" /Execute "C:\Sync\СТ_Автообмен.epf" /C"Exchange" /DisableStartupMessages </p>
+<p> </p>
+<p>Также возможно использование параметра /Out (не является обязательным):<br>/Out"&lt;полное имя txt-файла лога&gt;" -NoTruncate </p>
+<p>При использовании данного параметра все сообщения, которые выводятся в окно сообщение 1С (в частности, о процессе выгрузи/загрузки данных), будут записываться в указанный в параметре текстовый файл. При отсутствии указанного файла будет создан новый.</p></body></html>

@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Библиотека расширений</v8:content>
+		</v8:item>
+	</Title>
+	<Width>100</Width>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="34">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="48"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="41">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<CheckBoxField name="ТолькоПодходящие" id="44">
+					<DataPath>ТолькоПодходящие</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТолькоПодходящиеКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ТолькоПодходящиеРасширеннаяПодсказка" id="50"/>
+					<Events>
+						<Event name="OnChange">ТолькоПодходящиеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ТолькоРекомендованные" id="39">
+					<DataPath>ТолькоРекомендованные</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТолькоРекомендованныеКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ТолькоРекомендованныеРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="OnChange">ТолькоРекомендованныеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="Партнер" id="46">
+					<DataPath>Партнер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По партнеру</v8:content>
+						</v8:item>
+					</Title>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="ПартнерКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ПартнерРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">ПартнерПриИзменении</Event>
+						<Event name="StartChoice">ПартнерНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СписокРасширения" id="1">
+			<Representation>Tree</Representation>
+			<SkipOnInput>false</SkipOnInput>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>СписокРасширения</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="СписокРасширенияКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+			</ContextMenu>
+			<AutoCommandBar name="СписокРасширенияКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширенияРасширеннаяПодсказка" id="53"/>
+			<SearchStringAddition name="СписокРасширенияСтрокаПоиска" id="54">
+				<AdditionSource>
+					<Item>СписокРасширения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокРасширенияСтрокаПоискаКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="СписокРасширенияСтрокаПоискаРасширеннаяПодсказка" id="56"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокРасширенияСостояниеПросмотра" id="57">
+				<AdditionSource>
+					<Item>СписокРасширения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокРасширенияСостояниеПросмотраКонтекстноеМеню" id="58"/>
+				<ExtendedTooltip name="СписокРасширенияСостояниеПросмотраРасширеннаяПодсказка" id="59"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокРасширенияУправлениеПоиском" id="60">
+				<AdditionSource>
+					<Item>СписокРасширения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокРасширенияУправлениеПоискомКонтекстноеМеню" id="61"/>
+				<ExtendedTooltip name="СписокРасширенияУправлениеПоискомРасширеннаяПодсказка" id="62"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокРасширенияВыбор</Event>
+				<Event name="BeforeAddRow">СписокРасширенияПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">СписокРасширенияПередУдалением</Event>
+				<Event name="BeforeRowChange">СписокРасширенияПередНачаломИзменения</Event>
+				<Event name="OnActivateCell">СписокРасширенияПриАктивизацииЯчейки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="СписокРасширенияНаименование" id="6">
+					<DataPath>СписокРасширения.Наименование</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокРасширенияНаименованиеКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="СписокРасширенияНаименованиеРасширеннаяПодсказка" id="63"/>
+				</InputField>
+				<InputField name="СписокРасширенияУстановить" id="4">
+					<DataPath>СписокРасширения.Установить</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<EditMode>Directly</EditMode>
+					<CellHyperlink>true</CellHyperlink>
+					<Width>10</Width>
+					<ContextMenu name="СписокРасширенияУстановитьКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СписокРасширенияУстановитьРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="СписокРасширенияВерсияРасширения" id="8">
+					<DataPath>СписокРасширения.ВерсияРасширения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокРасширенияВерсияРасширенияКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СписокРасширенияВерсияРасширенияРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="СписокРасширенияРекомендуемаяВерсияМодуля" id="10">
+					<DataPath>СписокРасширения.РекомендуемаяВерсияМодуля</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия модуля</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокРасширенияРекомендуемаяВерсияМодуляКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СписокРасширенияРекомендуемаяВерсияМодуляРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<InputField name="СписокРасширенияТипРасширения" id="35">
+					<DataPath>СписокРасширения.ТипРасширения</DataPath>
+					<Visible>false</Visible>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокРасширенияТипРасширенияКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СписокРасширенияТипРасширенияРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="СписокРасширенияОписаниеПолное" id="12">
+					<DataPath>СписокРасширения.ОписаниеПолное</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокРасширенияОписаниеПолноеКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СписокРасширенияОписаниеПолноеРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<CheckBoxField name="СписокРасширенияОбязательный" id="14">
+					<DataPath>СписокРасширения.Обязательный</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокРасширенияОбязательныйКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокРасширенияОбязательныйРасширеннаяПодсказка" id="69"/>
+				</CheckBoxField>
+				<CheckBoxField name="СписокРасширенияИнтерфейс" id="16">
+					<DataPath>СписокРасширения.Интерфейс</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокРасширенияИнтерфейсКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СписокРасширенияИнтерфейсРасширеннаяПодсказка" id="70"/>
+				</CheckBoxField>
+				<InputField name="СписокРасширенияИдентификатор" id="18">
+					<DataPath>СписокРасширения.Идентификатор</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокРасширенияИдентификаторКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="СписокРасширенияИдентификаторРасширеннаяПодсказка" id="71"/>
+				</InputField>
+				<InputField name="СписокРасширенияТекВерсияРасширения" id="20">
+					<DataPath>СписокРасширения.ТекВерсияРасширения</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокРасширенияТекВерсияРасширенияКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокРасширенияТекВерсияРасширенияРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<InputField name="СписокРасширенияТекРекомендуемаяВерсияМодуля" id="22">
+					<DataPath>СписокРасширения.ТекРекомендуемаяВерсияМодуля</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокРасширенияТекРекомендуемаяВерсияМодуляКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СписокРасширенияТекРекомендуемаяВерсияМодуляРасширеннаяПодсказка" id="73"/>
+				</InputField>
+				<InputField name="СписокРасширенияТекОписаниеПолное" id="24">
+					<DataPath>СписокРасширения.ТекОписаниеПолное</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокРасширенияТекОписаниеПолноеКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СписокРасширенияТекОписаниеПолноеРасширеннаяПодсказка" id="74"/>
+				</InputField>
+				<CheckBoxField name="СписокРасширенияТекОбязательный" id="26">
+					<DataPath>СписокРасширения.ТекОбязательный</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокРасширенияТекОбязательныйКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СписокРасширенияТекОбязательныйРасширеннаяПодсказка" id="75"/>
+				</CheckBoxField>
+				<CheckBoxField name="СписокРасширенияТекИнтерфейс" id="28">
+					<DataPath>СписокРасширения.ТекИнтерфейс</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокРасширенияТекИнтерфейсКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СписокРасширенияТекИнтерфейсРасширеннаяПодсказка" id="76"/>
+				</CheckBoxField>
+				<InputField name="СписокРасширенияСсылка" id="30">
+					<DataPath>СписокРасширения.Ссылка</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокРасширенияСсылкаКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="СписокРасширенияСсылкаРасширеннаяПодсказка" id="77"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="ПодсказкаРасширения" id="32">
+			<DataPath>Items.СписокРасширения.CurrentData.ОписаниеПолное</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<Height>3</Height>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ПодсказкаРасширенияКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="ПодсказкаРасширенияРасширеннаяПодсказка" id="78"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурEDI</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокРасширения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список расширения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Установить" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВерсияРасширения" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия расширения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="РекомендуемаяВерсияМодуля" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рекомендуемая версия модуля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОписаниеПолное" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание полное</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Обязательный" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обязательный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Интерфейс" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интерфейс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекВерсияРасширения" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тек версия расширения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекРекомендуемаяВерсияМодуля" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тек рекомендуемая версия модуля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекОписаниеПолное" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тек описание полное</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТекОбязательный" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тек обязательный</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекИнтерфейс" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тек интерфейс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипРасширения" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип расширения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТолькоПодходящие" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только подходящие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоРекомендованные" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только рекомендованные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Партнер" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КонтурEDI_ДополнительныеСправочники</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокРасширенияУстановить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокРасширения.Установить</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">установить</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Blue</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокРасширенияУстановить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокРасширения.Установить</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">обновить</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:DeepSkyBlue</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокРасширенияУстановить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокРасширения.Установить</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">подключен</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Green</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокРасширенияНаименование</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СписокРасширенияУстановить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокРасширения.Обязательный</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Parameters>
+		<Parameter name="МодальностьЗапрещена">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="Партнер">
+			<Type>
+				<v8:Type>cfg:CatalogRef.КонтурEDI_ДополнительныеСправочники</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

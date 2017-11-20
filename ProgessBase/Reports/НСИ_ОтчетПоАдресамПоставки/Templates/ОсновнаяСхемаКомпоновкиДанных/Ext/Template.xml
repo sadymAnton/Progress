@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Владелец</dataPath>
+			<field>Владелец</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент/Склад</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресПоставки</dataPath>
+			<field>АдресПоставки</field>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.АдресаПоставки</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вид</dataPath>
+			<field>Вид</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид адреса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дивизион</dataPath>
+			<field>Дивизион</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДопОфис</dataPath>
+			<field>ДопОфис</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДопустимаяСуммаЗадолженности</dataPath>
+			<field>ДопустимаяСуммаЗадолженности</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кредитный лимит</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДопустимоеЧислоДнейЗадолженности</dataPath>
+			<field>ДопустимоеЧислоДнейЗадолженности</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отсрочка платежа, дней</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_GLN</dataPath>
+			<field>НСИ_GLN</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_АдресДоставки</dataPath>
+			<field>НСИ_АдресДоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_ДатаЗакрытия</dataPath>
+			<field>НСИ_ДатаЗакрытия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_ЖДСтанция</dataPath>
+			<field>НСИ_ЖДСтанция</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_КаналПродаж</dataPath>
+			<field>НСИ_КаналПродаж</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_КатегорияКлиента</dataPath>
+			<field>НСИ_КатегорияКлиента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_КлассТТ</dataPath>
+			<field>НСИ_КлассТТ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_НаправлениеПродаж</dataPath>
+			<field>НСИ_НаправлениеПродаж</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_Округ</dataPath>
+			<field>НСИ_Округ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_Отделение</dataPath>
+			<field>НСИ_Отделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_ПричинаЗакрытия</dataPath>
+			<field>НСИ_ПричинаЗакрытия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_Район</dataPath>
+			<field>НСИ_Район</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_Регион</dataPath>
+			<field>НСИ_Регион</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_Склад</dataPath>
+			<field>НСИ_Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_ТорговыйПредставитель</dataPath>
+			<field>НСИ_ТорговыйПредставитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_УсловияПоставки</dataPath>
+			<field>НСИ_УсловияПоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_ФорматТТ</dataPath>
+			<field>НСИ_ФорматТТ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПКК_КредитныйЛимитЗависитОтПланаПродаж</dataPath>
+			<field>ПКК_КредитныйЛимитЗависитОтПланаПродаж</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кредитный лимит зависит от плана продаж</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле1</dataPath>
+			<field>Поле1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле2</dataPath>
+			<field>Поле2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле3</dataPath>
+			<field>Поле3</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле4</dataPath>
+			<field>Поле4</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле5</dataPath>
+			<field>Поле5</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле6</dataPath>
+			<field>Поле6</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле7</dataPath>
+			<field>Поле7</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле8</dataPath>
+			<field>Поле8</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Поле9</dataPath>
+			<field>Поле9</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Представление</dataPath>
+			<field>Представление</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПТЛ_Маршрут</dataPath>
+			<field>ПТЛ_Маршрут</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипДома</dataPath>
+			<field>ТипДома</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипКвартиры</dataPath>
+			<field>ТипКвартиры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипКорпуса</dataPath>
+			<field>ТипКорпуса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	АдресаПоставки.Ссылка КАК АдресПоставки,
+	АдресаПоставки.Владелец,
+	АдресаПоставки.Код,
+	АдресаПоставки.Дивизион,
+	АдресаПоставки.ДопОфис,
+	АдресаПоставки.НСИ_КатегорияКлиента,
+	АдресаПоставки.НСИ_ТорговыйПредставитель,
+	АдресаПоставки.НСИ_КаналПродаж,
+	АдресаПоставки.ПТЛ_Маршрут,
+	АдресаПоставки.НСИ_Регион,
+	АдресаПоставки.НСИ_Отделение,
+	АдресаПоставки.НСИ_Склад,
+	АдресаПоставки.НСИ_GLN,
+	АдресаПоставки.НСИ_ЖДСтанция,
+	АдресаПоставки.НСИ_КлассТТ,
+	АдресаПоставки.НСИ_НаправлениеПродаж,
+	АдресаПоставки.НСИ_АдресДоставки,
+	АдресаПоставки.УдалитьНСИ_ФорматТТ КАК НСИ_ФорматТТ,
+	АдресаПоставки.НСИ_УсловияПоставки,
+	АдресаПоставки.НСИ_ДатаЗакрытия,
+	АдресаПоставки.НСИ_ПричинаЗакрытия,
+	АдресаПоставки.НСИ_Округ,
+	АдресаПоставки.НСИ_Район,
+	КонтактнаяИнформация.Вид,
+	КонтактнаяИнформация.Представление,
+	КонтактнаяИнформация.Поле1,
+	КонтактнаяИнформация.Поле2,
+	КонтактнаяИнформация.Поле3,
+	КонтактнаяИнформация.Поле4,
+	КонтактнаяИнформация.Поле5,
+	КонтактнаяИнформация.Поле6,
+	КонтактнаяИнформация.Поле7,
+	КонтактнаяИнформация.Поле8,
+	КонтактнаяИнформация.Поле9,
+	КонтактнаяИнформация.ТипДома,
+	КонтактнаяИнформация.ТипКорпуса,
+	КонтактнаяИнформация.ТипКвартиры,
+	ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследнихКонтрагенты.ДопустимаяСуммаЗадолженности,
+	ВЫБОР
+		КОГДА ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследних.ДопустимоеЧислоДнейЗадолженности ЕСТЬ NULL 
+				ИЛИ ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследних.ДопустимоеЧислоДнейЗадолженности = 0
+			ТОГДА ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследнихДоговора.ДопустимоеЧислоДнейЗадолженности
+		ИНАЧЕ ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследних.ДопустимоеЧислоДнейЗадолженности
+	КОНЕЦ КАК ДопустимоеЧислоДнейЗадолженности,
+	ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследнихКонтрагенты.ПКК_КредитныйЛимитЗависитОтПланаПродаж,
+	АдресаПоставки.НСИ_ДоговорКонтрагента КАК ДоговорКонтрагента
+ИЗ
+	Справочник.АдресаПоставки КАК АдресаПоставки
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КонтактнаяИнформация КАК КонтактнаяИнформация
+		ПО АдресаПоставки.Ссылка = КонтактнаяИнформация.Объект
+			И (КонтактнаяИнформация.Вид = ЗНАЧЕНИЕ(Справочник.ВидыКонтактнойИнформации.АП_ФактАдресАдресаПоставки))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа.СрезПоследних КАК ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследних
+		ПО АдресаПоставки.Ссылка = ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследних.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа.СрезПоследних КАК ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследнихДоговора
+		ПО АдресаПоставки.НСИ_ДоговорКонтрагента = ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследнихДоговора.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа.СрезПоследних КАК ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследнихКонтрагенты
+		ПО АдресаПоставки.Владелец = ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежаСрезПоследнихКонтрагенты.Объект
+			И (АдресаПоставки.Владелец ССЫЛКА Справочник.Контрагенты)</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Код</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АдресПоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Владелец</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДоговорКонтрагента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_ДатаЗакрытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_ПричинаЗакрытия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дивизион</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДопОфис</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДопустимаяСуммаЗадолженности</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПКК_КредитныйЛимитЗависитОтПланаПродаж</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДопустимоеЧислоДнейЗадолженности</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_ЖДСтанция</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_КаналПродаж</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_КатегорияКлиента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_КлассТТ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_GLN</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПТЛ_Маршрут</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_НаправлениеПродаж</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_Отделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Вид</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Представление</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Поле1</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Поле2</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Поле3</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Поле4</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Поле5</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Поле6</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Поле7</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Поле8</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Поле9</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТипДома</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТипКвартиры</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТипКорпуса</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_Округ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_Район</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_Регион</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_Склад</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_ТорговыйПредставитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_УсловияПоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_ФорматТТ</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">АдресПоставки</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.АдресаПоставки.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Владелец</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Дивизион</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПРГДивизионы.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Владелец</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>АдресПоставки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Владелец</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

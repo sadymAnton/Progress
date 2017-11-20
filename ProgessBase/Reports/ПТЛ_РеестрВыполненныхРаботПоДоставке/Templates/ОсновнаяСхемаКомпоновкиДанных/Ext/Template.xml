@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВодительПлан</dataPath>
+			<field>ВодительПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>план</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВодительФакт</dataPath>
+			<field>ВодительФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГородДоставки</dataPath>
+			<field>ГородДоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоSKU</dataPath>
+			<field>КоличествоSKU</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоРейсов</dataPath>
+			<field>КоличествоРейсов</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Маршрут</dataPath>
+			<field>Маршрут</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РайонДоставки</dataPath>
+			<field>РайонДоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РучнаяРазгрузка</dataPath>
+			<field>РучнаяРазгрузка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипТранспорта</dataPath>
+			<field>ТипТранспорта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТранспортноеСредствоПлан</dataPath>
+			<field>ТранспортноеСредствоПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>т/с план</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТранспортноеСредствоФакт</dataPath>
+			<field>ТранспортноеСредствоФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>т/с факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТЭК</dataPath>
+			<field>ТЭК</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вес</dataPath>
+			<field>Вес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес, т</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дивизион</dataPath>
+			<field>Дивизион</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЕстьНеПодписанные</dataPath>
+			<field>ЕстьНеПодписанные</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаПеревозку</dataPath>
+			<field>ЗаданиеНаПеревозку</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаПодбор</dataPath>
+			<field>ЗаданиеНаПодбор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отделение</dataPath>
+			<field>Отделение</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеестрОтТЭКДата</dataPath>
+			<field>РеестрОтТЭКДата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеестрОтТЭКНомер</dataPath>
+			<field>РеестрОтТЭКНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчетОВыполненнойПеревозке</dataPath>
+			<field>ОтчетОВыполненнойПеревозке</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланДоставки</dataPath>
+			<field>ПланДоставки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План доставки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесФакт</dataPath>
+			<field>ВесФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес факт, т</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Накладная</dataPath>
+			<field>Накладная</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НакладнаяПодписана</dataPath>
+			<field>НакладнаяПодписана</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Рейс</dataPath>
+			<field>Рейс</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОтгрузки</dataPath>
+			<field>ДатаОтгрузки</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПолученияДокумента</dataPath>
+			<field>ДатаПолученияДокумента</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПТЛ_ПланДоставки.Отделение,
+	ПТЛ_ПланДоставки.ЗаданиеНаПеревозку.АдресПоставки.Дивизион КАК Дивизион,
+	ПТЛ_ПланДоставки.Маршрут КАК Маршрут,
+	ПТЛ_ПланДоставки.Регистратор КАК ПланДоставки,
+	ВложДанные.ЗаданиеНаПеревозку,
+	ВложДанные.ОтчетОВыполненнойПеревозке,
+	ВложДанные.КоличествоSKU,
+	ПТЛ_ПланДоставки.ЗаданиеНаПеревозку.АдресПоставки.НСИ_Район КАК РайонДоставки,
+	ПТЛ_ПланДоставки.ЗаданиеНаПеревозку.АдресПоставки.НСИ_Город КАК ГородДоставки,
+	ПТЛ_ПланДоставки.ТЭК,
+	ПТЛ_ПланДоставки.ТранспортноеСредство КАК ТранспортноеСредствоПлан,
+	ВложДанные.ТранспортноеСредствоФакт,
+	ПТЛ_ПланДоставки.Водитель КАК ВодительПлан,
+	ВложДанные.ВодительФакт,
+	ВложДанные.ТипТранспорта,
+	ВложДанные.ВесФакт КАК ВесФакт,
+	ПТЛ_ПланДоставки.Вес КАК Вес,
+	ВложДанные.РеестрОтТЭКНомер,
+	ВложДанные.РеестрОтТЭКДата,
+	ВложДанные.ЕстьНеПодписанные,
+	ВложДанные.РучнаяРазгрузка,
+	ВложДанные.Реализация КАК Накладная,
+	ВложДанные.Подписана КАК НакладнаяПодписана,
+	ВложДанные.ДатаПолучения КАК ДатаПолученияДокумента,
+	ПТЛ_ПланДоставки.Рейс,
+	ПТЛ_ПланДоставки.Рейс КАК КоличествоРейсов,
+	ПТЛ_ПланДоставки.ДатаОтгрузки
+ИЗ
+	РегистрНакопления.ПТЛ_ПланДоставки КАК ПТЛ_ПланДоставки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.Ссылка КАК ОтчетОВыполненнойПеревозке,
+			ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.Рейс КАК Рейс,
+			ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.ПланДоставки КАК ПланДоставки,
+			ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку.ЗаданиеНаПеревозку КАК ЗаданиеНаПеревозку,
+			ЕСТЬNULL(ВложВес.КоличествоSKU, 0) КАК КоличествоSKU,
+			ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.ТранспортноеСредство КАК ТранспортноеСредствоФакт,
+			ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.Водитель КАК ВодительФакт,
+			ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.ТранспортноеСредство.ТипТранспорта КАК ТипТранспорта,
+			ЕСТЬNULL(ВложВес.ВесФакт, 0) КАК ВесФакт,
+			ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.Ссылка.НомерРеестра КАК РеестрОтТЭКНомер,
+			ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.Ссылка.ДатаРеестра КАК РеестрОтТЭКДата,
+			ВЫБОР
+				КОГДА ВложНакл.Подписана
+					ТОГДА "Нет"
+				ИНАЧЕ "Да"
+			КОНЕЦ КАК ЕстьНеПодписанные,
+			ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку.РучнаяРазгрузка КАК РучнаяРазгрузка,
+			ВложНакл.Реализация КАК Реализация,
+			ВложНакл.Подписана КАК Подписана,
+			ВложНакл.ДатаПолучения КАК ДатаПолучения
+		ИЗ
+			Документ.ПТЛ_ОтчетОВыполненнойПеревозке.Маршруты КАК ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты
+				ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПТЛ_ОтчетОВыполненнойПеревозке.ЗаданияНаПеревозку КАК ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку
+					ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+						ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.Ссылка КАК Док,
+						МИНИМУМ(ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.Подписана) КАК Подписана,
+						ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.Реализация КАК Реализация,
+						ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.ЗаданиеНаПеревозку КАК ЗаданиеНаПеревозку,
+						ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.Рейс КАК Рейс,
+						ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.ДатаПолучения КАК ДатаПолучения
+					ИЗ
+						Документ.ПТЛ_ОтчетОВыполненнойПеревозке.Накладные КАК ПТЛ_ОтчетОВыполненнойПеревозкеНакладные
+					ГДЕ
+						НЕ ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.Рейс = ЗНАЧЕНИЕ(Справочник.ПТЛ_Рейсы.ПустаяСсылка)
+					
+					СГРУППИРОВАТЬ ПО
+						ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.Ссылка,
+						ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.Реализация,
+						ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.ЗаданиеНаПеревозку,
+						ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.Рейс,
+						ПТЛ_ОтчетОВыполненнойПеревозкеНакладные.ДатаПолучения) КАК ВложНакл
+					ПО ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку.Ссылка = ВложНакл.Док
+						И ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку.Рейс = ВложНакл.Рейс
+						И ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку.ЗаданиеНаПеревозку = ВложНакл.ЗаданиеНаПеревозку
+				ПО ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.Ссылка = ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку.Ссылка
+					И ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.Рейс = ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку.Рейс
+					И ПТЛ_ОтчетОВыполненнойПеревозкеМаршруты.ПланДоставки = ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку.ПланДоставки
+				ПОЛНОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+					КОЛИЧЕСТВО(РАЗЛИЧНЫЕ СП_ЗаданияНаПодборОбороты.Номенклатура) КАК КоличествоSKU,
+					СУММА(СП_ЗаданияНаПодборОбороты.ВесФактОборот) КАК ВесФакт,
+					СП_ЗаданияНаПодборОбороты.ЗаданиеНаПодбор КАК ЗаданиеНаПодбор
+				ИЗ
+					РегистрНакопления.СП_ЗаданияНаПодбор.Обороты({(&amp;Дата1)}, {(&amp;Дата2)}, , ) КАК СП_ЗаданияНаПодборОбороты
+				
+				СГРУППИРОВАТЬ ПО
+					СП_ЗаданияНаПодборОбороты.ЗаданиеНаПодбор) КАК ВложВес
+				ПО (ВложВес.ЗаданиеНаПодбор = ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку.ЗаданиеНаПеревозку.ЗаданиеНаПодбор)
+		ГДЕ
+			ПТЛ_ОтчетОВыполненнойПеревозкеЗаданияНаПеревозку.Ссылка.Проведен) КАК ВложДанные
+		ПО ПТЛ_ПланДоставки.ПланДоставки = ВложДанные.ПланДоставки
+			И ПТЛ_ПланДоставки.ЗаданиеНаПеревозку = ВложДанные.ЗаданиеНаПеревозку
+			И ПТЛ_ПланДоставки.Рейс = ВложДанные.Рейс
+ГДЕ
+	ПТЛ_ПланДоставки.Исключено = ЛОЖЬ
+	И ПТЛ_ПланДоставки.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоРейсов</dataPath>
+		<expression>Количество(Различные КоличествоРейсов)</expression>
+		<group>Дивизион</group>
+		<group>Маршрут</group>
+		<group>Отделение</group>
+		<group>ТЭК</group>
+		<group>ТЭК Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>Вес</dataPath>
+		<expression>Сумма(Вес)</expression>
+		<group>Дивизион</group>
+		<group>Маршрут</group>
+		<group>Отделение</group>
+		<group>ТЭК</group>
+		<group>ТЭК Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесФакт</dataPath>
+		<expression>Сумма(ВесФакт)</expression>
+		<group>Дивизион</group>
+		<group>Маршрут</group>
+		<group>Отделение</group>
+		<group>ТЭК</group>
+		<group>ТЭК Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоSKU</dataPath>
+		<expression>Сумма(КоличествоSKU)</expression>
+		<group>Дивизион</group>
+		<group>Маршрут</group>
+		<group>Отделение</group>
+		<group>ТЭК</group>
+		<group>ТЭК Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Дата1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Дата2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Маршрут</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Рейс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПланДоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтчетОВыполненнойПеревозке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаданиеНаПеревозку</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПолученияДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Накладная</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоSKU</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РайонДоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГородДоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоРейсов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТЭК</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Транспортное средство</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТранспортноеСредствоПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТранспортноеСредствоФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Водитель</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВодительПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВодительФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ТипТранспорта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВесФакт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр от ТЭК</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РеестрОтТЭКНомер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РеестрОтТЭКДата</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЕстьНеПодписанные</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РучнаяРазгрузка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>3cd552d3-193c-4d72-85e6-93ba12355677</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Маршрут</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПланДоставки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>КоличествоРейсов</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр выполненных работ по доставке</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ДатаОтгрузки</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Отделение</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Рейс</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Маршрут</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТЭК</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПланДоставки</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ОтчетОВыполненнойПеревозке</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТранспортноеСредствоПлан</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТранспортноеСредствоФакт</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВодительПлан</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВодительФакт</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>РеестрОтТЭКНомер</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>РеестрОтТЭКДата</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

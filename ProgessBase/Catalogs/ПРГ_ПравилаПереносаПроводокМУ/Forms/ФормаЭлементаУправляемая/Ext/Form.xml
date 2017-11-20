@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Height>20</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="47"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="Родитель" id="5">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="49"/>
+		</InputField>
+		<UsualGroup name="СчетДтКт" id="46">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет дт кт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СчетДтКтРасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<InputField name="СчетДт" id="42">
+					<DataPath>Объект.СчетДт</DataPath>
+					<ContextMenu name="СчетДтКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="СчетДтРасширеннаяПодсказка" id="51"/>
+				</InputField>
+				<InputField name="СчетКт" id="44">
+					<DataPath>Объект.СчетКт</DataPath>
+					<ContextMenu name="СчетКтКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="СчетКтРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">СчетКтПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СоответсвиеАналитики" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СоответсвиеАналитики</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соотвествие аналитики</v8:content>
+				</v8:item>
+			</Title>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СоответсвиеАналитикиКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="СоответсвиеАналитикиКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="СоответсвиеАналитикиРасширеннаяПодсказка" id="53"/>
+			<SearchStringAddition name="СоответсвиеАналитикиСтрокаПоиска" id="54">
+				<AdditionSource>
+					<Item>СоответсвиеАналитики</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоответсвиеАналитикиСтрокаПоискаКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="СоответсвиеАналитикиСтрокаПоискаРасширеннаяПодсказка" id="56"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СоответсвиеАналитикиСостояниеПросмотра" id="57">
+				<AdditionSource>
+					<Item>СоответсвиеАналитики</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоответсвиеАналитикиСостояниеПросмотраКонтекстноеМеню" id="58"/>
+				<ExtendedTooltip name="СоответсвиеАналитикиСостояниеПросмотраРасширеннаяПодсказка" id="59"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СоответсвиеАналитикиУправлениеПоиском" id="60">
+				<AdditionSource>
+					<Item>СоответсвиеАналитики</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СоответсвиеАналитикиУправлениеПоискомКонтекстноеМеню" id="61"/>
+				<ExtendedTooltip name="СоответсвиеАналитикиУправлениеПоискомРасширеннаяПодсказка" id="62"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СоответсвиеАналитикиНомерСтроки" id="10">
+					<DataPath>Объект.СоответсвиеАналитики.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоответсвиеАналитикиНомерСтрокиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СоответсвиеАналитикиНомерСтрокиРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<ColumnGroup name="СоответсвиеАналитикиИсточник" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответсвие аналитики источник</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="СоответсвиеАналитикиИсточникРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<ColumnGroup name="СоответсвиеАналитикиГруппаИсточникДт" id="37">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Соответсвие аналитики группа источник дт</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowInHeader>true</ShowInHeader>
+							<ExtendedTooltip name="СоответсвиеАналитикиГруппаИсточникДтРасширеннаяПодсказка" id="65"/>
+							<ChildItems>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоДт1Источник" id="12">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоДтИсточник1</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто1</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоДт1ИсточникКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоДт1ИсточникРасширеннаяПодсказка" id="66"/>
+								</InputField>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоДт2Источник" id="14">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоДтИсточник2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто2</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоДт2ИсточникКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоДт2ИсточникРасширеннаяПодсказка" id="67"/>
+								</InputField>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоДт3Источник" id="16">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоДтИсточник3</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто3</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоДт3ИсточникКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоДт3ИсточникРасширеннаяПодсказка" id="68"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="СоответсвиеАналитикиГруппаИсточникКт" id="38">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Соответсвие аналитики группа источник кт</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowInHeader>true</ShowInHeader>
+							<ExtendedTooltip name="СоответсвиеАналитикиГруппаИсточникКтРасширеннаяПодсказка" id="69"/>
+							<ChildItems>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоКт1Источник" id="18">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоКтИсточник1</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто1</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоКт1ИсточникКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоКт1ИсточникРасширеннаяПодсказка" id="70"/>
+								</InputField>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоКт2Источник" id="20">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоКтИсточник2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто2</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоКт2ИсточникКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоКт2ИсточникРасширеннаяПодсказка" id="71"/>
+								</InputField>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоКт3Источник" id="22">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоКтИсточник3</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто3</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоКт3ИсточникКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоКт3ИсточникРасширеннаяПодсказка" id="72"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="СоответсвиеАналитикиГруппаПриемник" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приемник</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответсвие аналитики группа приемник</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="СоответсвиеАналитикиГруппаПриемникРасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<ColumnGroup name="СоответсвиеАналитикиГруппаПриемникДт" id="40">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Соответсвие аналитики группа приемник дт</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowInHeader>true</ShowInHeader>
+							<ExtendedTooltip name="СоответсвиеАналитикиГруппаПриемникДтРасширеннаяПодсказка" id="74"/>
+							<ChildItems>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоДт1Приемник" id="24">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоДтПриемник1</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто1</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоДт1ПриемникКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоДт1ПриемникРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоДт2Приемник" id="26">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоДтПриемник2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто2</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоДт2ПриемникКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоДт2ПриемникРасширеннаяПодсказка" id="76"/>
+								</InputField>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоДт3Приемник" id="28">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоДтПриемник3</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто3</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоДт3ПриемникКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоДт3ПриемникРасширеннаяПодсказка" id="77"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="СоответсвиеАналитикиГруппаПриемникКт" id="41">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Соответсвие аналитики группа приемник кт</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowInHeader>true</ShowInHeader>
+							<ExtendedTooltip name="СоответсвиеАналитикиГруппаПриемникКтРасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоКт1Приемник" id="30">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоКтПриемник1</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто1</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоКт1ПриемникКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоКт1ПриемникРасширеннаяПодсказка" id="79"/>
+								</InputField>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоКт2Приемник" id="32">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоКтПриемник2</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто2</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоКт2ПриемникКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоКт2ПриемникРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="СоответсвиеАналитикиЗначениеСубконтоКт3Приемник" id="34">
+									<DataPath>Объект.СоответсвиеАналитики.СубконтоКтПриемник3</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Субконто3</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответсвиеАналитикиЗначениеСубконтоКт3ПриемникКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="СоответсвиеАналитикиЗначениеСубконтоКт3ПриемникРасширеннаяПодсказка" id="81"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПРГ_ПравилаПереносаПроводокМУ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Subsystem uuid="cb9f8876-0da2-4b1c-9d79-03648d998f26">
+		<Properties>
+			<Name>ПР_ПодсистемаРекламации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсистема рекламации</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(ПР) Подсистема рекламации</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПР_Претензия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПР_ПричинаПретензии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПР_РешениеПоПретензиям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПР_ВидыПричинПретензии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПР_Претензии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПР_РеестрЗаявокПоПретензиям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АП_СтатусыДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПР_СтатусыПретензии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.ПР_ИнтерфейсРекламации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПР_ВидыПретензий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПР_ЭтапыВозникновенияПретензий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПР_Рекламации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаДолга</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаРеализации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаЗаписейРегистров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаказПокупателя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ХранилищеДополнительнойИнформации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыОперацийПеремещениеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.СвязанныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АктСверкиВзаиморасчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АП_ОбщегоНазначенияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СП_СтатусыПриходногоОрдераСолво</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПР_ПроверимНаличиеДублейПоПретензии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПРГ_Претензии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.АП_ПроверитьВозможностьОтменыПроведенияДокументовПоПретензии</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

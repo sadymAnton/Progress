@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус</dataPath>
+			<field>Статус</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Бонус</dataPath>
+			<field>Бонус</field>
+			<presentationExpression>Бонус.НаименованиеПолное</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КаналСбыта</dataPath>
+			<field>КаналСбыта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонПериод</dataPath>
+			<field>КонПериод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МетодПредоставленияБонуса</dataPath>
+			<field>МетодПредоставленияБонуса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МинПроцентВыпПлана</dataPath>
+			<field>МинПроцентВыпПлана</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачПериод</dataPath>
+			<field>НачПериод</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Процент</dataPath>
+			<field>Процент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СпособОтгрузки</dataPath>
+			<field>СпособОтгрузки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаБюджетаДДСсНДС</dataPath>
+			<field>СуммаБюджетаДДСсНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипБонуса</dataPath>
+			<field>ТипБонуса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипГрафика</dataPath>
+			<field>ТипГрафика</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=MMMM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидРасчБазы</dataPath>
+			<field>ВидРасчБазы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>График</dataPath>
+			<field>График</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПрогнознаяСумма</dataPath>
+			<field>ПрогнознаяСумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АктСсылка</dataPath>
+			<field>АктСсылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорректировкаДолгаСсылка</dataPath>
+			<field>КорректировкаДолгаСсылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоступлениеСсылка</dataPath>
+			<field>ПоступлениеСсылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УстановкаСкидокСсылка</dataPath>
+			<field>УстановкаСкидокСсылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаявкаНаРасходованиеСредствСсылка</dataPath>
+			<field>ЗаявкаНаРасходованиеСредствСсылка</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Дата,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.График,
+	ПКК_АктНачисленияБонусовУслугТабличнаяЧасть.Ссылка КАК АктСсылка,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Организация,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Контрагент,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.ДоговорКонтрагента,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.МетодПредоставленияБонуса,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Статус,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Ответственный,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.ТипГрафика,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.НачПериод,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.КонПериод,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Бонус,
+	ВЫБОР
+		КОГДА ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Шкала &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПРГ_ШкалыНачисленияБонусов.ПустаяСсылка)
+			ТОГДА ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Шкала.ПроцентыНачисленияСтрокойВозвр
+		ИНАЧЕ ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Процент
+	КОНЕЦ КАК Процент,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.ПрогнознаяСумма,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.СтавкаНДС,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.СуммаБюджетаДДСсНДС,
+	ВЫРАЗИТЬ(ПКК_ГрафикНачисленияВыплатыБонусовУслуг.КаналСбыта КАК СТРОКА(255)) КАК КаналСбыта,
+	ВЫРАЗИТЬ(ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Склад КАК СТРОКА(255)) КАК Склад,
+	ВЫРАЗИТЬ(ПКК_ГрафикНачисленияВыплатыБонусовУслуг.СпособОтгрузки КАК СТРОКА(255)) КАК СпособОтгрузки,
+	ВЫБОР
+		КОГДА ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Шкала &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПРГ_ШкалыНачисленияБонусов.ПустаяСсылка)
+			ТОГДА ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Шкала.ПроцентыВыполненияСтрокойВозвр
+		ИНАЧЕ ПКК_ГрафикНачисленияВыплатыБонусовУслуг.МинПроцентВыпПлана
+	КОНЕЦ КАК МинПроцентВыпПлана,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.ТипБонуса,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.ВидРасчБазы,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Валюта,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Комментарий,
+	ПоступлениеТоваровУслуг.Ссылка КАК ПоступлениеСсылка,
+	КорректировкаДолга.Ссылка КАК КорректировкаДолгаСсылка,
+	МАКСИМУМ(УстановкаСкидокНоменклатурыПолучателиСкидки.Ссылка) КАК УстановкаСкидокСсылка,
+	ЗаявкаНаРасходованиеСредств.Ссылка КАК ЗаявкаНаРасходованиеСредствСсылка
+ИЗ
+	РегистрСведений.ПКК_ГрафикНачисленияВыплатыБонусовУслуг КАК ПКК_ГрафикНачисленияВыплатыБонусовУслуг
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПКК_АктНачисленияБонусовУслуг.ТабличнаяЧасть КАК ПКК_АктНачисленияБонусовУслугТабличнаяЧасть
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПоступлениеТоваровУслуг КАК ПоступлениеТоваровУслуг
+			ПО ПКК_АктНачисленияБонусовУслугТабличнаяЧасть.Ссылка = ПоступлениеТоваровУслуг.ПКК_АктНачисленияБонусов
+				И (ПоступлениеТоваровУслуг.Проведен)
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.КорректировкаДолга КАК КорректировкаДолга
+			ПО ПКК_АктНачисленияБонусовУслугТабличнаяЧасть.Ссылка = КорректировкаДолга.ПКК_АктНачисленияБонусов
+				И (КорректировкаДолга.Проведен)
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.УстановкаСкидокНоменклатуры.ПолучателиСкидки КАК УстановкаСкидокНоменклатурыПолучателиСкидки
+			ПО ПКК_АктНачисленияБонусовУслугТабличнаяЧасть.Ссылка = УстановкаСкидокНоменклатурыПолучателиСкидки.ПЦ_ОграничениеСкидкиНаценки
+				И (УстановкаСкидокНоменклатурыПолучателиСкидки.Ссылка.Проведен)
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаявкаНаРасходованиеСредств КАК ЗаявкаНаРасходованиеСредств
+			ПО ПКК_АктНачисленияБонусовУслугТабличнаяЧасть.Ссылка = ЗаявкаНаРасходованиеСредств.ПКК_АктНачисленияБонусов
+				И (ЗаявкаНаРасходованиеСредств.Проведен)
+		ПО ПКК_ГрафикНачисленияВыплатыБонусовУслуг.УИграфик = ПКК_АктНачисленияБонусовУслугТабличнаяЧасть.УИграфик
+			И (ПКК_АктНачисленияБонусовУслугТабличнаяЧасть.Ссылка.Проведен)
+ГДЕ
+	(ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Дата &lt;= &amp;КонецПериода
+			ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1))
+	И (ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Дата &gt;= &amp;НачалоПериода
+			ИЛИ &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1))
+
+СГРУППИРОВАТЬ ПО
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.СтавкаНДС,
+	ВЫРАЗИТЬ(ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Склад КАК СТРОКА(255)),
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Контрагент,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.ДоговорКонтрагента,
+	ПКК_АктНачисленияБонусовУслугТабличнаяЧасть.Ссылка,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.График,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Дата,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Организация,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.ВидРасчБазы,
+	КорректировкаДолга.Ссылка,
+	ПоступлениеТоваровУслуг.Ссылка,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Комментарий,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Валюта,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.МетодПредоставленияБонуса,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Ответственный,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.ТипГрафика,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Бонус,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.КонПериод,
+	ВЫРАЗИТЬ(ПКК_ГрафикНачисленияВыплатыБонусовУслуг.СпособОтгрузки КАК СТРОКА(255)),
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Статус,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.НачПериод,
+	ВЫРАЗИТЬ(ПКК_ГрафикНачисленияВыплатыБонусовУслуг.КаналСбыта КАК СТРОКА(255)),
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.ТипБонуса,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.ПрогнознаяСумма,
+	ПКК_ГрафикНачисленияВыплатыБонусовУслуг.СуммаБюджетаДДСсНДС,
+	ЗаявкаНаРасходованиеСредств.Ссылка,
+	ВЫБОР
+		КОГДА ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Шкала &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПРГ_ШкалыНачисленияБонусов.ПустаяСсылка)
+			ТОГДА ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Шкала.ПроцентыВыполненияСтрокойВозвр
+		ИНАЧЕ ПКК_ГрафикНачисленияВыплатыБонусовУслуг.МинПроцентВыпПлана
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Шкала &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПРГ_ШкалыНачисленияБонусов.ПустаяСсылка)
+			ТОГДА ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Шкала.ПроцентыНачисленияСтрокойВозвр
+		ИНАЧЕ ПКК_ГрафикНачисленияВыплатыБонусовУслуг.Процент
+	КОНЕЦ</query>
+	</dataSet>
+	<totalField>
+		<dataPath>СуммаБюджетаДДСсНДС</dataPath>
+		<expression>Сумма(СуммаБюджетаДДСсНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПрогнознаяСумма</dataPath>
+		<expression>Сумма(ПрогнознаяСумма)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Статус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>График</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДоговорКонтрагента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Бонус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидРасчБазы</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид расчетной базы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НачПериод</dcsset:field>
+					<dcsset:title>База с</dcsset:title>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КонПериод</dcsset:field>
+					<dcsset:title>База по</dcsset:title>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипБонуса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МетодПредоставленияБонуса</dcsset:field>
+					<dcsset:title>Метод предост. бонуса</dcsset:title>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипГрафика</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Процент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МинПроцентВыпПлана</dcsset:field>
+					<dcsset:title>Мин. % вып. плана</dcsset:title>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Ответственный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Склад</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СпособОтгрузки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КаналСбыта</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Категория клиента</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтавкаНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПрогнознаяСумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаБюджетаДДСсНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АктСсылка</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Акт начисленных бонусов и услуг</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПоступлениеСсылка</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ поступления товаров и услуг</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КорректировкаДолгаСсылка</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ корректировка долга</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УстановкаСкидокСсылка</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ установки скидок номенклатуры</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаявкаНаРасходованиеСредствСсылка</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ запрос на оплату</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент.Дивизион</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПРГДивизионы.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент.НСИ_КаналПродаж</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НСИ_КаналыПродаж.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">График</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Документ.ПКК_ГрафикНачисленияВыплатыБонусовИМаркетинговыхУслуг.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДоговорКонтрагента</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Статус</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Организация</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Контрагент</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>График</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ДоговорКонтрагента</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Валюта</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item xsi:type="dcsset:StructureItemGroup">
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

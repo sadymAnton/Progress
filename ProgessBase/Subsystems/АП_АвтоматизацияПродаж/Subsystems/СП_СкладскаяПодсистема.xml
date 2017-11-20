@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Subsystem uuid="5e487fd7-76cf-4e49-b8c7-e7b980e400a8">
+		<Properties>
+			<Name>СП_СкладскаяПодсистема</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Складская подсистема управления готовой продукцией</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(СП) Подсистема управления складом готовой продукции</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СП_УправлениеСкладом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СП_ЗаданиеНаПодбор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СП_РеестрОтгрузокСоСклада</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АП_ПечатьСопроводительныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АП_ПакетнаяПечать</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АП_ПечатныеФормыДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СП_СтатусыЗаданияНаПодбор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СП_ВидыОперацииЗаданияНаПодбор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.СП_ЗаданияНаПодбор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.СП_СкладскаяПодсистема</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВнутреннийЗаказ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АП_ОбщегоНазначенияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АП_НастройкиПечатныхФорм</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АП_ПечатныеФормы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АП_НастройкиПечатныхФорм</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПеремещениеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РеализацияТоваровУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаказПокупателя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.СвязанныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПриУстановкеНовогоКодаСправочника</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ТребованиеНакладная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.СП_ДокументыПоЗаданиюНаПодбор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗакрытиеВнутреннихЗаказов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗакрытиеЗаказовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПРГ_ВидыОперацийВнутреннегоЗаказа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РезервированиеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СП_ЗаданиеНаСмену</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СП_ПривязкаСкладовКОтделениям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.АП_Подписанты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ОтветственныеЛицаОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеТоваровУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.Закупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыВРезервеНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СП_СтатусыПоступленияТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.Закупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыКПолучениюНаСклады</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СП_ПакетнаяЗагрузкаВнутреннихЗаказов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.АП_СтатусыЗаказов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВыпускПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СП_СтатусыЗаданияНаСмену</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СП_СтатусыПеремещенияТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьТоварыКПолучению</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ТоварыВРезервеНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АнализДоступностиТоваровНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьТоварыНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СП_ОтчетПоЗаданиямНаСмену</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КП_ФиксированныеРезервыПоНазначениюРезервов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КП_ФиксированныеРезервыПоНазначениюРезервов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПТЛ_ПланОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СП_ОтчетПоЗаданиямНаПодбор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.АнализВнутреннихЗаказов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СП_ОтчетПоВнутреннимЗаказам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СП_ОтчетПоПеремещениямТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КомплектацияНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СП_СтатусыКомплектацииНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СП_ОтчетПоПереупаковке</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ИнвентаризацияТоваровНаСкладе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СП_СравнениеОстатков_1С_СолвоПоСтатусам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СП_СравнениеДвиженияПродукции_1С_Солво</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СП_ВедомостьПоТоварамВРезервеНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СП_ЗагрузкаФактКомплектации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СП_НастройкаФормированияТребованияНакладная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СП_СтатусыТребованияНакладной</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОприходованиеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.АП_ПередЗаписьюДокументаПроверкаПоСтатусуДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВозвратТоваровПоставщику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СП_СтатусыВозвратТоваровПоставщику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.СвободныеОстатки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РазмещениеЗаказовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РасчетыСКонтрагентами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПТЛ_ЗаявкиНаПриход</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.АП_ПередЗаписьюПроверкаДублейПоЗаданияНаПодбор</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

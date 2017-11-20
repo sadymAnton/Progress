@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Партнеры</v8:content>
+		</v8:item>
+	</Title>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОткрыть" id="20">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.Открыть</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Magnifier</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Открыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаОткрытьРасширеннаяПодсказка" id="27"/>
+			</Button>
+			<Button name="ФормаДобавитьТорговуюСеть" id="21">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ДобавитьТорговуюСеть</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>автоматически</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаДобавитьТорговуюСетьРасширеннаяПодсказка" id="28"/>
+			</Button>
+			<Button name="ФормаДобавитьТСВручную" id="22">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ДобавитьТСВручную</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>вручную</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаДобавитьТСВручнуюРасширеннаяПодсказка" id="29"/>
+			</Button>
+			<Button name="ФормаНайти" id="16">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Item.СписокПартнеров.StandardCommand.Find</CommandName>
+				<ExtendedTooltip name="ФормаНайтиРасширеннаяПодсказка" id="30"/>
+			</Button>
+			<Button name="ФормаОтменитьПоиск" id="17">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Item.СписокПартнеров.StandardCommand.CancelSearch</CommandName>
+				<ExtendedTooltip name="ФормаОтменитьПоискРасширеннаяПодсказка" id="31"/>
+			</Button>
+			<Button name="ФормаВывестиСписок" id="19">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Item.СписокПартнеров.StandardCommand.OutputList</CommandName>
+				<ExtendedTooltip name="ФормаВывестиСписокРасширеннаяПодсказка" id="32"/>
+			</Button>
+			<Button name="ФормаУдалитьТорговуюСеть" id="26">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.УдалитьТорговуюСеть</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаУдалитьТорговуюСетьРасширеннаяПодсказка" id="33"/>
+			</Button>
+			<Button name="ФормаНастройкаСписка" id="18">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Item.СписокПартнеров.StandardCommand.ListSettings</CommandName>
+				<ExtendedTooltip name="ФормаНастройкаСпискаРасширеннаяПодсказка" id="34"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="СписокПартнеров" id="1">
+			<SkipOnInput>false</SkipOnInput>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<SelectionMode>SingleRow</SelectionMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<DataPath>СписокПартнеров</DataPath>
+			<RowPictureDataPath>СписокПартнеров.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокПартнеровКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СписокПартнеровКонтекстноеМенюОбновить" id="25">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокПартнеров.StandardCommand.Refresh</CommandName>
+						<ExtendedTooltip name="СписокПартнеровКонтекстноеМенюОбновитьРасширеннаяПодсказка" id="35"/>
+					</Button>
+					<Button name="СписокПартнеровКонтекстноеМенюВывестиСписок" id="24">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокПартнеров.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="СписокПартнеровКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="36"/>
+					</Button>
+					<Button name="СписокПартнеровКонтекстноеМенюНайти" id="23">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.СписокПартнеров.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="СписокПартнеровКонтекстноеМенюНайтиРасширеннаяПодсказка" id="37"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокПартнеровКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокПартнеровРасширеннаяПодсказка" id="38"/>
+			<SearchStringAddition name="СписокПартнеровСтрокаПоиска" id="39">
+				<AdditionSource>
+					<Item>СписокПартнеров</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокПартнеровСтрокаПоискаКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="СписокПартнеровСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокПартнеровСостояниеПросмотра" id="42">
+				<AdditionSource>
+					<Item>СписокПартнеров</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокПартнеровСостояниеПросмотраКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="СписокПартнеровСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокПартнеровУправлениеПоиском" id="45">
+				<AdditionSource>
+					<Item>СписокПартнеров</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокПартнеровУправлениеПоискомКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="СписокПартнеровУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокПартнеровВыбор</Event>
+				<Event name="BeforeAddRow">СписокПартнеровПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">СписокПартнеровПередУдалением</Event>
+				<Event name="BeforeRowChange">СписокПартнеровПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СписокПартнеровНаименование" id="4">
+					<DataPath>СписокПартнеров.Description</DataPath>
+					<ContextMenu name="СписокПартнеровНаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СписокПартнеровНаименованиеРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="СписокПартнеровGLN" id="6">
+					<DataPath>СписокПартнеров.GLN</DataPath>
+					<ContextMenu name="СписокПартнеровGLNКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="СписокПартнеровGLNРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="СписокПартнеровСсылка" id="8">
+					<DataPath>СписокПартнеров.Ref</DataPath>
+					<ContextMenu name="СписокПартнеровСсылкаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СписокПартнеровСсылкаРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<CheckBoxField name="СписокПартнеровТорговаяСеть" id="12">
+					<DataPath>СписокПартнеров.ТорговаяСеть</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокПартнеровТорговаяСетьКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СписокПартнеровТорговаяСетьРасширеннаяПодсказка" id="51"/>
+				</CheckBoxField>
+				<CheckBoxField name="СписокПартнеровПоставщик" id="10">
+					<DataPath>СписокПартнеров.Поставщик</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокПартнеровПоставщикКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СписокПартнеровПоставщикРасширеннаяПодсказка" id="52"/>
+				</CheckBoxField>
+				<LabelField name="СписокПартнеровСтандартнаяКартинка" id="14">
+					<DataPath>СписокПартнеров.DefaultPicture</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СписокПартнеровСтандартнаяКартинкаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокПартнеровСтандартнаяКартинкаРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурEDI</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокПартнеров" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список партнеров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	КонтурEDI_ДополнительныеСправочники.Ссылка,
+	КонтурEDI_ДополнительныеСправочники.Наименование,
+	ВЫРАЗИТЬ(ТаблицаРеквизитGLN.Значение КАК СТРОКА(13)) КАК GLN,
+	ВЫРАЗИТЬ(ТаблицаРеквизитТорговаяСеть.Значение КАК БУЛЕВО) КАК ТорговаяСеть,
+	ВЫРАЗИТЬ(ТаблицаРеквизитПоставщик.Значение КАК БУЛЕВО) КАК Поставщик
+ИЗ
+	Справочник.КонтурEDI_ДополнительныеСправочники КАК КонтурEDI_ДополнительныеСправочники
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КонтурEDI_ДополнительныеРеквизиты КАК ТаблицаРеквизитGLN
+		ПО КонтурEDI_ДополнительныеСправочники.Ссылка = ТаблицаРеквизитGLN.Объект
+			И (ТаблицаРеквизитGLN.Свойство = "GLN_Партнера")
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КонтурEDI_ДополнительныеРеквизиты КАК ТаблицаРеквизитТорговаяСеть
+		ПО КонтурEDI_ДополнительныеСправочники.Ссылка = ТаблицаРеквизитТорговаяСеть.Объект
+			И (ТаблицаРеквизитТорговаяСеть.Свойство = "ПартнерКакТорговаяСеть")
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КонтурEDI_ДополнительныеРеквизиты КАК ТаблицаРеквизитПоставщик
+		ПО КонтурEDI_ДополнительныеСправочники.Ссылка = ТаблицаРеквизитПоставщик.Объект
+			И (ТаблицаРеквизитПоставщик.Свойство = "ПартнерКакПоставщик")
+ГДЕ
+	КонтурEDI_ДополнительныеСправочники.ИмяСправочника = "Партнеры"
+	И НЕ КонтурEDI_ДополнительныеСправочники.ПометкаУдаления</QueryText>
+				<MainTable>Catalog.КонтурEDI_ДополнительныеСправочники</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПутьКФормам" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к формам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокПартнеровСсылка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокПартнеров.Ссылка</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">СписокПартнеров.Ссылка</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Открыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КоманднаяПанельТСОткрыть</Action>
+		</Command>
+		<Command name="ДобавитьТорговуюСеть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить торговую сеть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить торговую сеть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьТорговуюСеть</Action>
+		</Command>
+		<Command name="УдалитьТорговуюСеть" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить партнера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить торговую сеть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьТорговуюСеть</Action>
+		</Command>
+		<Command name="ДобавитьТСВручную" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить партнера вручную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить ТСВручную</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьТСВручную</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="МодальностьЗапрещена">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ОткрытаКакВыбор">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

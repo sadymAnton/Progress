@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресПоставки</dataPath>
+			<field>АдресПоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесБруттоПлан</dataPath>
+			<field>ВесБруттоПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес брутто, т</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Город</dataPath>
+			<field>Город</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Город</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаПеревозку</dataPath>
+			<field>ЗаданиеНаПеревозку</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаПодбор</dataPath>
+			<field>ЗаданиеНаПодбор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоАдресовПоставки</dataPath>
+			<field>КоличествоАдресовПоставки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество адресов поставки</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗаданийНаПеревозку</dataPath>
+			<field>КоличествоЗаданийНаПеревозку</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество заданий на перевозку</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПаллетоМестПлан</dataPath>
+			<field>КоличествоПаллетоМестПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество паллето мест</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъемПлан</dataPath>
+			<field>ОбъемПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем, т</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отделение</dataPath>
+			<field>Отделение</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Получатель</dataPath>
+			<field>Получатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регион</dataPath>
+			<field>Регион</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регион</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипТС</dataPath>
+			<field>ТипТС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип транспортного средства</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Маршрут</dataPath>
+			<field>Маршрут</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маршрут</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГрузовместимостьРег</dataPath>
+			<field>ГрузовместимостьРег</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Грузовместимость рег</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГрузоподъемностьРег</dataPath>
+			<field>ГрузоподъемностьРег</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Грузоподъемность рег</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНеобходимогоТранспортаПоВесуРег</dataPath>
+			<field>КоличествоНеобходимогоТранспортаПоВесуРег</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество необходимого транспорта по весу рег</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНеобходимогоТранспортаПоОбъемуРег</dataPath>
+			<field>КоличествоНеобходимогоТранспортаПоОбъемуРег</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество необходимого транспорта по объему рег</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНеобходимогоТранспортаПоПаллетамРег</dataPath>
+			<field>КоличествоНеобходимогоТранспортаПоПаллетамРег</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество необходимого транспорта по паллетам рег</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МаксимальноеКоличествоПаллетРег</dataPath>
+			<field>МаксимальноеКоличествоПаллетРег</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальное количество паллет рег</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.Организация КАК Организация,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.Отделение,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.Регион КАК Регион,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.ГородДоставки КАК Город,
+	ВЫБОР
+		КОГДА ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.ТипТранспорта = ЗНАЧЕНИЕ(Справочник.ПТЛ_ТипыТранспортныхСредств.ПустаяСсылка)
+			ТОГДА &amp;ТипТранспорта
+		ИНАЧЕ ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.ТипТранспорта
+	КОНЕЦ КАК ТипТС,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.АдресПоставки.ПТЛ_Маршрут КАК Маршрут,
+	ЕСТЬNULL(ПТЛ_ТипыТранспортныхСредств.Грузоподъемность, 0) КАК ГрузоподъемностьРег,
+	ЕСТЬNULL(ПТЛ_ТипыТранспортныхСредств.Грузовместимость, 0) КАК ГрузовместимостьРег,
+	ЕСТЬNULL(ПТЛ_ТипыТранспортныхСредств.КоличествоПаллетоМест, 0) КАК МаксимальноеКоличествоПаллетРег,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку) КАК КоличествоЗаданийНаПеревозку,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПТЛ_ЗаданияНаПеревозкуОбороты.АдресПоставки) КАК КоличествоАдресовПоставки,
+	СУММА(ПТЛ_ЗаданияНаПеревозкуОбороты.ВесБруттоПланОборот) КАК ВесБруттоПлан,
+	СУММА(ПТЛ_ЗаданияНаПеревозкуОбороты.ОбъемПланОборот) КАК ОбъемПлан,
+	СУММА(ПТЛ_ЗаданияНаПеревозкуОбороты.КоличествоПаллетоМестПланОборот) КАК КоличествоПаллетоМестПлан,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ПТЛ_ТипыТранспортныхСредств.Грузоподъемность, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА СУММА(ПТЛ_ЗаданияНаПеревозкуОбороты.ВесБруттоПланОборот) / ПТЛ_ТипыТранспортныхСредств.Грузоподъемность &lt; 1
+					ТОГДА 1
+				ИНАЧЕ СУММА(ПТЛ_ЗаданияНаПеревозкуОбороты.ВесБруттоПланОборот) / ПТЛ_ТипыТранспортныхСредств.Грузоподъемность
+			КОНЕЦ
+	КОНЕЦ КАК КоличествоНеобходимогоТранспортаПоВесуРег,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ПТЛ_ТипыТранспортныхСредств.Грузовместимость, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА СУММА(ПТЛ_ЗаданияНаПеревозкуОбороты.ОбъемПланОборот) / ПТЛ_ТипыТранспортныхСредств.Грузовместимость &lt; 1
+					ТОГДА 1
+				ИНАЧЕ СУММА(ПТЛ_ЗаданияНаПеревозкуОбороты.ОбъемПланОборот) / ПТЛ_ТипыТранспортныхСредств.Грузовместимость
+			КОНЕЦ
+	КОНЕЦ КАК КоличествоНеобходимогоТранспортаПоОбъемуРег,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ПТЛ_ТипыТранспортныхСредств.КоличествоПаллетоМест, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА СУММА(ПТЛ_ЗаданияНаПеревозкуОбороты.КоличествоПаллетоМестПланОборот) / ПТЛ_ТипыТранспортныхСредств.КоличествоПаллетоМест &lt; 1
+					ТОГДА 1
+				ИНАЧЕ СУММА(ПТЛ_ЗаданияНаПеревозкуОбороты.КоличествоПаллетоМестПланОборот) / ПТЛ_ТипыТранспортныхСредств.КоличествоПаллетоМест
+			КОНЕЦ
+	КОНЕЦ КАК КоличествоНеобходимогоТранспортаПоПаллетамРег
+ИЗ
+	РегистрНакопления.ПТЛ_ЗаданияНаПеревозку.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК ПТЛ_ЗаданияНаПеревозкуОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ПТЛ_ТипыТранспортныхСредств КАК ПТЛ_ТипыТранспортныхСредств
+		ПО (ПТЛ_ТипыТранспортныхСредств.Ссылка = ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.ТипТранспорта)
+
+СГРУППИРОВАТЬ ПО
+	ПТЛ_ЗаданияНаПеревозкуОбороты.Отделение,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.Организация,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.АдресПоставки.НСИ_Регион,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.АдресПоставки.НСИ_Город,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку,
+	ЕСТЬNULL(ПТЛ_ТипыТранспортныхСредств.Грузоподъемность, 0),
+	ЕСТЬNULL(ПТЛ_ТипыТранспортныхСредств.Грузовместимость, 0),
+	ЕСТЬNULL(ПТЛ_ТипыТранспортныхСредств.КоличествоПаллетоМест, 0),
+	ПТЛ_ТипыТранспортныхСредств.Грузоподъемность,
+	ПТЛ_ТипыТранспортныхСредств.Грузовместимость,
+	ПТЛ_ТипыТранспортныхСредств.КоличествоПаллетоМест,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.АдресПоставки.ПТЛ_Маршрут,
+	ВЫБОР
+		КОГДА ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.ТипТранспорта = ЗНАЧЕНИЕ(Справочник.ПТЛ_ТипыТранспортныхСредств.ПустаяСсылка)
+			ТОГДА &amp;ТипТранспорта
+		ИНАЧЕ ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.ТипТранспорта
+	КОНЕЦ,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.Регион,
+	ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПеревозку.ГородДоставки</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Грузоподъемность</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ТипТранспорта=ТипТС ТОГДА ТипТС.Грузоподъемность ИНАЧЕ ГрузоподъемностьРег КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Грузоподъемность</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>13</v8:Digits>
+				<v8:FractionDigits>1</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Грузовместимость</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ТипТранспорта=ТипТС ТОГДА ТипТС.Грузовместимость ИНАЧЕ ГрузовместимостьРег КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Грузовместимость</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>13</v8:Digits>
+				<v8:FractionDigits>1</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>МаксимальноеКоличествоПаллет</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ТипТранспорта=ТипТС ТОГДА ТипТС.КоличествоПаллетоМест ИНАЧЕ МаксимальноеКоличествоПаллетРег КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Максимальное количество паллет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>13</v8:Digits>
+				<v8:FractionDigits>1</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоНеобходимогоТранспортаПоВесу</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ТипТранспорта=ТипТС ТОГДА 
+
+ВЫБОР
+		КОГДА ТипТС.Грузоподъемность = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА (ВесБруттоПлан) / ТипТС.Грузоподъемность &lt; 1
+					ТОГДА 1
+				ИНАЧЕ (ВесБруттоПлан) / ТипТС.Грузоподъемность
+			КОНЕЦ
+	КОНЕЦ  
+
+ИНАЧЕ 	
+
+ВЫБОР
+		КОГДА ГрузоподъемностьРег = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА (ВесБруттоПлан) / ГрузоподъемностьРег &lt; 1
+					ТОГДА 1
+				ИНАЧЕ (ВесБруттоПлан) / ГрузоподъемностьРег
+			КОНЕЦ
+	КОНЕЦ 
+
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество необходимого транспорта по весу</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>13</v8:Digits>
+				<v8:FractionDigits>3</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоНеобходимогоТранспортаПоОбъему</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ТипТранспорта=ТипТС ТОГДА 
+
+ВЫБОР
+		КОГДА ТипТС.Грузовместимость = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА (ОбъемПлан) / ТипТС.Грузовместимость &lt; 1
+					ТОГДА 1
+				ИНАЧЕ (ОбъемПлан) / ТипТС.Грузовместимость
+			КОНЕЦ
+	КОНЕЦ  
+
+ИНАЧЕ 	
+
+ВЫБОР
+		КОГДА ГрузовместимостьРег = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА (ОбъемПлан) / ГрузовместимостьРег &lt; 1
+					ТОГДА 1
+				ИНАЧЕ (ОбъемПлан) / ГрузовместимостьРег
+			КОНЕЦ
+	КОНЕЦ 
+
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество необходимого транспорта по объему</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>13</v8:Digits>
+				<v8:FractionDigits>3</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КоличествоНеобходимогоТранспортаПоПаллетам</dataPath>
+		<expression>ВЫБОР КОГДА &amp;ТипТранспорта=ТипТС ТОГДА 
+
+ВЫБОР
+		КОГДА ТипТС.КоличествоПаллетоМест = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА (КоличествоПаллетоМестПлан) / ТипТС.КоличествоПаллетоМест &lt; 1
+					ТОГДА 1
+				ИНАЧЕ (КоличествоПаллетоМестПлан) / ТипТС.КоличествоПаллетоМест
+			КОНЕЦ
+	КОНЕЦ  
+
+ИНАЧЕ 	
+
+ВЫБОР
+		КОГДА МаксимальноеКоличествоПаллетРег = 0
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА (КоличествоПаллетоМестПлан) / МаксимальноеКоличествоПаллетРег &lt; 1
+					ТОГДА 1
+				ИНАЧЕ (КоличествоПаллетоМестПлан) / МаксимальноеКоличествоПаллетРег
+			КОНЕЦ
+	КОНЕЦ 
+
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Количество необходимого транспорта по паллетам</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>13</v8:Digits>
+				<v8:FractionDigits>3</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<totalField>
+		<dataPath>ВесБруттоПлан</dataPath>
+		<expression>Сумма(ВесБруттоПлан)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ОбъемПлан</dataPath>
+		<expression>Сумма(ОбъемПлан)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПаллетоМестПлан</dataPath>
+		<expression>Сумма(КоличествоПаллетоМестПлан)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ТипТС</group>
+	</totalField>
+	<totalField>
+		<dataPath>Грузовместимость</dataPath>
+		<expression>Сумма(Грузовместимость)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>Грузоподъемность</dataPath>
+		<expression>Сумма(Грузоподъемность)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>МаксимальноеКоличествоПаллет</dataPath>
+		<expression>Сумма(МаксимальноеКоличествоПаллет)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоАдресовПоставки</dataPath>
+		<expression>Сумма(КоличествоАдресовПоставки)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЗаданийНаПеревозку</dataPath>
+		<expression>Сумма(КоличествоЗаданийНаПеревозку)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНеобходимогоТранспортаПоВесу</dataPath>
+		<expression>Сумма(КоличествоНеобходимогоТранспортаПоВесу)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНеобходимогоТранспортаПоОбъему</dataPath>
+		<expression>Сумма(КоличествоНеобходимогоТранспортаПоОбъему)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНеобходимогоТранспортаПоПаллетам</dataPath>
+		<expression>Сумма(КоличествоНеобходимогоТранспортаПоПаллетам)</expression>
+		<group>Город</group>
+		<group>Город Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Регион</group>
+		<group>Регион Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТипТранспорта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип транспорта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ПТЛ_ТипыТранспортныхСредств</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Отделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипТС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипТ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Маршрут</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регион</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Город</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Грузоподъемность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Грузовместимость</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МаксимальноеКоличествоПаллет</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЗаданийНаПеревозку</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоАдресовПоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВесБруттоПлан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбъемПлан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПаллетоМестПлан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоНеобходимогоТранспортаПоВесу</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоНеобходимогоТранспортаПоОбъему</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоНеобходимогоТранспортаПоПаллетам</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Отделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НСИ_Отделения.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТипТранспорта</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.ПТЛ_ТипыТранспортныхСредств.ПустаяСсылка</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Отделение</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Маршрут</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Регион</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Город</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановый расчет необходимого транспорта</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Регион</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Город</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

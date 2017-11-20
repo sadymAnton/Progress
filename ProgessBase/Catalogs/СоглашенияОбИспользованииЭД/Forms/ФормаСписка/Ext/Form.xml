@@ -1,0 +1,1429 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСтраницы" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="118"/>
+			<ChildItems>
+				<Pages name="ГруппаСоглашения" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа соглашения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа соглашения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСоглашенияРасширеннаяПодсказка" id="119"/>
+					<ChildItems>
+						<Page name="ГруппаСоглашенияЧерезОЭДО" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Через операторов ЭДО</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа соглашения через ОЭДО</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаСоглашенияЧерезОЭДОРасширеннаяПодсказка" id="120"/>
+							<ChildItems>
+								<Table name="СписокСоглашенийЧерезОЭДО" id="54">
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>СписокСоглашенийЧерезОЭДО</DataPath>
+									<RowPictureDataPath>СписокСоглашенийЧерезОЭДО.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СписокСоглашенийЧерезОЭДОКонтекстноеМеню" id="55"/>
+									<AutoCommandBar name="СписокСоглашенийЧерезОЭДОКоманднаяПанель" id="56">
+										<ChildItems>
+											<ButtonGroup name="ГруппаЛокальныхКоманд" id="117">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа локальных команд</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа локальных команд</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ГруппаЛокальныхКомандРасширеннаяПодсказка" id="121"/>
+												<ChildItems>
+													<Button name="СписокСоглашенийЧерезОЭДОСоздатьНовое" id="116">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.СоздатьНовое</CommandName>
+														<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОСоздатьНовоеРасширеннаяПодсказка" id="122"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+											<ButtonGroup name="ГруппаКнопокГлобальныхКомандОбменЧерезОператоровЭДО" id="72">
+												<EnableContentChange>true</EnableContentChange>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа кнопок глобальных команд обмен через операторов ЭДО</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа кнопок глобальных команд прямой обмен</v8:content>
+													</v8:item>
+												</ToolTip>
+												<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+												<ExtendedTooltip name="ГруппаКнопокГлобальныхКомандОбменЧерезОператоровЭДОРасширеннаяПодсказка" id="123"/>
+											</ButtonGroup>
+											<Button name="СписокСоглашенийЧерезОЭДОСправка" id="70">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.StandardCommand.Help</CommandName>
+												<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОСправкаРасширеннаяПодсказка" id="124"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОРасширеннаяПодсказка" id="125"/>
+									<SearchStringAddition name="СписокСоглашенийЧерезОЭДОСтрокаПоиска" id="126">
+										<AdditionSource>
+											<Item>СписокСоглашенийЧерезОЭДО</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоглашенийЧерезОЭДОСтрокаПоискаКонтекстноеМеню" id="127"/>
+										<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОСтрокаПоискаРасширеннаяПодсказка" id="128"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокСоглашенийЧерезОЭДОСостояниеПросмотра" id="129">
+										<AdditionSource>
+											<Item>СписокСоглашенийЧерезОЭДО</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоглашенийЧерезОЭДОСостояниеПросмотраКонтекстноеМеню" id="130"/>
+										<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОСостояниеПросмотраРасширеннаяПодсказка" id="131"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокСоглашенийЧерезОЭДОУправлениеПоиском" id="132">
+										<AdditionSource>
+											<Item>СписокСоглашенийЧерезОЭДО</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоглашенийЧерезОЭДОУправлениеПоискомКонтекстноеМеню" id="133"/>
+										<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОУправлениеПоискомРасширеннаяПодсказка" id="134"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">СписокСоглашенийЧерезОЭДОПередНачаломДобавления</Event>
+										<Event name="BeforeRowChange">СписокСоглашенийЧерезОЭДОПередНачаломИзменения</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокСоглашенийЧерезОЭДОНомер" id="57">
+											<DataPath>СписокСоглашенийЧерезОЭДО.Номер</DataPath>
+											<ContextMenu name="СписокСоглашенийЧерезОЭДОНомерКонтекстноеМеню" id="58"/>
+											<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОНомерРасширеннаяПодсказка" id="135"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийЧерезОЭДОНаименование" id="59">
+											<DataPath>СписокСоглашенийЧерезОЭДО.Description</DataPath>
+											<ContextMenu name="СписокСоглашенийЧерезОЭДОНаименованиеКонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОНаименованиеРасширеннаяПодсказка" id="136"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийЧерезОЭДООрганизация" id="61">
+											<DataPath>СписокСоглашенийЧерезОЭДО.Организация</DataPath>
+											<ContextMenu name="СписокСоглашенийЧерезОЭДООрганизацияКонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="СписокСоглашенийЧерезОЭДООрганизацияРасширеннаяПодсказка" id="137"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийЧерезОЭДОСпособОбменаЭД" id="67">
+											<DataPath>СписокСоглашенийЧерезОЭДО.СпособОбменаЭД</DataPath>
+											<ContextMenu name="СписокСоглашенийЧерезОЭДОСпособОбменаЭДКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОСпособОбменаЭДРасширеннаяПодсказка" id="138"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийЧерезОЭДОСостояние" id="63">
+											<DataPath>СписокСоглашенийЧерезОЭДО.Состояние</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Текущее состояние</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокСоглашенийЧерезОЭДОСостояниеКонтекстноеМеню" id="64"/>
+											<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОСостояниеРасширеннаяПодсказка" id="139"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийЧерезОЭДОСрокДействия" id="65">
+											<DataPath>СписокСоглашенийЧерезОЭДО.СрокДействия</DataPath>
+											<ContextMenu name="СписокСоглашенийЧерезОЭДОСрокДействияКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="СписокСоглашенийЧерезОЭДОСрокДействияРасширеннаяПодсказка" id="140"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаСоглашенияСКонтрагентами" id="29">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прямой обмен с контрагентами</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа соглашения с контрагентами</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаСоглашенияСКонтрагентамиРасширеннаяПодсказка" id="141"/>
+							<ChildItems>
+								<Table name="Список" id="1">
+									<Representation>List</Representation>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<InitialTreeView>ExpandTopLevel</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>СписокСоглашенийСКонтрагентами</DataPath>
+									<RowPictureDataPath>СписокСоглашенийСКонтрагентами.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+									<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+										<ChildItems>
+											<ButtonGroup name="ГруппаКнопокГлобальныхКомандПрямойОбмен" id="52">
+												<EnableContentChange>true</EnableContentChange>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа кнопок глобальных команд прямой обмен</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа кнопок глобальных команд прямой обмен</v8:content>
+													</v8:item>
+												</ToolTip>
+												<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+												<ExtendedTooltip name="ГруппаКнопокГлобальныхКомандПрямойОбменРасширеннаяПодсказка" id="142"/>
+											</ButtonGroup>
+											<Button name="СписокСправка" id="69">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.StandardCommand.Help</CommandName>
+												<ExtendedTooltip name="СписокСправкаРасширеннаяПодсказка" id="143"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="144"/>
+									<SearchStringAddition name="СписокСтрокаПоиска" id="145">
+										<AdditionSource>
+											<Item>Список</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="146"/>
+										<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="147"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокСостояниеПросмотра" id="148">
+										<AdditionSource>
+											<Item>Список</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="149"/>
+										<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="150"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокУправлениеПоиском" id="151">
+										<AdditionSource>
+											<Item>Список</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="152"/>
+										<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="153"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="Номер" id="14">
+											<DataPath>СписокСоглашенийСКонтрагентами.Номер</DataPath>
+											<ContextMenu name="НомерКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="154"/>
+										</LabelField>
+										<LabelField name="Наименование" id="4">
+											<DataPath>СписокСоглашенийСКонтрагентами.Description</DataPath>
+											<DefaultItem>true</DefaultItem>
+											<Width>16</Width>
+											<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="155"/>
+										</LabelField>
+										<LabelField name="Организация" id="16">
+											<DataPath>СписокСоглашенийСКонтрагентами.Организация</DataPath>
+											<ContextMenu name="ОрганизацияКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="156"/>
+										</LabelField>
+										<LabelField name="Контрагент" id="8">
+											<DataPath>СписокСоглашенийСКонтрагентами.Контрагент</DataPath>
+											<ContextMenu name="КонтрагентКонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="157"/>
+										</LabelField>
+										<InputField name="Состояние" id="10">
+											<DataPath>СписокСоглашенийСКонтрагентами.Состояние</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Текущее состояние</v8:content>
+												</v8:item>
+											</Title>
+											<Width>16</Width>
+											<ContextMenu name="СостояниеКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="158"/>
+										</InputField>
+										<LabelField name="СрокДействия" id="12">
+											<DataPath>СписокСоглашенийСКонтрагентами.СрокДействия</DataPath>
+											<Width>8</Width>
+											<ContextMenu name="СрокДействияКонтекстноеМеню" id="13"/>
+											<ExtendedTooltip name="СрокДействияРасширеннаяПодсказка" id="159"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаСоглашенияМеждуОрганизациями" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Между организациями</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа соглашения между организациями</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаСоглашенияМеждуОрганизациямиРасширеннаяПодсказка" id="160"/>
+							<ChildItems>
+								<Table name="СписокИнтеркампани" id="31">
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>СписокСоглашенийМеждуОрганизациями</DataPath>
+									<RowPictureDataPath>СписокСоглашенийМеждуОрганизациями.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СписокИнтеркампаниКонтекстноеМеню" id="32"/>
+									<AutoCommandBar name="СписокИнтеркампаниКоманднаяПанель" id="33">
+										<ChildItems>
+											<ButtonGroup name="ГруппаКнопокГлобальныхКомандОбменИнтеркампани" id="73">
+												<EnableContentChange>true</EnableContentChange>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа кнопок глобальных команд обмен между организациями</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Группа кнопок глобальных команд прямой обмен</v8:content>
+													</v8:item>
+												</ToolTip>
+												<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+												<ExtendedTooltip name="ГруппаКнопокГлобальныхКомандОбменИнтеркампаниРасширеннаяПодсказка" id="161"/>
+											</ButtonGroup>
+											<Button name="СписокИнтеркампаниСправка" id="71">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.StandardCommand.Help</CommandName>
+												<ExtendedTooltip name="СписокИнтеркампаниСправкаРасширеннаяПодсказка" id="162"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокИнтеркампаниРасширеннаяПодсказка" id="163"/>
+									<SearchStringAddition name="СписокИнтеркампаниСтрокаПоиска" id="164">
+										<AdditionSource>
+											<Item>СписокИнтеркампани</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокИнтеркампаниСтрокаПоискаКонтекстноеМеню" id="165"/>
+										<ExtendedTooltip name="СписокИнтеркампаниСтрокаПоискаРасширеннаяПодсказка" id="166"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокИнтеркампаниСостояниеПросмотра" id="167">
+										<AdditionSource>
+											<Item>СписокИнтеркампани</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокИнтеркампаниСостояниеПросмотраКонтекстноеМеню" id="168"/>
+										<ExtendedTooltip name="СписокИнтеркампаниСостояниеПросмотраРасширеннаяПодсказка" id="169"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокИнтеркампаниУправлениеПоиском" id="170">
+										<AdditionSource>
+											<Item>СписокИнтеркампани</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокИнтеркампаниУправлениеПоискомКонтекстноеМеню" id="171"/>
+										<ExtendedTooltip name="СписокИнтеркампаниУправлениеПоискомРасширеннаяПодсказка" id="172"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">СписокИнтеркампаниПередНачаломДобавления</Event>
+										<Event name="BeforeRowChange">СписокИнтеркампаниПередНачаломИзменения</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокСоглашенийМеждуОрганизациямиНомер" id="40">
+											<DataPath>СписокСоглашенийМеждуОрганизациями.Номер</DataPath>
+											<ContextMenu name="СписокСоглашенийМеждуОрганизациямиНомерКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="СписокСоглашенийМеждуОрганизациямиНомерРасширеннаяПодсказка" id="173"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийМеждуОрганизациямиНаименование" id="34">
+											<DataPath>СписокСоглашенийМеждуОрганизациями.Description</DataPath>
+											<ContextMenu name="СписокСоглашенийМеждуОрганизациямиНаименованиеКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="СписокСоглашенийМеждуОрганизациямиНаименованиеРасширеннаяПодсказка" id="174"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийМеждуОрганизациямиОрганизация" id="42">
+											<DataPath>СписокСоглашенийМеждуОрганизациями.Организация</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организация-отправитель</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокСоглашенийМеждуОрганизациямиОрганизацияКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="СписокСоглашенийМеждуОрганизациямиОрганизацияРасширеннаяПодсказка" id="175"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийМеждуОрганизациямиКонтрагент" id="38">
+											<DataPath>СписокСоглашенийМеждуОрганизациями.Контрагент</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организация-получатель</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокСоглашенийМеждуОрганизациямиКонтрагентКонтекстноеМеню" id="39"/>
+											<ExtendedTooltip name="СписокСоглашенийМеждуОрганизациямиКонтрагентРасширеннаяПодсказка" id="176"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийМеждуОрганизациямиСостояние" id="48">
+											<DataPath>СписокСоглашенийМеждуОрганизациями.Состояние</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Текущее состояние</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокСоглашенийМеждуОрганизациямиСостояниеКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="СписокСоглашенийМеждуОрганизациямиСостояниеРасширеннаяПодсказка" id="177"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийМеждуОрганизациямиСрокДействия" id="50">
+											<DataPath>СписокСоглашенийМеждуОрганизациями.СрокДействия</DataPath>
+											<ContextMenu name="СписокСоглашенийМеждуОрганизациямиСрокДействияКонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="СписокСоглашенийМеждуОрганизациямиСрокДействияРасширеннаяПодсказка" id="178"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаСоглашенияСБанками" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Прямой обмен с банками</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Соглашения с банками</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаСоглашенияСБанкамиРасширеннаяПодсказка" id="179"/>
+							<ChildItems>
+								<Table name="СписокСоглашенийСБанками" id="75">
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>СписокСоглашенийСБанками</DataPath>
+									<RowPictureDataPath>СписокСоглашенийСБанками.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СписокСоглашенийСБанкамиКонтекстноеМеню" id="76"/>
+									<AutoCommandBar name="СписокСоглашенийСБанкамиКоманднаяПанель" id="77">
+										<ChildItems>
+											<Button name="СписокСоглашенийСБанкамиСправка" id="114">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.StandardCommand.Help</CommandName>
+												<ExtendedTooltip name="СписокСоглашенийСБанкамиСправкаРасширеннаяПодсказка" id="180"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокСоглашенийСБанкамиРасширеннаяПодсказка" id="181"/>
+									<SearchStringAddition name="СписокСоглашенийСБанкамиСтрокаПоиска" id="182">
+										<AdditionSource>
+											<Item>СписокСоглашенийСБанками</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоглашенийСБанкамиСтрокаПоискаКонтекстноеМеню" id="183"/>
+										<ExtendedTooltip name="СписокСоглашенийСБанкамиСтрокаПоискаРасширеннаяПодсказка" id="184"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокСоглашенийСБанкамиСостояниеПросмотра" id="185">
+										<AdditionSource>
+											<Item>СписокСоглашенийСБанками</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоглашенийСБанкамиСостояниеПросмотраКонтекстноеМеню" id="186"/>
+										<ExtendedTooltip name="СписокСоглашенийСБанкамиСостояниеПросмотраРасширеннаяПодсказка" id="187"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокСоглашенийСБанкамиУправлениеПоиском" id="188">
+										<AdditionSource>
+											<Item>СписокСоглашенийСБанками</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоглашенийСБанкамиУправлениеПоискомКонтекстноеМеню" id="189"/>
+										<ExtendedTooltip name="СписокСоглашенийСБанкамиУправлениеПоискомРасширеннаяПодсказка" id="190"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">СписокСоглашенийСБанкамиПередНачаломДобавления</Event>
+										<Event name="BeforeRowChange">СписокСоглашенийСБанкамиПередНачаломИзменения</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокСоглашенийСБанкамиНомер" id="78">
+											<DataPath>~СписокСоглашенийСБанками.Номер</DataPath>
+											<ContextMenu name="СписокСоглашенийСБанкамиНомерКонтекстноеМеню" id="79"/>
+											<ExtendedTooltip name="СписокСоглашенийСБанкамиНомерРасширеннаяПодсказка" id="191"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийСБанкамиНаименование" id="80">
+											<DataPath>~СписокСоглашенийСБанками.Description</DataPath>
+											<ContextMenu name="СписокСоглашенийСБанкамиНаименованиеКонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="СписокСоглашенийСБанкамиНаименованиеРасширеннаяПодсказка" id="192"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийСБанкамиОрганизация" id="82">
+											<DataPath>~СписокСоглашенийСБанками.Организация</DataPath>
+											<ContextMenu name="СписокСоглашенийСБанкамиОрганизацияКонтекстноеМеню" id="83"/>
+											<ExtendedTooltip name="СписокСоглашенийСБанкамиОрганизацияРасширеннаяПодсказка" id="193"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийСБанкамиКонтрагент" id="84">
+											<DataPath>~СписокСоглашенийСБанками.Контрагент</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Банк</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокСоглашенийСБанкамиКонтрагентКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="СписокСоглашенийСБанкамиКонтрагентРасширеннаяПодсказка" id="194"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийСБанкамиСостояние" id="86">
+											<DataPath>~СписокСоглашенийСБанками.Состояние</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Текущее состояние</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокСоглашенийСБанкамиСостояниеКонтекстноеМеню" id="87"/>
+											<ExtendedTooltip name="СписокСоглашенийСБанкамиСостояниеРасширеннаяПодсказка" id="195"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийСБанкамиСрокДействия" id="88">
+											<DataPath>~СписокСоглашенийСБанками.СрокДействия</DataPath>
+											<ContextMenu name="СписокСоглашенийСБанкамиСрокДействияКонтекстноеМеню" id="89"/>
+											<ExtendedTooltip name="СписокСоглашенийСБанкамиСрокДействияРасширеннаяПодсказка" id="196"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаВсеСоглашения" id="90">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все соглашения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Соглашения с банками</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаВсеСоглашенияРасширеннаяПодсказка" id="197"/>
+							<ChildItems>
+								<Table name="СписокСоглашений" id="91">
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>СписокСоглашений</DataPath>
+									<RowPictureDataPath>СписокСоглашений.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СписокСоглашенийКонтекстноеМеню" id="92"/>
+									<AutoCommandBar name="СписокСоглашенийКоманднаяПанель" id="93">
+										<ChildItems>
+											<Button name="СписокСоглашенийСправка" id="115">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.StandardCommand.Help</CommandName>
+												<ExtendedTooltip name="СписокСоглашенийСправкаРасширеннаяПодсказка" id="198"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокСоглашенийРасширеннаяПодсказка" id="199"/>
+									<SearchStringAddition name="СписокСоглашенийСтрокаПоиска" id="200">
+										<AdditionSource>
+											<Item>СписокСоглашений</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоглашенийСтрокаПоискаКонтекстноеМеню" id="201"/>
+										<ExtendedTooltip name="СписокСоглашенийСтрокаПоискаРасширеннаяПодсказка" id="202"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокСоглашенийСостояниеПросмотра" id="203">
+										<AdditionSource>
+											<Item>СписокСоглашений</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоглашенийСостояниеПросмотраКонтекстноеМеню" id="204"/>
+										<ExtendedTooltip name="СписокСоглашенийСостояниеПросмотраРасширеннаяПодсказка" id="205"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокСоглашенийУправлениеПоиском" id="206">
+										<AdditionSource>
+											<Item>СписокСоглашений</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокСоглашенийУправлениеПоискомКонтекстноеМеню" id="207"/>
+										<ExtendedTooltip name="СписокСоглашенийУправлениеПоискомРасширеннаяПодсказка" id="208"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeRowChange">СписокСоглашенийПередНачаломИзменения</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокСоглашенийНомер" id="100">
+											<DataPath>СписокСоглашений.Номер</DataPath>
+											<ContextMenu name="СписокСоглашенийНомерКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="СписокСоглашенийНомерРасширеннаяПодсказка" id="209"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийНаименование" id="94">
+											<DataPath>СписокСоглашений.Description</DataPath>
+											<ContextMenu name="СписокСоглашенийНаименованиеКонтекстноеМеню" id="95"/>
+											<ExtendedTooltip name="СписокСоглашенийНаименованиеРасширеннаяПодсказка" id="210"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийОрганизация" id="102">
+											<DataPath>СписокСоглашений.Организация</DataPath>
+											<ContextMenu name="СписокСоглашенийОрганизацияКонтекстноеМеню" id="103"/>
+											<ExtendedTooltip name="СписокСоглашенийОрганизацияРасширеннаяПодсказка" id="211"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийКонтрагент" id="98">
+											<DataPath>СписокСоглашений.Контрагент</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Контрагент/Банк</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СписокСоглашенийКонтрагентКонтекстноеМеню" id="99"/>
+											<ExtendedTooltip name="СписокСоглашенийКонтрагентРасширеннаяПодсказка" id="212"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийСостояние" id="108">
+											<DataPath>СписокСоглашений.Состояние</DataPath>
+											<ContextMenu name="СписокСоглашенийСостояниеКонтекстноеМеню" id="109"/>
+											<ExtendedTooltip name="СписокСоглашенийСостояниеРасширеннаяПодсказка" id="213"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийСпособОбменаЭД" id="110">
+											<DataPath>СписокСоглашений.СпособОбменаЭД</DataPath>
+											<ContextMenu name="СписокСоглашенийСпособОбменаЭДКонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="СписокСоглашенийСпособОбменаЭДРасширеннаяПодсказка" id="214"/>
+										</LabelField>
+										<LabelField name="СписокСоглашенийСрокДействия" id="112">
+											<DataPath>СписокСоглашений.СрокДействия</DataPath>
+											<ContextMenu name="СписокСоглашенийСрокДействияКонтекстноеМеню" id="113"/>
+											<ExtendedTooltip name="СписокСоглашенийСрокДействияРасширеннаяПодсказка" id="215"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокСоглашенийСКонтрагентами" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список соглашений с контрагентами</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Соглашение.Ссылка,
+	Соглашение.Наименование,
+	Соглашение.Номер,
+	Соглашение.Контрагент,
+	Соглашение.Организация,
+	Соглашение.СрокДействия,
+	ВЫБОР
+		КОГДА Соглашение.ПометкаУдаления
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.ПустаяСсылка)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Закрыто)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.Закрыто)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Действует)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.Действует)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.НеСогласовано)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.ОжидаетсяСогласование)
+	КОНЕЦ КАК Состояние,
+	ВЫБОР
+		КОГДА Соглашение.ПометкаУдаления
+			ТОГДА ЛОЖЬ
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Действует)
+				И (Соглашение.СрокДействия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					И Соглашение.СрокДействия &lt; &amp;ДатаАктуальности)
+			ТОГДА ИСТИНА
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.НеСогласовано)
+				И (Соглашение.СрокДействия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					И Соглашение.СрокДействия &lt; &amp;ДатаАктуальности)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Просрочен,
+	Соглашение.ЭтоТиповое
+ИЗ
+	Справочник.СоглашенияОбИспользованииЭД КАК Соглашение
+ГДЕ
+	&amp;Партнер
+	И ВЫБОР
+			КОГДА &amp;Контрагент = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+					ИЛИ &amp;Контрагент ССЫЛКА Справочник.Контрагенты
+						И Соглашение.Контрагент = &amp;Контрагент
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;Организация = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+					ИЛИ Соглашение.Организация = &amp;Организация
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ
+	И НЕ Соглашение.ЭтоИнтеркампани
+	И Соглашение.СпособОбменаЭД В(&amp;СпособыОбменаЭДНапрямую)</QueryText>
+				<MainTable>Catalog.СоглашенияОбИспользованииЭД</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоТиповое</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Номер</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Состояние</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСоглашенийЭД.Закрыто</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ФайлЗанятыйДругимПользователем</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Состояние</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СрокДействия</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Просрочен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ПоясняющийОшибкуТекст</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокСоглашенийМеждуОрганизациями" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список соглашений между организациями</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьОбменЭДМеждуОрганизациями</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Соглашение.Ссылка,
+	Соглашение.Наименование,
+	Соглашение.Номер,
+	Соглашение.Контрагент,
+	Соглашение.Организация,
+	Соглашение.СрокДействия,
+	ВЫБОР
+		КОГДА Соглашение.ПометкаУдаления
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.ПустаяСсылка)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Закрыто)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.Закрыто)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Действует)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.Действует)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.НеСогласовано)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.ОжидаетсяСогласование)
+	КОНЕЦ КАК Состояние,
+	ВЫБОР
+		КОГДА Соглашение.ПометкаУдаления
+			ТОГДА ЛОЖЬ
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Действует)
+				И (Соглашение.СрокДействия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					И Соглашение.СрокДействия &lt; &amp;ДатаАктуальности)
+			ТОГДА ИСТИНА
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.НеСогласовано)
+				И (Соглашение.СрокДействия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					И Соглашение.СрокДействия &lt; &amp;ДатаАктуальности)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Просрочен
+ИЗ
+	Справочник.СоглашенияОбИспользованииЭД КАК Соглашение
+ГДЕ
+	&amp;Партнер
+	И ВЫБОР
+			КОГДА &amp;Организация = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+					ИЛИ Соглашение.Организация = &amp;Организация
+					ИЛИ Соглашение.Контрагент = &amp;Организация
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ
+	И Соглашение.ЭтоИнтеркампани
+	И ВЫБОР
+			КОГДА &amp;Контрагент = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ</QueryText>
+				<MainTable>Catalog.СоглашенияОбИспользованииЭД</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Номер</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Состояние</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСоглашенийЭД.Закрыто</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ФайлЗанятыйДругимПользователем</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Состояние</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СрокДействия</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Просрочен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ПоясняющийОшибкуТекст</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокСоглашенийЧерезОЭДО" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список соглашений через ОЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьЭлектронныеЦифровыеПодписи</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	Соглашение.Ссылка,
+	Соглашение.Наименование,
+	Соглашение.Номер,
+	Соглашение.Контрагент,
+	Соглашение.Организация,
+	Соглашение.СрокДействия,
+	ВЫБОР
+		КОГДА Соглашение.ПометкаУдаления
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.ПустаяСсылка)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Закрыто)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.Закрыто)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Действует)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.Действует)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.НеСогласовано)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.ОжидаетсяСогласование)
+	КОНЕЦ КАК Состояние,
+	ВЫБОР
+		КОГДА Соглашение.ПометкаУдаления
+			ТОГДА ЛОЖЬ
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Действует)
+				И (Соглашение.СрокДействия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					И Соглашение.СрокДействия &lt; &amp;ДатаАктуальности)
+			ТОГДА ИСТИНА
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.НеСогласовано)
+				И (Соглашение.СрокДействия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					И Соглашение.СрокДействия &lt; &amp;ДатаАктуальности)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Просрочен,
+	Соглашение.ЭтоТиповое,
+	Соглашение.СпособОбменаЭД
+ИЗ
+	Справочник.СоглашенияОбИспользованииЭД КАК Соглашение
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.УчастникиОбменовЭДЧерезОператоровЭДО КАК УчастникиОбменовЭДЧерезОператоровЭДО
+		ПО Соглашение.Ссылка = УчастникиОбменовЭДЧерезОператоровЭДО.СоглашениеОбИспользованииЭД
+ГДЕ
+	&amp;Партнер
+	И ВЫБОР
+			КОГДА &amp;Организация = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+					ИЛИ Соглашение.Организация = &amp;Организация
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ
+	И НЕ Соглашение.ЭтоИнтеркампани
+	И Соглашение.СпособОбменаЭД = ЗНАЧЕНИЕ(Перечисление.СпособыОбменаЭД.ЧерезОператораЭДОТакском)
+	И ВЫБОР
+			КОГДА &amp;Контрагент = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+					ИЛИ УчастникиОбменовЭДЧерезОператоровЭДО.Участник = &amp;Контрагент
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ</QueryText>
+				<MainTable>Catalog.СоглашенияОбИспользованииЭД</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоТиповое</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Номер</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Состояние</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСоглашенийЭД.Закрыто</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ФайлЗанятыйДругимПользователем</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Состояние</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СрокДействия</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Просрочен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ПоясняющийОшибкуТекст</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокСоглашенийСБанками" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список соглашений с банками</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьОбменЭДСБанками</Item>
+			</FunctionalOptions>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+    Соглашение.Ссылка,
+    Соглашение.Наименование,
+    Соглашение.Номер,
+    Соглашение.Контрагент,
+    Соглашение.Организация,
+    Соглашение.СрокДействия,
+    ВЫБОР
+        КОГДА Соглашение.ПометкаУдаления
+            ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.ПустаяСсылка)
+        КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Закрыто)
+            ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.Закрыто)
+        КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Действует)
+            ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.Действует)
+        КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.НеСогласовано)
+            ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.ОжидаетсяСогласование)
+    КОНЕЦ КАК Состояние,
+    ВЫБОР
+        КОГДА Соглашение.ПометкаУдаления
+            ТОГДА ЛОЖЬ
+        КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Действует)
+                И (Соглашение.СрокДействия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+                    И Соглашение.СрокДействия &lt; &amp;ДатаАктуальности)
+            ТОГДА ИСТИНА
+        КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.НеСогласовано)
+                И (Соглашение.СрокДействия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+                    И Соглашение.СрокДействия &lt; &amp;ДатаАктуальности)
+            ТОГДА ИСТИНА
+        ИНАЧЕ ЛОЖЬ
+    КОНЕЦ КАК Просрочен
+ИЗ
+    Справочник.СоглашенияОбИспользованииЭД КАК Соглашение
+ГДЕ
+    ВЫБОР
+            КОГДА &amp;Банк = ЗНАЧЕНИЕ(Справочник.КлассификаторБанковРФ.ПустаяСсылка)
+                    ИЛИ Соглашение.Контрагент = &amp;Банк
+                ТОГДА ИСТИНА
+            ИНАЧЕ ЛОЖЬ
+        КОНЕЦ
+    И ВЫБОР
+            КОГДА &amp;Организация = ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка)
+                    ИЛИ Соглашение.Организация = &amp;Организация
+                ТОГДА ИСТИНА
+            ИНАЧЕ ЛОЖЬ
+        КОНЕЦ
+    И Соглашение.СпособОбменаЭД = ЗНАЧЕНИЕ(Перечисление.СпособыОбменаЭД.ЧерезВебРесурсБанка)</QueryText>
+				<MainTable>Catalog.СоглашенияОбИспользованииЭД</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Состояние</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСоглашенийЭД.Закрыто</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ФайлЗанятыйДругимПользователем</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Состояние</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СрокДействия</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Просрочен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ПоясняющийОшибкуТекст</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокСоглашений" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список соглашений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Соглашение.Ссылка,
+	Соглашение.Наименование,
+	Соглашение.Номер,
+	Соглашение.Контрагент,
+	Соглашение.Организация,
+	Соглашение.СрокДействия,
+	ВЫБОР
+		КОГДА Соглашение.ПометкаУдаления
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.ПустаяСсылка)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Закрыто)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.Закрыто)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Действует)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.Действует)
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.НеСогласовано)
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияСоглашенийЭД.ОжидаетсяСогласование)
+	КОНЕЦ КАК Состояние,
+	ВЫБОР
+		КОГДА Соглашение.ПометкаУдаления
+			ТОГДА ЛОЖЬ
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.Действует)
+				И (Соглашение.СрокДействия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					И Соглашение.СрокДействия &lt; &amp;ДатаАктуальности)
+			ТОГДА ИСТИНА
+		КОГДА Соглашение.СтатусСоглашения = ЗНАЧЕНИЕ(Перечисление.СтатусыСоглашенийЭД.НеСогласовано)
+				И (Соглашение.СрокДействия &lt;&gt; ДАТАВРЕМЯ(1, 1, 1)
+					И Соглашение.СрокДействия &lt; &amp;ДатаАктуальности)
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Просрочен,
+	Соглашение.ЭтоТиповое,
+	Соглашение.СпособОбменаЭД
+ИЗ
+	Справочник.СоглашенияОбИспользованииЭД КАК Соглашение</QueryText>
+				<MainTable>Catalog.СоглашенияОбИспользованииЭД</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоТиповое</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Номер</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Состояние</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияСоглашенийЭД.Закрыто</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ФайлЗанятыйДругимПользователем</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Состояние</dcsset:field>
+								</dcsset:item>
+								<dcsset:item>
+									<dcsset:field>СрокДействия</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Просрочен</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">style:ПоясняющийОшибкуТекст</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьНовое" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новое (ручной режим)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новое соглашение без использования помощника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionNewTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьНовое</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Контрагент">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Банк">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Catalog.СоглашенияОбИспользованииЭД.Command.ОтправитьКаталогПоСоглашению</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.ЭД</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Form.StandardCommand.CustomizeForm</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>DataProcessor.ЭлектронныеДокументы.Command.ПереотправитьЭД</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.ЭД</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.СоглашенияОбИспользованииЭД.Command.ТестНастроекСоглашения</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

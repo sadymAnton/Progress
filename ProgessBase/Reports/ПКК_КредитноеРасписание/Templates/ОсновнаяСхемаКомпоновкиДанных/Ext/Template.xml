@@ -1,0 +1,990 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дивизион</dataPath>
+			<field>Дивизион</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВариантРаспределения</dataPath>
+			<field>ВариантРаспределения</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПланирования</dataPath>
+			<field>ДокументПланирования</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ планирования</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Задолженность_ПрошлогоПериода</dataPath>
+			<field>Задолженность_ПрошлогоПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задолженность прошлого периода</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Задолженность_Текущий</dataPath>
+			<field>Задолженность_Текущий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задолженность текущая</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодКонтрагента</dataPath>
+			<field>КодКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код контрагента</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КредитныйЛимит_ПрошлогоПериода</dataPath>
+			<field>КредитныйЛимит_ПрошлогоПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кредитный лимит прошлого периода</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КредитныйЛимит_Текущие</dataPath>
+			<field>КредитныйЛимит_Текущие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кредитный лимит текущий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтклонениеЗадолженности</dataPath>
+			<field>ОтклонениеЗадолженности</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение задолженности</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтклонениеКредитногоЛимита</dataPath>
+			<field>ОтклонениеКредитногоЛимита</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение кредитного лимита</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтклонениеПланаПродаж</dataPath>
+			<field>ОтклонениеПланаПродаж</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение плана продаж</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтсрочкаПлатежа_ПрошлогоПериода</dataPath>
+			<field>ОтсрочкаПлатежа_ПрошлогоПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отсрочка платежа прошлого периода, дн.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтсрочкаПлатежа_Текущие</dataPath>
+			<field>ОтсрочкаПлатежа_Текущие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отсрочка платежа текущий, дн.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланПродаж_ПрошлогоПериода</dataPath>
+			<field>ПланПродаж_ПрошлогоПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План продаж прошлого периода</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланПродаж_Текущий</dataPath>
+			<field>ПланПродаж_Текущий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План продаж текущий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_АдресПоставки</dataPath>
+			<field>ППП_АдресПоставки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес поставки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_КаналПродаж</dataPath>
+			<field>ППП_КаналПродаж</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Канал продаж</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_ПрайсЛист</dataPath>
+			<field>ППП_ПрайсЛист</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прайс лист</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_ТоварнаяКатегория</dataPath>
+			<field>ППП_ТоварнаяКатегория</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарная категория</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_ТорговыйПредставитель</dataPath>
+			<field>ППП_ТорговыйПредставитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Торговый представитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентОтклонениеЗадолженности</dataPath>
+			<field>ПроцентОтклонениеЗадолженности</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение задолженности, %</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентОтклонениеКредитногоЛимита</dataPath>
+			<field>ПроцентОтклонениеКредитногоЛимита</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение кредитного лимита, %</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентОтклонениеПланаПродаж</dataPath>
+			<field>ПроцентОтклонениеПланаПродаж</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение плана продаж, %</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сделка</dataPath>
+			<field>Сделка</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сценарий</dataPath>
+			<field>Сценарий</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТорговаяКоманда</dataPath>
+			<field>ТорговаяКоманда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Торговая команда</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПродажи</dataPath>
+			<field>ДокументПродажи</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПокупателя</dataPath>
+			<field>ЗаказПокупателя</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПРГАдресПоставки</dataPath>
+			<field>ПРГАдресПоставки</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтклонениеПродаж</dataPath>
+			<field>ОтклонениеПродаж</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение продаж</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продажи_ПрошлогоПериода</dataPath>
+			<field>Продажи_ПрошлогоПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продажи прошлого периода</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продажи_Текущий</dataPath>
+			<field>Продажи_Текущий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущие продажи</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентОтклонениеПродаж</dataPath>
+			<field>ПроцентОтклонениеПродаж</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение продаж, %</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_Брендообъем</dataPath>
+			<field>ППП_Брендообъем</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПКК_СценарийДляПолученияПлановСрезПоследних.Сценарий
+ПОМЕСТИТЬ Т_СценарийДляПлана_Текущий
+ИЗ
+	РегистрСведений.ПКК_СценарийДляПолученияПланов.СрезПоследних({(&amp;КонецПериода)}, ) КАК ПКК_СценарийДляПолученияПлановСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПКК_СценарийДляПолученияПлановСрезПоследних.Сценарий
+ПОМЕСТИТЬ Т_СценарийДляПлана_ПрошлогоПериода
+ИЗ
+	РегистрСведений.ПКК_СценарийДляПолученияПланов.СрезПоследних({(&amp;КонецПериодаПрошлый)}, ) КАК ПКК_СценарийДляПолученияПлановСрезПоследних
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДоговорыКонтрагентов.Владелец КАК Контрагент,
+	МАКСИМУМ(ПКК_История_Контрагент_Текущие.ДопустимаяСуммаЗадолженности) КАК ДопустимаяСуммаЗадолженности_Текущие,
+	МАКСИМУМ(ПКК_История_Текущие.ДопустимоеЧислоДнейЗадолженности) КАК ДопустимоеЧислоДнейЗадолженности_Текущие,
+	МАКСИМУМ(ПКК_История_ПрошлогоПериода.ДопустимаяСуммаЗадолженности) КАК ДопустимаяСуммаЗадолженности_ПрошлогоПериода,
+	МАКСИМУМ(ПКК_История_Контрагент_ПрошлогоПериода.ДопустимоеЧислоДнейЗадолженности) КАК ДопустимоеЧислоДнейЗадолженности_ПрошлогоПериода,
+	ДоговорыКонтрагентов.Владелец.Код КАК КодКонтрагента,
+	ДоговорыКонтрагентов.Владелец.Дивизион КАК Дивизион,
+	ДоговорыКонтрагентов.Владелец.НСИ_ТорговаяКоманда КАК ТорговаяКоманда
+ПОМЕСТИТЬ Т_ДанныеПоДоговору
+ИЗ
+	Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа.СрезПоследних({(&amp;КонецПериода)}, ) КАК ПКК_История_Текущие
+		ПО ДоговорыКонтрагентов.Ссылка = ПКК_История_Текущие.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа.СрезПоследних({(&amp;КонецПериодаПрошлый)}, ) КАК ПКК_История_ПрошлогоПериода
+		ПО ДоговорыКонтрагентов.Ссылка = ПКК_История_ПрошлогоПериода.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа.СрезПоследних({(&amp;КонецПериода)}, ) КАК ПКК_История_Контрагент_Текущие
+		ПО ДоговорыКонтрагентов.Владелец.Ссылка = ПКК_История_Контрагент_Текущие.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПКК_ИсторияИзмененияКредитногоЛимитаИОтсрочкиПлатежа.СрезПоследних({(&amp;КонецПериодаПрошлый)}, ) КАК ПКК_История_Контрагент_ПрошлогоПериода
+		ПО ДоговорыКонтрагентов.Владелец.Ссылка = ПКК_История_Контрагент_ПрошлогоПериода.Объект
+ГДЕ
+	ДоговорыКонтрагентов.ВидДоговора = &amp;ВидДоговора
+
+СГРУППИРОВАТЬ ПО
+	ДоговорыКонтрагентов.Владелец,
+	ДоговорыКонтрагентов.Владелец.Код,
+	ДоговорыКонтрагентов.Владелец.Дивизион,
+	ДоговорыКонтрагентов.Владелец.НСИ_ТорговаяКоманда
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СУММА(ПродажиОбороты.СтоимостьОборот) КАК СтоимостьОборот,
+	ПродажиОбороты.Контрагент
+ПОМЕСТИТЬ Т_ПродажиОборотыТекущие
+ИЗ
+	РегистрНакопления.Продажи.Обороты(&amp;НачалоПериода {(&amp;НачалоПериода)}, &amp;КонецПериода {(&amp;КонецПериода)}, , ) КАК ПродажиОбороты
+
+СГРУППИРОВАТЬ ПО
+	ПродажиОбороты.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СУММА(ПродажиОбороты.СтоимостьОборот) КАК СтоимостьОборот,
+	ПродажиОбороты.Контрагент
+ПОМЕСТИТЬ Т_ПродажиОбороты_ПрошлогоПериода
+ИЗ
+	РегистрНакопления.Продажи.Обороты(&amp;НачалоПериодаПрошлый {(&amp;НачалоПериодаПрошлый)}, &amp;КонецПериодаПрошлый {(&amp;КонецПериодаПрошлый)}, , ) КАК ПродажиОбороты
+
+СГРУППИРОВАТЬ ПО
+	ПродажиОбороты.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СУММА(ПланыПродажОбороты.СтоимостьОборот) КАК СтоимостьОборот,
+	ПланыПродажОбороты.Контрагент КАК Контрагент
+ПОМЕСТИТЬ Т_Продажи
+ИЗ
+	РегистрНакопления.ПланыПродаж.Обороты(
+			{(&amp;НачалоПериода)},
+			{(&amp;КонецПериода)},
+			,
+			Сценарий В
+				(ВЫБРАТЬ
+					Т_СценарийДляПлана_Текущий.Сценарий
+				ИЗ
+					Т_СценарийДляПлана_Текущий)) КАК ПланыПродажОбороты
+
+СГРУППИРОВАТЬ ПО
+	ПланыПродажОбороты.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СУММА(ПланыПродажОбороты.СтоимостьОборот) КАК СтоимостьОборотПрошлый,
+	ПланыПродажОбороты.Контрагент КАК Контрагент
+ПОМЕСТИТЬ Т_Продажи_ПрошлогоПериода
+ИЗ
+	РегистрНакопления.ПланыПродаж.Обороты(
+			{(&amp;НачалоПериодаПрошлый)},
+			{(&amp;КонецПериодаПрошлый)},
+			,
+			Сценарий В
+				(ВЫБРАТЬ
+					Т_СценарийДляПлана_ПрошлогоПериода.Сценарий
+				ИЗ
+					Т_СценарийДляПлана_ПрошлогоПериода)) КАК ПланыПродажОбороты
+
+СГРУППИРОВАТЬ ПО
+	ПланыПродажОбороты.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СУММА(ВзаиморасчетыСКонтрагентамиОстатки.СуммаУпрОстаток) КАК СуммаУпрОстаток,
+	ВзаиморасчетыСКонтрагентамиОстатки.Контрагент
+ПОМЕСТИТЬ Т_Взаиморасчеты
+ИЗ
+	РегистрНакопления.ВзаиморасчетыСКонтрагентами.Остатки({(&amp;КонецПериода)}, ) КАК ВзаиморасчетыСКонтрагентамиОстатки
+
+СГРУППИРОВАТЬ ПО
+	ВзаиморасчетыСКонтрагентамиОстатки.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СУММА(ВзаиморасчетыСКонтрагентамиОстатки.СуммаУпрОстаток) КАК СуммаУпрОстаток,
+	ВзаиморасчетыСКонтрагентамиОстатки.Контрагент
+ПОМЕСТИТЬ Т_Взаиморасчеты_ПрошлогоПериода
+ИЗ
+	РегистрНакопления.ВзаиморасчетыСКонтрагентами.Остатки({(&amp;КонецПериодаПрошлый)}, ) КАК ВзаиморасчетыСКонтрагентамиОстатки
+
+СГРУППИРОВАТЬ ПО
+	ВзаиморасчетыСКонтрагентамиОстатки.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Т_ДанныеПоДоговору.Дивизион,
+	Т_ДанныеПоДоговору.ТорговаяКоманда,
+	Т_ДанныеПоДоговору.КодКонтрагента,
+	Т_ДанныеПоДоговору.Контрагент,
+	ЕСТЬNULL(Т_ДанныеПоДоговору.ДопустимоеЧислоДнейЗадолженности_ПрошлогоПериода, 0) КАК ОтсрочкаПлатежа_ПрошлогоПериода,
+	ЕСТЬNULL(Т_ДанныеПоДоговору.ДопустимаяСуммаЗадолженности_ПрошлогоПериода, 0) КАК КредитныйЛимит_ПрошлогоПериода,
+	ЕСТЬNULL(Т_ДанныеПоДоговору.ДопустимоеЧислоДнейЗадолженности_Текущие, 0) КАК ОтсрочкаПлатежа_Текущие,
+	ЕСТЬNULL(Т_ДанныеПоДоговору.ДопустимаяСуммаЗадолженности_Текущие, 0) КАК КредитныйЛимит_Текущие,
+	ЕСТЬNULL(Т_Взаиморасчеты_ПрошлогоПериода.СуммаУпрОстаток, 0) КАК Задолженность_ПрошлогоПериода,
+	ЕСТЬNULL(Т_Взаиморасчеты.СуммаУпрОстаток, 0) КАК Задолженность_Текущий,
+	ЕСТЬNULL(Т_Продажи_ПрошлогоПериода.СтоимостьОборотПрошлый, 0) КАК ПланПродаж_ПрошлогоПериода,
+	ЕСТЬNULL(Т_Продажи.СтоимостьОборот, 0) КАК ПланПродаж_Текущий,
+	ЕСТЬNULL(Т_Продажи.СтоимостьОборот, 0) - ЕСТЬNULL(Т_Продажи_ПрошлогоПериода.СтоимостьОборотПрошлый, 0) КАК ОтклонениеПланаПродаж,
+	ЕСТЬNULL(Т_Взаиморасчеты.СуммаУпрОстаток, 0) - ЕСТЬNULL(Т_Взаиморасчеты_ПрошлогоПериода.СуммаУпрОстаток, 0) КАК ОтклонениеЗадолженности,
+	ЕСТЬNULL(Т_ДанныеПоДоговору.ДопустимаяСуммаЗадолженности_Текущие, 0) - ЕСТЬNULL(Т_ДанныеПоДоговору.ДопустимаяСуммаЗадолженности_ПрошлогоПериода, 0) КАК ОтклонениеКредитногоЛимита,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(Т_Продажи_ПрошлогоПериода.СтоимостьОборотПрошлый, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ (ЕСТЬNULL(Т_Продажи.СтоимостьОборот, 0) - ЕСТЬNULL(Т_Продажи_ПрошлогоПериода.СтоимостьОборотПрошлый, 0)) / ЕСТЬNULL(Т_Продажи_ПрошлогоПериода.СтоимостьОборотПрошлый, 0) * 100
+	КОНЕЦ КАК ПроцентОтклонениеПланаПродаж,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(Т_Взаиморасчеты_ПрошлогоПериода.СуммаУпрОстаток, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ (ЕСТЬNULL(Т_Взаиморасчеты.СуммаУпрОстаток, 0) - ЕСТЬNULL(Т_Взаиморасчеты_ПрошлогоПериода.СуммаУпрОстаток, 0)) / ЕСТЬNULL(Т_Взаиморасчеты_ПрошлогоПериода.СуммаУпрОстаток, 0) * 100
+	КОНЕЦ КАК ПроцентОтклонениеЗадолженности,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(Т_ДанныеПоДоговору.ДопустимаяСуммаЗадолженности_ПрошлогоПериода, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ (ЕСТЬNULL(Т_ДанныеПоДоговору.ДопустимаяСуммаЗадолженности_Текущие, 0) - ЕСТЬNULL(Т_ДанныеПоДоговору.ДопустимаяСуммаЗадолженности_ПрошлогоПериода, 0)) / ЕСТЬNULL(Т_ДанныеПоДоговору.ДопустимаяСуммаЗадолженности_ПрошлогоПериода, 0) * 100
+	КОНЕЦ КАК ПроцентОтклонениеКредитногоЛимита,
+	ЕСТЬNULL(Т_ПродажиОборотыТекущие.СтоимостьОборот, 0) КАК Продажи_Текущий,
+	ЕСТЬNULL(Т_ПродажиОбороты_ПрошлогоПериода.СтоимостьОборот, 0) КАК Продажи_ПрошлогоПериода,
+	ЕСТЬNULL(Т_ПродажиОбороты_ПрошлогоПериода.СтоимостьОборот, 0) - ЕСТЬNULL(Т_ПродажиОборотыТекущие.СтоимостьОборот, 0) КАК ОтклонениеПродаж,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(Т_ПродажиОбороты_ПрошлогоПериода.СтоимостьОборот, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ (ЕСТЬNULL(Т_ПродажиОборотыТекущие.СтоимостьОборот, 0) - ЕСТЬNULL(Т_ПродажиОбороты_ПрошлогоПериода.СтоимостьОборот, 0)) / ЕСТЬNULL(Т_ПродажиОбороты_ПрошлогоПериода.СтоимостьОборот, 0) * 100
+	КОНЕЦ КАК ПроцентОтклонениеПродаж
+ПОМЕСТИТЬ Т_Итоговая
+ИЗ
+	Т_ДанныеПоДоговору КАК Т_ДанныеПоДоговору
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_Продажи КАК Т_Продажи
+		ПО Т_ДанныеПоДоговору.Контрагент = Т_Продажи.Контрагент
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_Продажи_ПрошлогоПериода КАК Т_Продажи_ПрошлогоПериода
+		ПО Т_ДанныеПоДоговору.Контрагент = Т_Продажи_ПрошлогоПериода.Контрагент
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_Взаиморасчеты КАК Т_Взаиморасчеты
+		ПО Т_ДанныеПоДоговору.Контрагент = Т_Взаиморасчеты.Контрагент
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_Взаиморасчеты_ПрошлогоПериода КАК Т_Взаиморасчеты_ПрошлогоПериода
+		ПО Т_ДанныеПоДоговору.Контрагент = Т_Взаиморасчеты_ПрошлогоПериода.Контрагент
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_ПродажиОборотыТекущие КАК Т_ПродажиОборотыТекущие
+		ПО Т_ДанныеПоДоговору.Контрагент = Т_ПродажиОборотыТекущие.Контрагент
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_ПродажиОбороты_ПрошлогоПериода КАК Т_ПродажиОбороты_ПрошлогоПериода
+		ПО Т_ДанныеПоДоговору.Контрагент = Т_ПродажиОбороты_ПрошлогоПериода.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Т_Итоговая.Дивизион,
+	Т_Итоговая.ТорговаяКоманда,
+	Т_Итоговая.КодКонтрагента,
+	Т_Итоговая.Контрагент,
+	Т_Итоговая.ОтсрочкаПлатежа_ПрошлогоПериода,
+	Т_Итоговая.КредитныйЛимит_ПрошлогоПериода,
+	Т_Итоговая.ОтсрочкаПлатежа_Текущие,
+	Т_Итоговая.КредитныйЛимит_Текущие,
+	Т_Итоговая.Задолженность_ПрошлогоПериода,
+	Т_Итоговая.Задолженность_Текущий,
+	Т_Итоговая.ПланПродаж_ПрошлогоПериода,
+	Т_Итоговая.ПланПродаж_Текущий,
+	Т_Итоговая.ОтклонениеПланаПродаж,
+	Т_Итоговая.ОтклонениеЗадолженности,
+	Т_Итоговая.ОтклонениеКредитногоЛимита,
+	Т_Итоговая.ПроцентОтклонениеПланаПродаж,
+	Т_Итоговая.ПроцентОтклонениеЗадолженности,
+	Т_Итоговая.ПроцентОтклонениеКредитногоЛимита,
+	Т_Итоговая.Продажи_Текущий,
+	Т_Итоговая.Продажи_ПрошлогоПериода,
+	Т_Итоговая.ОтклонениеПродаж,
+	Т_Итоговая.ПроцентОтклонениеПродаж
+ИЗ
+	Т_Итоговая КАК Т_Итоговая
+ГДЕ
+	(НЕ Т_Итоговая.ОтсрочкаПлатежа_ПрошлогоПериода = 0
+			ИЛИ НЕ Т_Итоговая.КредитныйЛимит_ПрошлогоПериода = 0
+			ИЛИ НЕ Т_Итоговая.ОтсрочкаПлатежа_Текущие = 0
+			ИЛИ НЕ Т_Итоговая.КредитныйЛимит_Текущие = 0
+			ИЛИ НЕ Т_Итоговая.Задолженность_ПрошлогоПериода = 0
+			ИЛИ НЕ Т_Итоговая.Задолженность_Текущий = 0
+			ИЛИ НЕ Т_Итоговая.ПланПродаж_ПрошлогоПериода = 0
+			ИЛИ НЕ Т_Итоговая.ПланПродаж_Текущий = 0
+			ИЛИ НЕ Т_Итоговая.Продажи_Текущий = 0
+			ИЛИ НЕ Т_Итоговая.Продажи_ПрошлогоПериода = 0)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Задолженность_ПрошлогоПериода</dataPath>
+		<expression>Сумма(Задолженность_ПрошлогоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Задолженность_Текущий</dataPath>
+		<expression>Сумма(Задолженность_Текущий)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КредитныйЛимит_ПрошлогоПериода</dataPath>
+		<expression>Сумма(КредитныйЛимит_ПрошлогоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КредитныйЛимит_Текущие</dataPath>
+		<expression>Сумма(КредитныйЛимит_Текущие)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтклонениеЗадолженности</dataPath>
+		<expression>Сумма(Задолженность_Текущий) - Сумма(Задолженность_ПрошлогоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтклонениеКредитногоЛимита</dataPath>
+		<expression>Сумма(КредитныйЛимит_Текущие) - Сумма(КредитныйЛимит_ПрошлогоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтклонениеПланаПродаж</dataPath>
+		<expression>Сумма(ПланПродаж_Текущий) - Сумма(ПланПродаж_ПрошлогоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтсрочкаПлатежа_ПрошлогоПериода</dataPath>
+		<expression>Максимум(ОтсрочкаПлатежа_ПрошлогоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтсрочкаПлатежа_Текущие</dataPath>
+		<expression>Максимум(ОтсрочкаПлатежа_Текущие)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланПродаж_ПрошлогоПериода</dataPath>
+		<expression>Сумма(ПланПродаж_ПрошлогоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланПродаж_Текущий</dataPath>
+		<expression>Сумма(ПланПродаж_Текущий)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентОтклонениеЗадолженности</dataPath>
+		<expression>ВЫБОР КОГДА Сумма(Задолженность_ПрошлогоПериода) = 0 ТОГДА 0 ИНАЧЕ (Сумма(Задолженность_Текущий) - Сумма(Задолженность_ПрошлогоПериода)) / Сумма(Задолженность_ПрошлогоПериода) *100 КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентОтклонениеКредитногоЛимита</dataPath>
+		<expression>ВЫБОР КОГДА Сумма(КредитныйЛимит_ПрошлогоПериода) = 0 ТОГДА 0 ИНАЧЕ (Сумма(КредитныйЛимит_Текущие) - Сумма(КредитныйЛимит_ПрошлогоПериода)) / Сумма(КредитныйЛимит_ПрошлогоПериода) *100 КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентОтклонениеПланаПродаж</dataPath>
+		<expression>ВЫБОР КОГДА Сумма(ПланПродаж_ПрошлогоПериода) = 0 ТОГДА 0 ИНАЧЕ (Сумма(ПланПродаж_Текущий) - Сумма(ПланПродаж_ПрошлогоПериода)) / Сумма(ПланПродаж_ПрошлогоПериода)*100 КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Продажи_Текущий</dataPath>
+		<expression>Сумма(Продажи_Текущий)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Продажи_ПрошлогоПериода</dataPath>
+		<expression>Сумма(Продажи_ПрошлогоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентОтклонениеПродаж</dataPath>
+		<expression>ВЫБОР КОГДА Сумма(Продажи_ПрошлогоПериода) = 0 ТОГДА 0 ИНАЧЕ (Сумма(Продажи_Текущий) - Сумма(Продажи_ПрошлогоПериода)) /  Сумма(Продажи_ПрошлогоПериода) *100 КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтклонениеПродаж</dataPath>
+		<expression>Сумма(Продажи_Текущий) - Сумма(Продажи_ПрошлогоПериода)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидДоговора</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид договора</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыДоговоровКонтрагентов</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыДоговоровКонтрагентов.СПокупателем</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериодаПрошлый</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец прошлого периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>НачалоПериодаПрошлый</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало прошлого периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прошлый период</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Продажи_ПрошлогоПериода</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОтсрочкаПлатежа_ПрошлогоПериода</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КредитныйЛимит_ПрошлогоПериода</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Задолженность_ПрошлогоПериода</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПланПродаж_ПрошлогоПериода</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий период</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Продажи_Текущий</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОтсрочкаПлатежа_Текущие</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КредитныйЛимит_Текущие</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Задолженность_Текущий</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПланПродаж_Текущий</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклонение</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОтклонениеПродаж</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентОтклонениеПродаж</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОтклонениеКредитногоЛимита</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентОтклонениеКредитногоЛимита</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОтклонениеЗадолженности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентОтклонениеЗадолженности</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОтклонениеПланаПродаж</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПроцентОтклонениеПланаПродаж</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Дивизион</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПРГДивизионы.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ДоговорКонтрагента</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ДоговорыКонтрагентов.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТорговаяКоманда</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НСИ_ТорговыеКоманды.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ППП_ТорговыйПредставитель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НСИ_ТорговыеПредставители.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ТорговаяКоманда</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Дивизион</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КодКонтрагента</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Контрагент</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

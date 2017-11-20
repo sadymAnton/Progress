@@ -1,0 +1,1100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Пользователи</v8:content>
+		</v8:item>
+	</Title>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаИзменитьФорму" id="31">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьФормуРасширеннаяПодсказка" id="154"/>
+			</Button>
+			<Button name="ФормаЗаписатьИЗакрыть" id="43">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="155"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Пользователь" id="1">
+			<DataPath>Пользователь</DataPath>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="156"/>
+		</InputField>
+		<InputField name="ВариантОбмена" id="5">
+			<DataPath>ВариантОбмена</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обмен по кнопке "Выполнить обмен"</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ручной</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Автоматический обмен</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Автоматический</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Работа в offline</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">БезОбмена</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ВариантОбменаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ВариантОбменаРасширеннаяПодсказка" id="157"/>
+		</InputField>
+		<Pages name="ПанельЗакладок" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель закладок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель закладок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ПанельЗакладокРасширеннаяПодсказка" id="158"/>
+			<ChildItems>
+				<Page name="НастройкаПрав" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка прав</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка прав</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="НастройкаПравРасширеннаяПодсказка" id="159"/>
+					<ChildItems>
+						<UsualGroup name="ПанельКнопок" id="150">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель кнопок</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель кнопок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ПанельКнопокРасширеннаяПодсказка" id="160"/>
+							<ChildItems>
+								<RadioButtonField name="РольПользователяEDI" id="10">
+									<DataPath>РольПользователяEDI</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Полные права</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПолныеПрава</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Пользователь</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Пользователь</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="РольПользователяEDIКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="РольПользователяEDIРасширеннаяПодсказка" id="161"/>
+									<Events>
+										<Event name="OnChange">РольПользователяEDIПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<LabelDecoration name="НадписьРазделитель1" id="152">
+									<Height>1</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="НадписьРазделитель1КонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="НадписьРазделитель1РасширеннаяПодсказка" id="162"/>
+								</LabelDecoration>
+								<Button name="КнопкаВсеГалкиПроставить" id="146">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВсеГалкиПроставить</CommandName>
+									<ExtendedTooltip name="КнопкаВсеГалкиПроставитьРасширеннаяПодсказка" id="163"/>
+								</Button>
+								<Button name="КнопкаВсеГалкиУбрать" id="148">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВсеГалкиУбрать</CommandName>
+									<ExtendedTooltip name="КнопкаВсеГалкиУбратьРасширеннаяПодсказка" id="164"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Pages name="ПанельНастроекПрав" id="12">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель настроек прав</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель настроек прав</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+							<ExtendedTooltip name="ПанельНастроекПравРасширеннаяПодсказка" id="165"/>
+							<ChildItems>
+								<Page name="Партнеры" id="13">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Партнеры</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Партнеры</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПартнерыРасширеннаяПодсказка" id="166"/>
+									<ChildItems>
+										<Table name="СписокНастроекПартнеров" id="16">
+											<Representation>List</Representation>
+											<SkipOnInput>false</SkipOnInput>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<DataPath>СписокНастроекПартнеров</DataPath>
+											<RowPictureDataPath>СписокНастроекПартнеров.Picture</RowPictureDataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="СписокНастроекПартнеровКонтекстноеМеню" id="17">
+												<Autofill>false</Autofill>
+											</ContextMenu>
+											<AutoCommandBar name="СписокНастроекПартнеровКоманднаяПанель" id="18">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="СписокНастроекПартнеровРасширеннаяПодсказка" id="167"/>
+											<SearchStringAddition name="СписокНастроекПартнеровСтрокаПоиска" id="168">
+												<AdditionSource>
+													<Item>СписокНастроекПартнеров</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекПартнеровСтрокаПоискаКонтекстноеМеню" id="169"/>
+												<ExtendedTooltip name="СписокНастроекПартнеровСтрокаПоискаРасширеннаяПодсказка" id="170"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="СписокНастроекПартнеровСостояниеПросмотра" id="171">
+												<AdditionSource>
+													<Item>СписокНастроекПартнеров</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекПартнеровСостояниеПросмотраКонтекстноеМеню" id="172"/>
+												<ExtendedTooltip name="СписокНастроекПартнеровСостояниеПросмотраРасширеннаяПодсказка" id="173"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="СписокНастроекПартнеровУправлениеПоиском" id="174">
+												<AdditionSource>
+													<Item>СписокНастроекПартнеров</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекПартнеровУправлениеПоискомКонтекстноеМеню" id="175"/>
+												<ExtendedTooltip name="СписокНастроекПартнеровУправлениеПоискомРасширеннаяПодсказка" id="176"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeAddRow">СписокНастроекПартнеровПередНачаломДобавления</Event>
+												<Event name="BeforeDeleteRow">СписокНастроекПартнеровПередУдалением</Event>
+												<Event name="BeforeRowChange">СписокНастроекПартнеровПередНачаломИзменения</Event>
+											</Events>
+											<ChildItems>
+												<CheckBoxField name="СписокНастроекПартнеровПометка" id="44">
+													<DataPath>СписокНастроекПартнеров.Check</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СписокНастроекПартнеровПометкаКонтекстноеМеню" id="45"/>
+													<ExtendedTooltip name="СписокНастроекПартнеровПометкаРасширеннаяПодсказка" id="177"/>
+												</CheckBoxField>
+												<InputField name="СписокНастроекПартнеровЗначение" id="19">
+													<DataPath>СписокНастроекПартнеров.Value</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СписокНастроекПартнеровЗначениеКонтекстноеМеню" id="20"/>
+													<ExtendedTooltip name="СписокНастроекПартнеровЗначениеРасширеннаяПодсказка" id="178"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="Организации" id="37">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Организации</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Организации</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОрганизацииРасширеннаяПодсказка" id="179"/>
+									<ChildItems>
+										<Table name="СписокНастроекОрганизаций" id="38">
+											<Representation>List</Representation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<DataPath>СписокНастроекОрганизаций</DataPath>
+											<RowPictureDataPath>СписокНастроекОрганизаций.Picture</RowPictureDataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="СписокНастроекОрганизацийКонтекстноеМеню" id="39">
+												<Autofill>false</Autofill>
+											</ContextMenu>
+											<AutoCommandBar name="СписокНастроекОрганизацийКоманднаяПанель" id="40">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="СписокНастроекОрганизацийРасширеннаяПодсказка" id="180"/>
+											<SearchStringAddition name="СписокНастроекОрганизацийСтрокаПоиска" id="181">
+												<AdditionSource>
+													<Item>СписокНастроекОрганизаций</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекОрганизацийСтрокаПоискаКонтекстноеМеню" id="182"/>
+												<ExtendedTooltip name="СписокНастроекОрганизацийСтрокаПоискаРасширеннаяПодсказка" id="183"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="СписокНастроекОрганизацийСостояниеПросмотра" id="184">
+												<AdditionSource>
+													<Item>СписокНастроекОрганизаций</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекОрганизацийСостояниеПросмотраКонтекстноеМеню" id="185"/>
+												<ExtendedTooltip name="СписокНастроекОрганизацийСостояниеПросмотраРасширеннаяПодсказка" id="186"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="СписокНастроекОрганизацийУправлениеПоиском" id="187">
+												<AdditionSource>
+													<Item>СписокНастроекОрганизаций</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекОрганизацийУправлениеПоискомКонтекстноеМеню" id="188"/>
+												<ExtendedTooltip name="СписокНастроекОрганизацийУправлениеПоискомРасширеннаяПодсказка" id="189"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeAddRow">СписокНастроекОрганизацийПередНачаломДобавления</Event>
+												<Event name="BeforeDeleteRow">СписокНастроекОрганизацийПередУдалением</Event>
+												<Event name="BeforeRowChange">СписокНастроекОрганизацийПередНачаломИзменения</Event>
+											</Events>
+											<ChildItems>
+												<CheckBoxField name="СписокНастроекОрганизацийПометка" id="46">
+													<DataPath>СписокНастроекОрганизаций.Check</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СписокНастроекОрганизацийПометкаКонтекстноеМеню" id="47"/>
+													<ExtendedTooltip name="СписокНастроекОрганизацийПометкаРасширеннаяПодсказка" id="190"/>
+												</CheckBoxField>
+												<InputField name="СписокНастроекОрганизацийЗначение" id="41">
+													<DataPath>СписокНастроекОрганизаций.Value</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СписокНастроекОрганизацийЗначениеКонтекстноеМеню" id="42"/>
+													<ExtendedTooltip name="СписокНастроекОрганизацийЗначениеРасширеннаяПодсказка" id="191"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="Документы" id="14">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ДокументыРасширеннаяПодсказка" id="192"/>
+									<ChildItems>
+										<Table name="СписокНастроекДокументов" id="21">
+											<Representation>List</Representation>
+											<SkipOnInput>false</SkipOnInput>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<DataPath>СписокНастроекДокументов</DataPath>
+											<RowPictureDataPath>СписокНастроекДокументов.Picture</RowPictureDataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="СписокНастроекДокументовКонтекстноеМеню" id="22">
+												<Autofill>false</Autofill>
+											</ContextMenu>
+											<AutoCommandBar name="СписокНастроекДокументовКоманднаяПанель" id="23">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="СписокНастроекДокументовРасширеннаяПодсказка" id="193"/>
+											<SearchStringAddition name="СписокНастроекДокументовСтрокаПоиска" id="194">
+												<AdditionSource>
+													<Item>СписокНастроекДокументов</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекДокументовСтрокаПоискаКонтекстноеМеню" id="195"/>
+												<ExtendedTooltip name="СписокНастроекДокументовСтрокаПоискаРасширеннаяПодсказка" id="196"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="СписокНастроекДокументовСостояниеПросмотра" id="197">
+												<AdditionSource>
+													<Item>СписокНастроекДокументов</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекДокументовСостояниеПросмотраКонтекстноеМеню" id="198"/>
+												<ExtendedTooltip name="СписокНастроекДокументовСостояниеПросмотраРасширеннаяПодсказка" id="199"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="СписокНастроекДокументовУправлениеПоиском" id="200">
+												<AdditionSource>
+													<Item>СписокНастроекДокументов</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекДокументовУправлениеПоискомКонтекстноеМеню" id="201"/>
+												<ExtendedTooltip name="СписокНастроекДокументовУправлениеПоискомРасширеннаяПодсказка" id="202"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeAddRow">СписокНастроекДокументовПередНачаломДобавления</Event>
+												<Event name="BeforeDeleteRow">СписокНастроекДокументовПередУдалением</Event>
+											</Events>
+											<ChildItems>
+												<CheckBoxField name="СписокНастроекДокументовПометка" id="48">
+													<DataPath>СписокНастроекДокументов.Check</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СписокНастроекДокументовПометкаКонтекстноеМеню" id="49"/>
+													<ExtendedTooltip name="СписокНастроекДокументовПометкаРасширеннаяПодсказка" id="203"/>
+												</CheckBoxField>
+												<InputField name="СписокНастроекДокументовЗначение" id="24">
+													<DataPath>СписокНастроекДокументов.Value</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СписокНастроекДокументовЗначениеКонтекстноеМеню" id="25"/>
+													<ExtendedTooltip name="СписокНастроекДокументовЗначениеРасширеннаяПодсказка" id="204"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="EDI_сообщения" id="15">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>EDI сообщения</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>EDI сообщения</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="EDI_сообщенияРасширеннаяПодсказка" id="205"/>
+									<ChildItems>
+										<Table name="СписокНастроекСообщений" id="26">
+											<Representation>List</Representation>
+											<SkipOnInput>false</SkipOnInput>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<DataPath>СписокНастроекСообщений</DataPath>
+											<RowPictureDataPath>СписокНастроекСообщений.Picture</RowPictureDataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="СписокНастроекСообщенийКонтекстноеМеню" id="27">
+												<Autofill>false</Autofill>
+											</ContextMenu>
+											<AutoCommandBar name="СписокНастроекСообщенийКоманднаяПанель" id="28">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="СписокНастроекСообщенийРасширеннаяПодсказка" id="206"/>
+											<SearchStringAddition name="СписокНастроекСообщенийСтрокаПоиска" id="207">
+												<AdditionSource>
+													<Item>СписокНастроекСообщений</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекСообщенийСтрокаПоискаКонтекстноеМеню" id="208"/>
+												<ExtendedTooltip name="СписокНастроекСообщенийСтрокаПоискаРасширеннаяПодсказка" id="209"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="СписокНастроекСообщенийСостояниеПросмотра" id="210">
+												<AdditionSource>
+													<Item>СписокНастроекСообщений</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекСообщенийСостояниеПросмотраКонтекстноеМеню" id="211"/>
+												<ExtendedTooltip name="СписокНастроекСообщенийСостояниеПросмотраРасширеннаяПодсказка" id="212"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="СписокНастроекСообщенийУправлениеПоиском" id="213">
+												<AdditionSource>
+													<Item>СписокНастроекСообщений</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокНастроекСообщенийУправлениеПоискомКонтекстноеМеню" id="214"/>
+												<ExtendedTooltip name="СписокНастроекСообщенийУправлениеПоискомРасширеннаяПодсказка" id="215"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeAddRow">СписокНастроекСообщенийПередНачаломДобавления</Event>
+												<Event name="BeforeDeleteRow">СписокНастроекСообщенийПередУдалением</Event>
+											</Events>
+											<ChildItems>
+												<CheckBoxField name="СписокНастроекСообщенийПометка" id="50">
+													<DataPath>СписокНастроекСообщений.Check</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СписокНастроекСообщенийПометкаКонтекстноеМеню" id="51"/>
+													<ExtendedTooltip name="СписокНастроекСообщенийПометкаРасширеннаяПодсказка" id="216"/>
+												</CheckBoxField>
+												<InputField name="СписокНастроекСообщенийЗначение" id="29">
+													<DataPath>СписокНастроекСообщений.Value</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="СписокНастроекСообщенийЗначениеКонтекстноеМеню" id="30"/>
+													<ExtendedTooltip name="СписокНастроекСообщенийЗначениеРасширеннаяПодсказка" id="217"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="Дополнительно" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДополнительноРасширеннаяПодсказка" id="218"/>
+					<ChildItems>
+						<CheckBoxField name="СлужебныйПользовательАвтообмен" id="32">
+							<DataPath>СлужебныйПользовательАвтообмен</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content> Служебный пользователь для автообмена</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СлужебныйПользовательАвтообменКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="СлужебныйПользовательАвтообменРасширеннаяПодсказка" id="219"/>
+						</CheckBoxField>
+						<LabelDecoration name="ПояснениеСлужебныйПользовательАвтообмен" id="34">
+							<Width>40</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<SkipOnInput>false</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При запуске обработки служебным пользователем автоматически произойдет загрузка всех новых сообщений, а также отправка сообщений, которые ожидают отправки. После выполнения всех обменов работа с 1С будет завершена автоматически.</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ПояснениеСлужебныйПользовательАвтообменКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ПояснениеСлужебныйПользовательАвтообменРасширеннаяПодсказка" id="220"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаНастройкиФайлаАвтозапускаМодуля" id="52">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки файла автозапуска модуля (*.bat)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки файла автозапуска модуля</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаНастройкиФайлаАвтозапускаМодуляРасширеннаяПодсказка" id="221"/>
+							<ChildItems>
+								<RadioButtonField name="АвтообменВариантБазыДанных" id="53">
+									<DataPath>АвтообменВариантБазыДанных</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Серверный вариант</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">СерверныйВариант</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Файловый вариант</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ФайловыйВариант</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="АвтообменВариантБазыДанныхКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="АвтообменВариантБазыДанныхРасширеннаяПодсказка" id="222"/>
+									<Events>
+										<Event name="OnChange">АвтообменВариантБазыДанныхПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<UsualGroup name="ГруппаСерверныйВариант" id="55">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Серверный вариант</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа серверный вариант</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаСерверныйВариантРасширеннаяПодсказка" id="223"/>
+									<ChildItems>
+										<InputField name="АвтообменСервер" id="65">
+											<DataPath>АвтообменСервер</DataPath>
+											<ContextMenu name="АвтообменСерверКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="АвтообменСерверРасширеннаяПодсказка" id="224"/>
+										</InputField>
+										<InputField name="АвтообменИмяБазы" id="67">
+											<DataPath>АвтообменИмяБазы</DataPath>
+											<ContextMenu name="АвтообменИмяБазыКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="АвтообменИмяБазыРасширеннаяПодсказка" id="225"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаФайловыйВариант" id="56">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Файловый вариант</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа файловый вариант</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаФайловыйВариантРасширеннаяПодсказка" id="226"/>
+									<ChildItems>
+										<InputField name="АвтообменПутьКБазе" id="63">
+											<DataPath>АвтообменПутьКБазе</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Путь к ИБ</v8:content>
+												</v8:item>
+											</Title>
+											<ChoiceButton>true</ChoiceButton>
+											<ContextMenu name="АвтообменПутьКБазеКонтекстноеМеню" id="64"/>
+											<ExtendedTooltip name="АвтообменПутьКБазеРасширеннаяПодсказка" id="227"/>
+											<Events>
+												<Event name="StartChoice">АвтообменПутьКБазеНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="АвтообменПользователь" id="57">
+									<DataPath>АвтообменПользователь</DataPath>
+									<Visible>false</Visible>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="АвтообменПользовательКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="АвтообменПользовательРасширеннаяПодсказка" id="228"/>
+									<Events>
+										<Event name="StartChoice">АвтообменПользовательНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="АвтообменПароль" id="59">
+									<DataPath>АвтообменПароль</DataPath>
+									<ContextMenu name="АвтообменПарольКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="АвтообменПарольРасширеннаяПодсказка" id="229"/>
+								</InputField>
+								<InputField name="АвтообменПутьКМодулю" id="61">
+									<DataPath>АвтообменПутьКМодулю</DataPath>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="АвтообменПутьКМодулюКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="АвтообменПутьКМодулюРасширеннаяПодсказка" id="230"/>
+									<Events>
+										<Event name="StartChoice">АвтообменПутьКМодулюНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<Button name="АвтообменСохранитьБатФайл" id="69">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.АвтообменСохранитьБатФайл</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сохранить файл</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="АвтообменСохранитьБатФайлРасширеннаяПодсказка" id="231"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="Группа1" id="36">
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="232"/>
+			<ChildItems>
+				<InputField name="УчетнаяЗапись" id="3">
+					<DataPath>УчетнаяЗапись</DataPath>
+					<Enabled>false</Enabled>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учетная запись (не используется)</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="233"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурEDI</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Пользователь" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="РольПользователяEDI" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роль пользователя EDI</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СлужебныйПользовательАвтообмен" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служебный пользователь автообмен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокНастроекДокументов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список настроек документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокНастроекПартнеров" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список настроек партнеров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокНастроекСообщений" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список настроек сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УчетнаяЗапись" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная запись</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантОбмена" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтообменВариантБазыДанных" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автообмен вариант базы данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтообменИмяБазы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя базы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтообменПароль" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтообменПользователь" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтообменПутьКБазе" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к базе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтообменПутьКМодулю" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к модулю</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтообменСервер" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер 1С</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокНастроекОрганизаций" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список настроек организаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГруппаФайловыйВариант</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">АвтообменВариантБазыДанных</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">СерверныйВариант</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГруппаСерверныйВариант</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">АвтообменВариантБазыДанных</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">ФайловыйВариант</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+		</Command>
+		<Command name="АвтообменСохранитьБатФайл" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автообмен сохранить бат файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автообмен сохранить бат файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АвтообменСохранитьБатФайл</Action>
+		</Command>
+		<Command name="ВсеГалкиПроставить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все галки проставить</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВсеГалкиПроставить</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ВсеГалкиУбрать" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все галки убрать</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВсеГалкиУбрать</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Пользователь">
+			<Type>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Parameter>
+		<Parameter name="Новый">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="МодальностьЗапрещена">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

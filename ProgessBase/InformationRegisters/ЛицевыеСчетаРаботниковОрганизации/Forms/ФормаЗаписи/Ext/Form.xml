@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="18">
+			<DataPath>Запись.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="20"/>
+		</InputField>
+		<InputField name="Банк" id="3">
+			<DataPath>Запись.Банк</DataPath>
+			<ContextMenu name="БанкКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="БанкРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ФизЛицо" id="5">
+			<DataPath>Запись.ФизЛицо</DataPath>
+			<ContextMenu name="ФизЛицоКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ФизЛицоРасширеннаяПодсказка" id="22"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="17">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="НомерЛицевогоСчета" id="7">
+					<DataPath>Запись.НомерЛицевогоСчета</DataPath>
+					<ContextMenu name="НомерЛицевогоСчетаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НомерЛицевогоСчетаРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<CheckBoxField name="AVT_ЛичныеРеквизиты" id="15">
+					<DataPath>Запись.AVT_ЛичныеРеквизиты</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="AVT_ЛичныеРеквизитыКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="AVT_ЛичныеРеквизитыРасширеннаяПодсказка" id="25"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Авт_ТекстНазначения" id="9">
+			<DataPath>Запись.Авт_ТекстНазначения</DataPath>
+			<Width>60</Width>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="Авт_ТекстНазначенияКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="Авт_ТекстНазначенияРасширеннаяПодсказка" id="26"/>
+		</InputField>
+		<InputField name="Авт_ТекстКорреспондента" id="11">
+			<DataPath>Запись.Авт_ТекстКорреспондента</DataPath>
+			<Width>60</Width>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="Авт_ТекстКорреспондентаКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="Авт_ТекстКорреспондентаРасширеннаяПодсказка" id="27"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ЛицевыеСчетаРаботниковОрганизации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

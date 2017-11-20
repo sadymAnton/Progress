@@ -1,0 +1,1034 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОборот</dataPath>
+			<field>КоличествоОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество принято</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаПретензии</dataPath>
+			<field>ПричинаПретензии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина претензии</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РешениеПоПретензии</dataPath>
+			<field>РешениеПоПретензии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Решение по претензии</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОборот</dataPath>
+			<field>СуммаОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма принято</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидыПричинПретензии</dataPath>
+			<field>ВидыПричинПретензии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид причин претензии</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоРекламацииОборот</dataPath>
+			<field>КоличествоРекламацииОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество рекламации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Накладная</dataPath>
+			<field>Накладная</field>
+			<presentationExpression>Накладная.Номер+"от " +Формат(Накладная.Дата,"ДФ=dd.MM.yyyy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРекламацииОборот</dataPath>
+			<field>СуммаРекламацииОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма рекламации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПретензии</dataPath>
+			<field>ДокументПретензии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ претензии</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия номенклатуры</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика номенклатуры</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаФакт</dataPath>
+			<field>ЦенаФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена факт.</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНакладнойОборот</dataPath>
+			<field>КоличествоНакладнойОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество по накладной</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПринятоСкладомОборот</dataPath>
+			<field>КоличествоПринятоСкладомОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество принято складом</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоФактОборот</dataPath>
+			<field>КоличествоФактОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество факт.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНакладнойОборот</dataPath>
+			<field>СуммаНакладнойОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма по накладной</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаФактОборот</dataPath>
+			<field>СуммаФактОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма факт.</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПокупателя</dataPath>
+			<field>ЗаказПокупателя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ покупателя</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>ЗаказПокупателя.Номер+"от "+ Формат(ЗаказПокупателя.Дата,"ДФ=dd.MM.yyyy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорректировкаПеремещенияТоваров</dataPath>
+			<field>КорректировкаПеремещенияТоваров</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировка перемещения товаров</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>КорректировкаПеремещенияТоваров.Номер+"от " +Формат(КорректировкаПеремещенияТоваров.Дата,"ДФ=dd.MM.yyyy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорректировкаРеализации</dataPath>
+			<field>КорректировкаРеализации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировка реализации</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>КорректировкаРеализации.Номер+"от " +Формат(КорректировкаРеализации.Дата,"ДФ=dd.MM.yyyy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПеревыставленоНаКонтрагента</dataPath>
+			<field>ПеревыставленоНаКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевыставлено на контрагента</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>ПеревыставленоНаКонтрагента.Номер+"от " + Формат(ПеревыставленоНаКонтрагента.Дата,"ДФ=dd.MM.yyyy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПеремещениеТоваров</dataPath>
+			<field>ПеремещениеТоваров</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перемещение товаров</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>ПеремещениеТоваров.Номер+"от " +Формат(ПеремещениеТоваров.Дата,"ДФ=dd.MM.yyyy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УменьшениеЗадолженности</dataPath>
+			<field>УменьшениеЗадолженности</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшение задолженности</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>УменьшениеЗадолженности.Номер+"от " +Формат(УменьшениеЗадолженности.Дата,"ДФ=dd.MM.yyyy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СписаниеТоваров</dataPath>
+			<field>СписаниеТоваров</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списание товаров</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>СписаниеТоваров.Номер+"от " +Формат(СписаниеТоваров.Дата,"ДФ=dd.MM.yyyy")</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокОбработки</dataPath>
+			<field>СрокОбработки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок обработки, дни</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КорректировкаЗаписейРегистров</dataPath>
+			<field>КорректировкаЗаписейРегистров</field>
+			<presentationExpression>КорректировкаЗаписейРегистров.Номер+" от " +Формат(КорректировкаЗаписейРегистров.Дата,"ДФ=dd.MM.yyyy")</presentationExpression>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">25</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КомментарийКорректировки</dataPath>
+			<field>КомментарийКорректировки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребованиеНакладная</dataPath>
+			<field>ТребованиеНакладная</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СторноНакладной</dataPath>
+			<field>СторноНакладной</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПР_ПретензииОбороты.Контрагент,
+	ПР_ПретензииОбороты.ДоговорКонтрагента,
+	ПР_ПретензииОбороты.ВидыПричинПретензии,
+	ПР_ПретензииОбороты.ПричинаПретензии,
+	ПР_ПретензииОбороты.РешениеПоПретензии,
+	ПР_ПретензииОбороты.Накладная,
+	ПР_ПретензииОбороты.Номенклатура,
+	ПР_ПретензииОбороты.ДокументПретензии,
+	ПР_ПретензииОбороты.ХарактеристикаНоменклатуры,
+	ПР_ПретензииОбороты.СерияНоменклатуры,
+	ПР_ПретензииОбороты.ЦенаФакт,
+	ПР_ПретензииОбороты.КоличествоОборот,
+	ПР_ПретензииОбороты.КоличествоНакладнойОборот,
+	ПР_ПретензииОбороты.КоличествоФактОборот,
+	ПР_ПретензииОбороты.КоличествоРекламацииОборот,
+	ПР_ПретензииОбороты.КоличествоПринятоСкладомОборот,
+	ПР_ПретензииОбороты.СуммаОборот,
+	ПР_ПретензииОбороты.СуммаНакладнойОборот,
+	ПР_ПретензииОбороты.СуммаФактОборот,
+	ПР_ПретензииОбороты.СуммаРекламацииОборот,
+	ВЫБОР
+		КОГДА ПР_ПретензииОбороты.ДокументПретензии.ДатаЗакрытия = &amp;ПустаяДата
+			ТОГДА РАЗНОСТЬДАТ(ПР_ПретензииОбороты.ДокументПретензии.Дата, &amp;ТекущаяДата, ДЕНЬ)
+		ИНАЧЕ РАЗНОСТЬДАТ(ПР_ПретензииОбороты.ДокументПретензии.Дата, ПР_ПретензииОбороты.ДокументПретензии.ДатаЗакрытия, ДЕНЬ)
+	КОНЕЦ КАК СрокОбработки
+ПОМЕСТИТЬ Т_ДанныеПоПретензиям
+ИЗ
+	РегистрНакопления.ПР_Претензии.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК ПР_ПретензииОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(КорректировкаДолга.Ссылка) КАК УменьшениеЗадолженности,
+	КорректировкаДолга.ДокументОснование КАК ДокументПретензии
+ПОМЕСТИТЬ Т_УменьшениеЗадолженности
+ИЗ
+	Документ.КорректировкаДолга КАК КорректировкаДолга
+ГДЕ
+	КорректировкаДолга.Проведен = ИСТИНА
+	И КорректировкаДолга.ДокументОснование В
+			(ВЫБРАТЬ
+				Т_ДанныеПоПретензиям.ДокументПретензии
+			ИЗ
+				Т_ДанныеПоПретензиям)
+
+СГРУППИРОВАТЬ ПО
+	КорректировкаДолга.ДокументОснование
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(КорректировкаДолга.Ссылка) КАК ПеревыставленоНаКонтрагента,
+	КорректировкаДолга.ДокументОснование.ДокументОснование КАК ДокументПретензии
+ПОМЕСТИТЬ Т_ПеревыставленоНаКонтрагента
+ИЗ
+	Документ.КорректировкаДолга КАК КорректировкаДолга
+ГДЕ
+	КорректировкаДолга.Проведен = ИСТИНА
+	И КорректировкаДолга.ДокументОснование ССЫЛКА Документ.СписаниеТоваров
+	И КорректировкаДолга.ДокументОснование.ДокументОснование В
+			(ВЫБРАТЬ
+				Т_ДанныеПоПретензиям.ДокументПретензии
+			ИЗ
+				Т_ДанныеПоПретензиям)
+
+СГРУППИРОВАТЬ ПО
+	КорректировкаДолга.ДокументОснование.ДокументОснование
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(СписаниеТоваров.Ссылка) КАК СписаниеТоваров,
+	СписаниеТоваров.Ссылка.ДокументОснование КАК ДокументПретензии,
+	СписаниеТоваров.Номенклатура
+ПОМЕСТИТЬ Т_СписаниеТоваров
+ИЗ
+	Документ.СписаниеТоваров.Товары КАК СписаниеТоваров
+ГДЕ
+	СписаниеТоваров.Ссылка.Проведен = ИСТИНА
+	И СписаниеТоваров.Ссылка.ДокументОснование В
+			(ВЫБРАТЬ
+				Т_ДанныеПоПретензиям.ДокументПретензии
+			ИЗ
+				Т_ДанныеПоПретензиям)
+
+СГРУППИРОВАТЬ ПО
+	СписаниеТоваров.Ссылка.ДокументОснование,
+	СписаниеТоваров.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(ТребованиеНакладная.Ссылка) КАК ТребованиеНакладная,
+	ТребованиеНакладная.Ссылка.ДокументОснование КАК ДокументПретензии,
+	ТребованиеНакладная.Номенклатура
+ПОМЕСТИТЬ Т_ТребованиеНакладная
+ИЗ
+	Документ.ТребованиеНакладная.Материалы КАК ТребованиеНакладная
+ГДЕ
+	ТребованиеНакладная.Ссылка.Проведен = ИСТИНА
+	И ТребованиеНакладная.Ссылка.ДокументОснование В
+			(ВЫБРАТЬ
+				Т_ДанныеПоПретензиям.ДокументПретензии
+			ИЗ
+				Т_ДанныеПоПретензиям)
+
+СГРУППИРОВАТЬ ПО
+	ТребованиеНакладная.Ссылка.ДокументОснование,
+	ТребованиеНакладная.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(ПРГ_СторноНакладной.Ссылка) КАК СторноНакладной,
+	ПРГ_СторноНакладной.Претензия КАК ДокументПретензии
+ПОМЕСТИТЬ Т_СторноНакладной
+ИЗ
+	Документ.ПРГ_СторноНакладной КАК ПРГ_СторноНакладной
+ГДЕ
+	ПРГ_СторноНакладной.Проведен = ИСТИНА
+	И ПРГ_СторноНакладной.Претензия В
+			(ВЫБРАТЬ
+				Т_ДанныеПоПретензиям.ДокументПретензии
+			ИЗ
+				Т_ДанныеПоПретензиям)
+
+СГРУППИРОВАТЬ ПО
+	ПРГ_СторноНакладной.Претензия
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(КорректировкаРеализации.Ссылка) КАК КорректировкаРеализации,
+	КорректировкаРеализации.Ссылка.ПР_Претензия КАК ДокументПретензии,
+	КорректировкаРеализации.Номенклатура
+ПОМЕСТИТЬ Т_КорректировкаРеализации
+ИЗ
+	Документ.КорректировкаРеализации.Товары КАК КорректировкаРеализации
+ГДЕ
+	КорректировкаРеализации.Ссылка.Проведен = ИСТИНА
+	И КорректировкаРеализации.Ссылка.ПР_Претензия В
+			(ВЫБРАТЬ
+				Т_ДанныеПоПретензиям.ДокументПретензии
+			ИЗ
+				Т_ДанныеПоПретензиям)
+
+СГРУППИРОВАТЬ ПО
+	КорректировкаРеализации.Ссылка.ПР_Претензия,
+	КорректировкаРеализации.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(ПеремещениеТоваров.Ссылка) КАК КорректировкаПеремещенияТоваров,
+	ПеремещениеТоваров.Ссылка.ДокументОснование КАК ДокументПретензии,
+	ПеремещениеТоваров.Номенклатура
+ПОМЕСТИТЬ Т_КорректировкаПеремещенияТоваров
+ИЗ
+	Документ.ПеремещениеТоваров.Товары КАК ПеремещениеТоваров
+ГДЕ
+	ПеремещениеТоваров.Ссылка.Проведен = ИСТИНА
+	И ПеремещениеТоваров.Ссылка.ДокументОснование В
+			(ВЫБРАТЬ
+				Т_ДанныеПоПретензиям.ДокументПретензии
+			ИЗ
+				Т_ДанныеПоПретензиям)
+	И ПеремещениеТоваров.Ссылка.ВидОперации = &amp;ВидОперации
+
+СГРУППИРОВАТЬ ПО
+	ПеремещениеТоваров.Ссылка.ДокументОснование,
+	ПеремещениеТоваров.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(ПеремещениеТоваров.Ссылка) КАК ПеремещениеТоваров,
+	ПеремещениеТоваров.Ссылка.ДокументОснование КАК ДокументПретензии,
+	ПеремещениеТоваров.Номенклатура
+ПОМЕСТИТЬ Т_ПеремещенияТоваров
+ИЗ
+	Документ.ПеремещениеТоваров.Товары КАК ПеремещениеТоваров
+ГДЕ
+	ПеремещениеТоваров.Ссылка.Проведен = ИСТИНА
+	И ПеремещениеТоваров.Ссылка.ДокументОснование В
+			(ВЫБРАТЬ
+				Т_ДанныеПоПретензиям.ДокументПретензии
+			ИЗ
+				Т_ДанныеПоПретензиям)
+	И НЕ ПеремещениеТоваров.Ссылка.ВидОперации = &amp;ВидОперации
+
+СГРУППИРОВАТЬ ПО
+	ПеремещениеТоваров.Ссылка.ДокументОснование,
+	ПеремещениеТоваров.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МАКСИМУМ(ЗаказыПокупателя.Ссылка) КАК ЗаказПокупателя,
+	ЗаказыПокупателя.Ссылка.ДокументОснование КАК ДокументПретензии,
+	ЗаказыПокупателя.Номенклатура
+ПОМЕСТИТЬ Т_ЗаказыПокупателя
+ИЗ
+	Документ.ЗаказПокупателя.Товары КАК ЗаказыПокупателя
+ГДЕ
+	ЗаказыПокупателя.Ссылка.Проведен = ИСТИНА
+	И ЗаказыПокупателя.Ссылка.ДокументОснование В
+			(ВЫБРАТЬ
+				Т_ДанныеПоПретензиям.ДокументПретензии
+			ИЗ
+				Т_ДанныеПоПретензиям)
+	И ЗаказыПокупателя.Ссылка.КП_ВидЗаказаПокупателя = &amp;ВидОперацииЗаказаПокупателя
+
+СГРУППИРОВАТЬ ПО
+	ЗаказыПокупателя.Ссылка.ДокументОснование,
+	ЗаказыПокупателя.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	КорректировкаЗаписейРегистровЗаполнениеДвижений.Документ,
+	КорректировкаЗаписейРегистровЗаполнениеДвижений.Ссылка КАК КорректировкаЗаписейРегистров,
+	КорректировкаЗаписейРегистровЗаполнениеДвижений.Ссылка.Комментарий КАК КомментарийКорректировки
+ПОМЕСТИТЬ ВТТаблицаКорректировокЗаписейРегистров
+ИЗ
+	Документ.КорректировкаЗаписейРегистров.ЗаполнениеДвижений КАК КорректировкаЗаписейРегистровЗаполнениеДвижений
+ГДЕ
+	(КорректировкаЗаписейРегистровЗаполнениеДвижений.Документ ССЫЛКА Документ.КорректировкаРеализации
+			ИЛИ КорректировкаЗаписейРегистровЗаполнениеДвижений.Документ ССЫЛКА Документ.ПеремещениеТоваров
+			ИЛИ КорректировкаЗаписейРегистровЗаполнениеДвижений.Документ ССЫЛКА Документ.РеализацияТоваровУслуг)
+	И КорректировкаЗаписейРегистровЗаполнениеДвижений.Документ В
+			(ВЫБРАТЬ
+				Т_ДанныеПоПретензиямВ.Накладная
+			ИЗ
+				Т_ДанныеПоПретензиям КАК Т_ДанныеПоПретензиямВ)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Т_ДанныеПоПретензиям.Контрагент,
+	Т_ДанныеПоПретензиям.ДоговорКонтрагента,
+	Т_ДанныеПоПретензиям.ВидыПричинПретензии,
+	Т_ДанныеПоПретензиям.ПричинаПретензии,
+	Т_ДанныеПоПретензиям.РешениеПоПретензии,
+	Т_ДанныеПоПретензиям.Накладная,
+	Т_ДанныеПоПретензиям.Номенклатура,
+	Т_ДанныеПоПретензиям.ДокументПретензии,
+	Т_ДанныеПоПретензиям.ХарактеристикаНоменклатуры,
+	Т_ДанныеПоПретензиям.СерияНоменклатуры,
+	Т_ДанныеПоПретензиям.ЦенаФакт,
+	Т_ДанныеПоПретензиям.КоличествоОборот,
+	Т_ДанныеПоПретензиям.КоличествоНакладнойОборот,
+	Т_ДанныеПоПретензиям.КоличествоФактОборот,
+	Т_ДанныеПоПретензиям.КоличествоРекламацииОборот,
+	Т_ДанныеПоПретензиям.КоличествоПринятоСкладомОборот,
+	Т_ДанныеПоПретензиям.СуммаОборот,
+	Т_ДанныеПоПретензиям.СуммаНакладнойОборот,
+	Т_ДанныеПоПретензиям.СуммаФактОборот,
+	Т_ДанныеПоПретензиям.СуммаРекламацииОборот,
+	Т_ЗаказыПокупателя.ЗаказПокупателя,
+	Т_КорректировкаПеремещенияТоваров.КорректировкаПеремещенияТоваров,
+	Т_КорректировкаРеализации.КорректировкаРеализации,
+	Т_ПеревыставленоНаКонтрагента.ПеревыставленоНаКонтрагента,
+	Т_ПеремещенияТоваров.ПеремещениеТоваров,
+	Т_УменьшениеЗадолженности.УменьшениеЗадолженности,
+	Т_СписаниеТоваров.СписаниеТоваров,
+	Т_ТребованиеНакладная.ТребованиеНакладная,
+	Т_СторноНакладной.СторноНакладной,
+	Т_ДанныеПоПретензиям.СрокОбработки,
+	ВТТаблицаКорректировокЗаписейРегистров.КорректировкаЗаписейРегистров,
+	ВТТаблицаКорректировокЗаписейРегистров.КомментарийКорректировки
+ИЗ
+	Т_ДанныеПоПретензиям КАК Т_ДанныеПоПретензиям
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_УменьшениеЗадолженности КАК Т_УменьшениеЗадолженности
+		ПО Т_ДанныеПоПретензиям.ДокументПретензии = Т_УменьшениеЗадолженности.ДокументПретензии
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_ПеревыставленоНаКонтрагента КАК Т_ПеревыставленоНаКонтрагента
+		ПО Т_ДанныеПоПретензиям.ДокументПретензии = Т_ПеревыставленоНаКонтрагента.ДокументПретензии
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_КорректировкаРеализации КАК Т_КорректировкаРеализации
+		ПО Т_ДанныеПоПретензиям.ДокументПретензии = Т_КорректировкаРеализации.ДокументПретензии
+			И Т_ДанныеПоПретензиям.Номенклатура = Т_КорректировкаРеализации.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_КорректировкаПеремещенияТоваров КАК Т_КорректировкаПеремещенияТоваров
+		ПО Т_ДанныеПоПретензиям.ДокументПретензии = Т_КорректировкаПеремещенияТоваров.ДокументПретензии
+			И Т_ДанныеПоПретензиям.Номенклатура = Т_КорректировкаПеремещенияТоваров.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_ПеремещенияТоваров КАК Т_ПеремещенияТоваров
+		ПО Т_ДанныеПоПретензиям.ДокументПретензии = Т_ПеремещенияТоваров.ДокументПретензии
+			И Т_ДанныеПоПретензиям.Номенклатура = Т_ПеремещенияТоваров.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_ЗаказыПокупателя КАК Т_ЗаказыПокупателя
+		ПО Т_ДанныеПоПретензиям.ДокументПретензии = Т_ЗаказыПокупателя.ДокументПретензии
+			И Т_ДанныеПоПретензиям.Номенклатура = Т_ЗаказыПокупателя.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_СписаниеТоваров КАК Т_СписаниеТоваров
+		ПО Т_ДанныеПоПретензиям.ДокументПретензии = Т_СписаниеТоваров.ДокументПретензии
+			И Т_ДанныеПоПретензиям.Номенклатура = Т_СписаниеТоваров.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_ТребованиеНакладная КАК Т_ТребованиеНакладная
+		ПО Т_ДанныеПоПретензиям.ДокументПретензии = Т_ТребованиеНакладная.ДокументПретензии
+			И Т_ДанныеПоПретензиям.Номенклатура = Т_ТребованиеНакладная.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_СторноНакладной КАК Т_СторноНакладной
+		ПО Т_ДанныеПоПретензиям.ДокументПретензии = Т_СторноНакладной.ДокументПретензии
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТТаблицаКорректировокЗаписейРегистров КАК ВТТаблицаКорректировокЗаписейРегистров
+		ПО Т_ДанныеПоПретензиям.Накладная = ВТТаблицаКорректировокЗаписейРегистров.Документ</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоНакладнойОборот</dataPath>
+		<expression>Сумма(КоличествоНакладнойОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОборот</dataPath>
+		<expression>Сумма(КоличествоОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПринятоСкладомОборот</dataPath>
+		<expression>Сумма(КоличествоПринятоСкладомОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоРекламацииОборот</dataPath>
+		<expression>Сумма(КоличествоРекламацииОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоФактОборот</dataPath>
+		<expression>Сумма(КоличествоФактОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНакладнойОборот</dataPath>
+		<expression>Сумма(СуммаНакладнойОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОборот</dataPath>
+		<expression>Сумма(СуммаОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРекламацииОборот</dataPath>
+		<expression>Сумма(СуммаРекламацииОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаФактОборот</dataPath>
+		<expression>Сумма(СуммаФактОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЦенаФакт</dataPath>
+		<expression>Среднее(ЦенаФакт)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">2499-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВидОперации</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид операции</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыОперацийПеремещениеТоваров</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.ВидыОперацийПеремещениеТоваров.ПР_КорректировкаПеремещения</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВидОперацииЗаказаПокупателя</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид операции заказа покупателя</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.КП_ВидыЗаказовПокупателей</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Перечисление.КП_ВидыЗаказовПокупателей.СменаПокупателя</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПустаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пустая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ТекущаяДата()</expression>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоНакладнойОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаНакладнойОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоФактОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаФактОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоРекламацииОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаРекламацииОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПринятоСкладомОборот</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ДокументПретензии</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Документ.ПР_Претензия.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Накладная</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ДоговорКонтрагента</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ДоговорыКонтрагентов.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ПричинаПретензии</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДоговорКонтрагента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДокументПретензии.ВидПретензии</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДокументПретензии</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДокументПретензии.СтатусДокумента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДокументПретензии.ЭтапВозникновенияПретензии</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Накладная.АдресДоставки</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>КорректировкаЗаписейРегистров</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Накладная</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДокументПретензии.ДатаРассмотрения</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДокументПретензии.ДатаЗакрытия</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>СрокОбработки</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Номенклатура</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ПеревыставленоНаКонтрагента</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>УменьшениеЗадолженности</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>КорректировкаПеремещенияТоваров</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ПеремещениеТоваров</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>КорректировкаРеализации</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>СписаниеТоваров</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>КомментарийКорректировки</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>РешениеПоПретензии</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

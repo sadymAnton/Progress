@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическиОтгруженоПоддонов</dataPath>
+			<field>ФактическиОтгруженоПоддонов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Водитель</dataPath>
+			<field>Водитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПереноса</dataPath>
+			<field>ДатаПереноса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Маршрут</dataPath>
+			<field>Маршрут</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПриоритетОтгрузки</dataPath>
+			<field>ПриоритетОтгрузки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Рейс</dataPath>
+			<field>Рейс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипТранспорта</dataPath>
+			<field>ТипТранспорта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТранспортноеСредство</dataPath>
+			<field>ТранспортноеСредство</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТЭК</dataPath>
+			<field>ТЭК</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланДоставки</dataPath>
+			<field>ПланДоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыезда</dataPath>
+			<field>ДатаВыезда</field>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ
+	ПТЛ_ПланДоставкиМаршруты.Ссылка КАК ПланДоставки,
+	ПТЛ_ПланДоставкиМаршруты.Рейс КАК Рейс,
+	ПТЛ_ПланДоставкиМаршруты.Маршрут,
+	ПТЛ_ПланДоставкиМаршруты.ТипТранспорта,
+	ПТЛ_ПланДоставкиМаршруты.ТЭК,
+	ПТЛ_ПланДоставкиМаршруты.Водитель,
+	ПТЛ_ПланДоставкиМаршруты.ТранспортноеСредство,
+	ПТЛ_ПланДоставкиМаршруты.ДатаПереноса,
+	ПТЛ_ПланДоставкиМаршруты.ПриоритетОтгрузки,
+	ПТЛ_ПланДоставкиМаршруты.ФактическиОтгруженоПоддонов,
+	ИнфаПоЖурналам.Журнал.ДатаВыезда КАК ДатаВыезда
+ИЗ
+	Документ.ПТЛ_ПланДоставки.Маршруты КАК ПТЛ_ПланДоставкиМаршруты
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			МИНИМУМ(Журнал.Ссылка) КАК Журнал,
+			ПТЛ_ПланДоставкиМаршруты.Рейс КАК Рейс
+		ИЗ
+			Документ.ПТЛ_ПланДоставки.Маршруты КАК ПТЛ_ПланДоставкиМаршруты
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ПТЛ_ЖурналУчетаВъездаВыездаАМ КАК Журнал
+				ПО ПТЛ_ПланДоставкиМаршруты.Рейс = Журнал.Рейс
+		ГДЕ
+			ПТЛ_ПланДоставкиМаршруты.Ссылка.Проведен
+			И ПТЛ_ПланДоставкиМаршруты.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+			И ПТЛ_ПланДоставкиМаршруты.Ссылка.Отделение.ИспользоватьФактическиОтгруженоПалетВПланеДоставке
+		
+		СГРУППИРОВАТЬ ПО
+			ПТЛ_ПланДоставкиМаршруты.Рейс) КАК ИнфаПоЖурналам
+		ПО ПТЛ_ПланДоставкиМаршруты.Рейс = ИнфаПоЖурналам.Рейс
+ГДЕ
+	ПТЛ_ПланДоставкиМаршруты.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ПТЛ_ПланДоставкиМаршруты.Ссылка.Проведен
+	И ПТЛ_ПланДоставкиМаршруты.Ссылка.Отделение.ИспользоватьФактическиОтгруженоПалетВПланеДоставке
+
+УПОРЯДОЧИТЬ ПО
+	ПланДоставки,
+	Рейс</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ФактическиОтгруженоПоддонов</dataPath>
+		<expression>Сумма(ФактическиОтгруженоПоддонов)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Рейс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПланДоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаВыезда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФактическиОтгруженоПоддонов</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance/>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактически отгруженно поддонов</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

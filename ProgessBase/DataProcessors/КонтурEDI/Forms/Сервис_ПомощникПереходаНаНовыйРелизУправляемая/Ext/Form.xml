@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Вас приветствует мастер перехода на новую версию модуля!</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Задачи" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ЗадачиРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<Page name="ПереходНаНовуюРедакциюМодуля" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Переход на новую редакцию модуля</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Переход на новую редакцию модуля</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ExtendedTooltip name="ПереходНаНовуюРедакциюМодуляРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<LabelDecoration name="ПредупреждениеПоследнее" id="3">
+							<TextColor>style:SpecialTextColor</TextColor>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если вы читаете эту надпись и до сих пор не сделали резервную копию базы, вы очень рисковый человек! Запуск конвертации без резервной копии базы очень опасен.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПредупреждениеПоследнееКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="ПредупреждениеПоследнееРасширеннаяПодсказка" id="42"/>
+						</LabelDecoration>
+						<LabelDecoration name="НадписьВыборОбъектовДляКонвертации" id="6">
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выберите разделы для конвертации (рекомендуется - все)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьВыборОбъектовДляКонвертацииКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="НадписьВыборОбъектовДляКонвертацииРасширеннаяПодсказка" id="43"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаМыСеть" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа мы сеть</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа мы сеть</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМыСетьРасширеннаяПодсказка" id="44"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияМыСеть" id="31">
+									<TextColor>style:SpecialTextColor</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Внимание! Новая редакция модуля на текущем этапе не обладает функционалом торговой сети! Переход невозможен!</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияМыСетьКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="ДекорацияМыСетьРасширеннаяПодсказка" id="45"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПодключаемыйМодуль" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В старой редакции использовался подключаемый модуль</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подключаемый модуль</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПодключаемыйМодульРасширеннаяПодсказка" id="46"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПМ" id="28">
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Внимание! Подключаемый модуль будет отключен. В связи с существенной переработкой и объединением с модулем обычных форм мы вынуждены отключить используемый подключаемый модуль. Необходимо проверить его работоспособность и затем включить его.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПМКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="ДекорацияПМРасширеннаяПодсказка" id="47"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаАвтоматическийОбмен" id="33">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В старой редакции использовался автоматический обмен сообщениями</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подключаемый модуль</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаАвтоматическийОбменРасширеннаяПодсказка" id="48"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПМ1" id="34">
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Внимание! Автоматический обмен будет отключен. В связи с существенной переработкой и объединением с модулем обычных форм мы вынуждены отключить используемый автообмен. Необходимо проверить его работоспособность и затем включить его.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПМ1КонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ДекорацияПМ1РасширеннаяПодсказка" id="49"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОсновные" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа основные</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа основные</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОсновныеРасширеннаяПодсказка" id="50"/>
+							<ChildItems>
+								<CheckBoxField name="Р_УчетныеЗаписи" id="8">
+									<DataPath>Р_УчетныеЗаписи</DataPath>
+									<Enabled>false</Enabled>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Р_УчетныеЗаписиКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="Р_УчетныеЗаписиРасширеннаяПодсказка" id="51"/>
+								</CheckBoxField>
+								<CheckBoxField name="Р_ОбщиеНастройки" id="10">
+									<DataPath>Р_ОбщиеНастройки</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Р_ОбщиеНастройкиКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="Р_ОбщиеНастройкиРасширеннаяПодсказка" id="52"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСети" id="23">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сети</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сети</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСетиРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<CheckBoxField name="Р_Сети_Настройки" id="12">
+									<DataPath>Р_Сети_Настройки</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Р_Сети_НастройкиКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="Р_Сети_НастройкиРасширеннаяПодсказка" id="54"/>
+								</CheckBoxField>
+								<CheckBoxField name="Р_Сети_ЮрЛица" id="18">
+									<DataPath>Р_Сети_ЮрЛица</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Р_Сети_ЮрЛицаКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="Р_Сети_ЮрЛицаРасширеннаяПодсказка" id="55"/>
+								</CheckBoxField>
+								<CheckBoxField name="Р_Сети_ТочкиДоставки" id="16">
+									<DataPath>Р_Сети_ТочкиДоставки</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Р_Сети_ТочкиДоставкиКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="Р_Сети_ТочкиДоставкиРасширеннаяПодсказка" id="56"/>
+								</CheckBoxField>
+								<CheckBoxField name="Р_Сети_СоответствияНоменклатуры" id="14">
+									<DataPath>Р_Сети_СоответствияНоменклатуры</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Р_Сети_СоответствияНоменклатурыКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="Р_Сети_СоответствияНоменклатурыРасширеннаяПодсказка" id="57"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСообщения" id="24">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сообщения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сообщения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСообщенияРасширеннаяПодсказка" id="58"/>
+							<ChildItems>
+								<CheckBoxField name="Р_Сообщения" id="20">
+									<DataPath>Р_Сообщения</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="Р_СообщенияКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="Р_СообщенияРасширеннаяПодсказка" id="59"/>
+								</CheckBoxField>
+								<InputField name="Р_ДатаС" id="38">
+									<DataPath>Р_ДатаС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по дате с</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цепочки по заказам, пришедшим до этой даты сконвертированы не будут!!!</v8:content>
+										</v8:item>
+									</ToolTip>
+									<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цепочки по заказам, пришедшим до этой даты сконвертированы не будут!!!</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<ContextMenu name="Р_ДатаСКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="Р_ДатаСРасширеннаяПодсказка" id="60"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКнопки" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<Button name="СконвертироватьНаНовуюРедакцию" id="5">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.СконвертироватьНаНовуюРедакцию</CommandName>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Picture>
+										<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сконвертировать данные на новую редакцию</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СконвертироватьНаНовуюРедакциюРасширеннаяПодсказка" id="62"/>
+								</Button>
+								<Button name="ОтменитьПереход" id="37">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ОтменитьПереход</CommandName>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Picture>
+										<xr:Ref>StdPicture.Stop</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ОтменитьПереходРасширеннаяПодсказка" id="63"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КонтурEDI</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПутьКФормам" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к формам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Р_ОбщиеНастройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Р_УчетныеЗаписи" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетные записи (недоступно, необходимо заново настроить учетную запись)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Р_Сообщения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Р_Сети_ЮрЛица" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Юр лица торговых сетей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Р_Сети_Настройки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки торговых сетей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Р_Сети_ТочкиДоставки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Точки доставки торговых сетей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Р_Сети_СоответствияНоменклатуры" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соответствия номенклатуры торговых сетей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Р_Сообщения_ТолькоАктивные" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитСПустойСсылкой" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит с пустой ссылкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="Р_ДатаС" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Р дата С</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СконвертироватьНаНовуюРедакцию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сконвертировать на новую редакцию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сконвертировать на новую редакцию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СконвертироватьНаНовуюРедакцию</Action>
+		</Command>
+		<Command name="ОтменитьПереход" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить переход</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить переход</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьПереход</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Задача">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="МодальностьЗапрещена">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

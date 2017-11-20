@@ -1,0 +1,1054 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>SKU</dataPath>
+			<field>SKU</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>SKU</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаПодбор</dataPath>
+			<field>ЗаданиеНаПодбор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание на подбор</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Качество</dataPath>
+			<field>Качество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клиент</dataPath>
+			<field>Клиент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Клиент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Накладная</dataPath>
+			<field>Накладная</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Накладная</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресПоставки</dataPath>
+			<field>АдресПоставки</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаПеревозку</dataPath>
+			<field>ЗаданиеНаПеревозку</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отделение</dataPath>
+			<field>Отделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отделение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Получатель</dataPath>
+			<field>Получатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПТЛ_ЖурналУчетаВъездаВыездаАМ</dataPath>
+			<field>ПТЛ_ЖурналУчетаВъездаВыездаАМ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал учета въезда\выезда АМ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесБруттоПлан</dataPath>
+			<field>ВесБруттоПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесБруттоФакт</dataPath>
+			<field>ВесБруттоФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесВсехПоддоновПлан</dataPath>
+			<field>ВесВсехПоддоновПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесВсехПоддоновФакт</dataPath>
+			<field>ВесВсехПоддоновФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесНаборныхУпаковокПлан</dataPath>
+			<field>ВесНаборныхУпаковокПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесНаборныхУпаковокФакт</dataPath>
+			<field>ВесНаборныхУпаковокФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесЦелыхПоддоновПлан</dataPath>
+			<field>ВесЦелыхПоддоновПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесЦелыхПоддоновФакт</dataPath>
+			<field>ВесЦелыхПоддоновФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаборныеУпаковкиПлан</dataPath>
+			<field>НаборныеУпаковкиПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаборныеУпаковкиФакт</dataPath>
+			<field>НаборныеУпаковкиФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПаллетМестаПлан</dataPath>
+			<field>ПаллетМестаПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПаллетМестаФакт</dataPath>
+			<field>ПаллетМестаФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоддоныПлан</dataPath>
+			<field>ПоддоныПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоддоныФакт</dataPath>
+			<field>ПоддоныФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УпаковкиПлан</dataPath>
+			<field>УпаковкиПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УпаковкиФакт</dataPath>
+			<field>УпаковкиФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦелыеПоддоныПлан</dataPath>
+			<field>ЦелыеПоддоныПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦелыеПоддоныФакт</dataPath>
+			<field>ЦелыеПоддоныФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтукиПлан</dataPath>
+			<field>ШтукиПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ШтукиФакт</dataPath>
+			<field>ШтукиФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесНеттоПлан</dataPath>
+			<field>ВесНеттоПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВесНеттоФакт</dataPath>
+			<field>ВесНеттоФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЗаказа</dataPath>
+			<field>ВидЗаказа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаБезНДС</dataPath>
+			<field>СуммаБезНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаСНДС</dataPath>
+			<field>СуммаСНДС</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложЗапр.Склад, 
+	ВложЗапр.ЗаданиеНаПодбор КАК ЗаданиеНаПодбор,
+	ЗапрНакладная.Накладная КАК Накладная,	
+	ВложЗапр.Клиент,
+	ВложЗапр.АдресПоставки,
+	ЕСТЬNULL(ПТЛ_ЖурналУчетаВъездаВыездаАМЗаданияНаПодбор.ЖурналУчетаАМ, ЗНАЧЕНИЕ(Документ.ПТЛ_ЖурналУчетаВъездаВыездаАМ.ПустаяСсылка)) КАК ПТЛ_ЖурналУчетаВъездаВыездаАМ,
+	ВложЗапр.Номенклатура,
+	ВложЗапр.ХарактеристикаНоменклатуры,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ШтукиПлан, 0)) КАК ЧИСЛО(13, 3)) КАК ШтукиПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ШтукиФакт, 0)) КАК ЧИСЛО(13, 3)) КАК ШтукиФакт,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.УпаковкиПлан, 0)) КАК ЧИСЛО(13, 3)) КАК УпаковкиПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.УпаковкиФакт, 0)) КАК ЧИСЛО(13, 3)) КАК УпаковкиФакт,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ПоддоныПлан, 0)) КАК ЧИСЛО(13, 3)) КАК ПоддоныПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ПоддоныФакт, 0)) КАК ЧИСЛО(13, 3)) КАК ПоддоныФакт,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.SKU, 0)) КАК ЧИСЛО(13, 3)) КАК SKU,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ЦелыеПоддоныПлан, 0)) КАК ЧИСЛО(13, 3)) КАК ЦелыеПоддоныПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ЦелыеПоддоныФакт, 0)) КАК ЧИСЛО(13, 3)) КАК ЦелыеПоддоныФакт,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВЫБОР
+					КОГДА ВложЗапр.ЦелыеПоддоныПлан &gt;= ВложЗапр.ПоддоныПлан
+						ТОГДА 0
+					ИНАЧЕ ВложЗапр.ПоддоныПлан - ВложЗапр.ЦелыеПоддоныПлан
+				КОНЕЦ, 0)) КАК ЧИСЛО(13, 3)) КАК НаборныеУпаковкиПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВЫБОР
+					КОГДА ВложЗапр.ЦелыеПоддоныФакт &gt;= ВложЗапр.ПоддоныФакт
+						ТОГДА 0
+					ИНАЧЕ ВложЗапр.ПоддоныФакт - ВложЗапр.ЦелыеПоддоныФакт
+				КОНЕЦ, 0)) КАК ЧИСЛО(13, 3)) КАК НаборныеУпаковкиФакт,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ПаллетМестаПлан, 0)) КАК ЧИСЛО(13, 3)) КАК ПаллетМестаПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ПаллетМестаФакт, 0)) КАК ЧИСЛО(13, 3)) КАК ПаллетМестаФакт,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ВесБруттоПлан, 0)) КАК ЧИСЛО(13, 3)) КАК ВесБруттоПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ВесБруттоФакт, 0)) КАК ЧИСЛО(13, 3)) КАК ВесБруттоФакт,
+	// &lt;- Шевченков 20170328 #63491
+	ВложЗапр.Заказ,
+	выбор когда ТИПЗНАЧЕНИЯ(ВложЗапр.Заказ) = ТИП(Документ.ЗаказПокупателя)
+	тогда ЗаказПокупателя.ВидОперации
+	когда ТИПЗНАЧЕНИЯ(ВложЗапр.Заказ) = ТИП(Документ.ВнутреннийЗаказ)
+	тогда ВнутреннийЗаказ.ВидЗаказа
+	иначе ""
+	конец как ВидЗаказа,	
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ВесНеттоПлан, 0)) КАК ЧИСЛО(13, 3)) КАК ВесНеттоПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ВесНеттоФакт, 0)) КАК ЧИСЛО(13, 3)) КАК ВесНеттоФакт,
+	ВЫРАЗИТЬ(СУММА(ВЫБОР
+				КОГДА ЗаказПокупателя.СуммаВключаетНДС
+					ТОГДА ЕСТЬNULL(ЗаказПокупателяТовары.Сумма, 0) - ЕСТЬNULL(ЗаказПокупателяТовары.СуммаНДС, 0)
+				ИНАЧЕ ЕСТЬNULL(ЗаказПокупателяТовары.Сумма, 0)
+			КОНЕЦ) КАК ЧИСЛО(13, 3)) КАК СуммаБезНДС,
+	ВЫРАЗИТЬ(СУММА(ВЫБОР
+				КОГДА ЗаказПокупателя.СуммаВключаетНДС
+					ТОГДА ЕСТЬNULL(ЗаказПокупателяТовары.Сумма, 0)
+				ИНАЧЕ ЕСТЬNULL(ЗаказПокупателяТовары.Сумма, 0) + ЕСТЬNULL(ЗаказПокупателяТовары.СуммаНДС, 0)
+			КОНЕЦ) КАК ЧИСЛО(13, 3)) КАК СуммаСНДС,
+	// -&gt;
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ВесВсехПоддоновПлан, 0)) КАК ЧИСЛО(13, 3)) КАК ВесВсехПоддоновПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ВесВсехПоддоновФакт, 0)) КАК ЧИСЛО(13, 3)) КАК ВесВсехПоддоновФакт,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ВесЦелыхПоддоновПлан, 0)) КАК ЧИСЛО(13, 3)) КАК ВесЦелыхПоддоновПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВложЗапр.ВесЦелыхПоддоновФакт, 0)) КАК ЧИСЛО(13, 3)) КАК ВесЦелыхПоддоновФакт,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВЫБОР
+					КОГДА ВложЗапр.ВесЦелыхПоддоновПлан &gt;= ВложЗапр.ВесВсехПоддоновПлан
+						ТОГДА 0
+					ИНАЧЕ ВложЗапр.ВесВсехПоддоновПлан - ВложЗапр.ВесЦелыхПоддоновПлан
+				КОНЕЦ, 0)) КАК ЧИСЛО(13, 3)) КАК ВесНаборныхУпаковокПлан,
+	ВЫРАЗИТЬ(СУММА(ЕСТЬNULL(ВЫБОР
+					КОГДА ВложЗапр.ВесЦелыхПоддоновФакт &gt;= ВложЗапр.ВесВсехПоддоновФакт
+						ТОГДА 0
+					ИНАЧЕ ВложЗапр.ВесВсехПоддоновФакт - ВложЗапр.ВесЦелыхПоддоновФакт
+				КОНЕЦ, 0)) КАК ЧИСЛО(13, 3)) КАК ВесНаборныхУпаковокФакт,
+	ВложЗапр.Отделение
+ИЗ
+	(ВЫБРАТЬ
+		СП_ЗаданияНаПодборОбороты.Склад КАК Склад,
+		СП_ЗаданияНаПодборОбороты.Заказ КАК Заказ,
+		СП_ЗаданияНаПодборОбороты.Номенклатура КАК Номенклатура,
+		СП_ЗаданияНаПодборОбороты.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+		СП_ЗаданияНаПодборОбороты.ЗаданиеНаПодбор КАК ЗаданиеНаПодбор,
+		СП_ЗаданияНаПодборОбороты.ЗаданиеНаПодбор.Получатель КАК Клиент,
+		СУММА(СП_ЗаданияНаПодборОбороты.КоличествоПланОборот) КАК ШтукиПлан,
+		СУММА(СП_ЗаданияНаПодборОбороты.КоличествоФактОборот) КАК ШтукиФакт,
+		СУММА(СП_ЗаданияНаПодборОбороты.КоличествоМестОборот) КАК УпаковкиПлан,
+		СУММА(СП_ЗаданияНаПодборОбороты.КоличествоМестОборот) КАК УпаковкиФакт,
+		ВЫБОР
+			КОГДА СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент = 0
+				ТОГДА 0
+			ИНАЧЕ СУММА(СП_ЗаданияНаПодборОбороты.КоличествоПланОборот) / СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент
+		КОНЕЦ КАК ПоддоныПлан,
+		ВЫБОР
+			КОГДА СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент = 0
+				ТОГДА 0
+			ИНАЧЕ СУММА(СП_ЗаданияНаПодборОбороты.КоличествоФактОборот) / СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент
+		КОНЕЦ КАК ПоддоныФакт,
+		КОЛИЧЕСТВО(РАЗЛИЧНЫЕ СП_ЗаданияНаПодборОбороты.Номенклатура) КАК SKU,
+		ВЫБОР
+			КОГДА СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент = 0
+				ТОГДА 0
+			ИНАЧЕ ВЫБОР
+					КОГДА СУММА(СП_ЗаданияНаПодборОбороты.КоличествоПланОборот) = 0
+						ТОГДА 0
+					ИНАЧЕ ВЫРАЗИТЬ(СУММА(СП_ЗаданияНаПодборОбороты.КоличествоПланОборот) / СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент - 0.5 КАК ЧИСЛО(13, 0))
+				КОНЕЦ
+		КОНЕЦ КАК ЦелыеПоддоныПлан,
+		ВЫБОР
+			КОГДА СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент = 0
+				ТОГДА 0
+			ИНАЧЕ ВЫБОР
+					КОГДА СУММА(СП_ЗаданияНаПодборОбороты.КоличествоФактОборот) = 0
+						ТОГДА 0
+					ИНАЧЕ ВЫРАЗИТЬ(СУММА(СП_ЗаданияНаПодборОбороты.КоличествоФактОборот) / СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент - 0.5 КАК ЧИСЛО(13, 0))
+				КОНЕЦ
+		КОНЕЦ КАК ЦелыеПоддоныФакт,
+		СУММА(ЕСТЬNULL(ПТЛ_ЗаданияНаПеревозкуОбороты.КоличествоПаллетоМестПланОборот, 0)) КАК ПаллетМестаПлан,
+		СУММА(ПТЛ_ЗаданияНаПеревозкуОбороты.КоличествоПаллетоМестФактОборот) КАК ПаллетМестаФакт,
+		// &lt;- Шевченков 20170328 #63491
+		СУММА(СП_ЗаданияНаПодборОбороты.ВесПланОборот) КАК ВесНеттоПлан,
+		СУММА(СП_ЗаданияНаПодборОбороты.ВесФактОборот) КАК ВесНеттоФакт,
+		// -&gt;
+		СУММА(СП_ЗаданияНаПодборОбороты.ВесБруттоПланОборот) КАК ВесБруттоПлан,
+		СУММА(СП_ЗаданияНаПодборОбороты.ВесБруттоФактОборот) КАК ВесБруттоФакт,
+
+		ВЫБОР
+			КОГДА СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент = 0
+				ТОГДА 0
+			ИНАЧЕ ВЫБОР
+					КОГДА СУММА(СП_ЗаданияНаПодборОбороты.КоличествоПланОборот) = 0
+						ТОГДА 0
+					ИНАЧЕ СУММА(СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Вес) / 1000 * (ВЫРАЗИТЬ(СУММА(СП_ЗаданияНаПодборОбороты.КоличествоПланОборот) / СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент - 0.5 КАК ЧИСЛО(13, 0)))
+				КОНЕЦ
+		КОНЕЦ КАК ВесЦелыхПоддоновПлан,
+		ВЫБОР
+			КОГДА СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент = 0
+				ТОГДА 0
+			ИНАЧЕ ВЫБОР
+					КОГДА СУММА(СП_ЗаданияНаПодборОбороты.КоличествоФактОборот) = 0
+						ТОГДА 0
+					ИНАЧЕ СУММА(СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Вес) / 1000 * (ВЫРАЗИТЬ(СУММА(СП_ЗаданияНаПодборОбороты.КоличествоФактОборот) / СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент - 0.5 КАК ЧИСЛО(13, 0)))
+				КОНЕЦ
+		КОНЕЦ КАК ВесЦелыхПоддоновФакт,
+		СУММА(СП_ЗаданияНаПодборОбороты.ВесБруттоПланОборот) КАК ВесВсехПоддоновПлан,
+		СУММА(СП_ЗаданияНаПодборОбороты.ВесБруттоФактОборот) КАК ВесВсехПоддоновФакт,
+		МАКСИМУМ(ПТЛ_ЗаданияНаПеревозкуОбороты.АдресПоставки) КАК АдресПоставки,
+		СП_ЗаданияНаПодборОбороты.ЗаданиеНаПодбор.КП_Отделение КАК Отделение
+	ИЗ
+		РегистрНакопления.СП_ЗаданияНаПодбор.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК СП_ЗаданияНаПодборОбороты
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ПТЛ_ЗаданияНаПеревозку.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК ПТЛ_ЗаданияНаПеревозкуОбороты
+			ПО СП_ЗаданияНаПодборОбороты.ЗаданиеНаПодбор = ПТЛ_ЗаданияНаПеревозкуОбороты.ЗаданиеНаПодбор
+	
+	СГРУППИРОВАТЬ ПО
+		СП_ЗаданияНаПодборОбороты.Склад,
+		СП_ЗаданияНаПодборОбороты.ЗаданиеНаПодбор,
+		СП_ЗаданияНаПодборОбороты.Заказ,
+		СП_ЗаданияНаПодборОбороты.Номенклатура,
+		СП_ЗаданияНаПодборОбороты.ЗаданиеНаПодбор.Получатель,
+		СП_ЗаданияНаПодборОбороты.ЗаданиеНаПодбор.КП_Отделение,
+		СП_ЗаданияНаПодборОбороты.ХарактеристикаНоменклатуры,
+		СП_ЗаданияНаПодборОбороты.Номенклатура.НСИ_ЕдиницаИзмеренияПаллет.Коэффициент) КАК ВложЗапр
+		ПОЛНОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			МАКСИМУМ(ВложНакл.Накладная) КАК Накладная,
+			ВложНакл.СП_ЗаданиеНаПодбор КАК СП_ЗаданиеНаПодбор
+		ИЗ
+			(ВЫБРАТЬ РАЗЛИЧНЫЕ
+				ВЫБОР
+					КОГДА ТоварыНаСкладахОбороты.Регистратор ССЫЛКА Документ.РеализацияТоваровУслуг
+							ИЛИ ТоварыНаСкладахОбороты.Регистратор ССЫЛКА Документ.ПеремещениеТоваров
+							ИЛИ ТоварыНаСкладахОбороты.Регистратор ССЫЛКА Документ.ТребованиеНакладная
+						ТОГДА ТоварыНаСкладахОбороты.Регистратор
+				КОНЕЦ КАК Накладная,
+				ВЫБОР
+					КОГДА ТоварыНаСкладахОбороты.Регистратор ССЫЛКА Документ.РеализацияТоваровУслуг
+							ИЛИ ТоварыНаСкладахОбороты.Регистратор ССЫЛКА Документ.ПеремещениеТоваров
+							ИЛИ ТоварыНаСкладахОбороты.Регистратор ССЫЛКА Документ.ТребованиеНакладная
+						ТОГДА ТоварыНаСкладахОбороты.Регистратор.СП_ЗаданиеНаПодбор
+					ИНАЧЕ ЗНАЧЕНИЕ(Документ.СП_ЗаданиеНаПодбор.ПустаяСсылка)
+				КОНЕЦ КАК СП_ЗаданиеНаПодбор
+			ИЗ
+				РегистрНакопления.ТоварыНаСкладах.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК ТоварыНаСкладахОбороты) КАК ВложНакл
+		ГДЕ
+			НЕ ВложНакл.СП_ЗаданиеНаПодбор = ЗНАЧЕНИЕ(Документ.СП_ЗаданиеНаПодбор.ПустаяСсылка)
+		
+		СГРУППИРОВАТЬ ПО
+			ВложНакл.СП_ЗаданиеНаПодбор) КАК ЗапрНакладная
+		ПО (ЗапрНакладная.СП_ЗаданиеНаПодбор = ВложЗапр.ЗаданиеНаПодбор)
+		ПОЛНОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ЖурналВлож.ЗаданиеНаПодбор КАК ЗаданиеНаПодбор,
+			ЖурналВлож.Накладная КАК Накладная,
+			МАКСИМУМ(ЖурналВлож.Ссылка) КАК ЖурналУчетаАМ
+		ИЗ
+			Документ.ПТЛ_ЖурналУчетаВъездаВыездаАМ.ЗаданияНаПодбор КАК ЖурналВлож
+		
+		СГРУППИРОВАТЬ ПО
+			ЖурналВлож.ЗаданиеНаПодбор,
+			ЖурналВлож.Накладная) КАК ПТЛ_ЖурналУчетаВъездаВыездаАМЗаданияНаПодбор
+		ПО ВложЗапр.ЗаданиеНаПодбор = ПТЛ_ЖурналУчетаВъездаВыездаАМЗаданияНаПодбор.ЗаданиеНаПодбор
+			И (ПТЛ_ЖурналУчетаВъездаВыездаАМЗаданияНаПодбор.ЖурналУчетаАМ.Проведен = ИСТИНА)
+			И (ЗапрНакладная.Накладная = ПТЛ_ЖурналУчетаВъездаВыездаАМЗаданияНаПодбор.Накладная)
+		// &lt;- Шевченков 20170328 #63491
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ВнутреннийЗаказ КАК ВнутреннийЗаказ
+		ПО ВложЗапр.Заказ = ВнутреннийЗаказ.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаказПокупателя КАК ЗаказПокупателя
+		ПО ВложЗапр.Заказ = ЗаказПокупателя.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ЗаказПокупателяТовары.Ссылка КАК Ссылка,
+			ЗаказПокупателяТовары.Номенклатура КАК Номенклатура,
+			СУММА(ЗаказПокупателяТовары.Сумма) КАК Сумма,
+			СУММА(ЗаказПокупателяТовары.СуммаНДС) КАК СуммаНДС
+		ИЗ
+			Документ.ЗаказПокупателя.Товары КАК ЗаказПокупателяТовары
+		
+		СГРУППИРОВАТЬ ПО
+			ЗаказПокупателяТовары.Ссылка,
+			ЗаказПокупателяТовары.Номенклатура) КАК ЗаказПокупателяТовары
+		ПО ВложЗапр.Заказ = ЗаказПокупателяТовары.Ссылка
+			И ВложЗапр.Номенклатура = ЗаказПокупателяТовары.Номенклатура
+			
+		//ГДЕ ВложЗапр.ЗаданиеНаПодбор = ЗНАЧЕНИЕ(Документ.СП_ЗаданиеНаПодбор.ПустаяСсылка)
+        // -&gt;
+СГРУППИРОВАТЬ ПО
+	ВложЗапр.Склад,
+	ВложЗапр.ЗаданиеНаПодбор,
+	ЗапрНакладная.Накладная,
+	ВложЗапр.Клиент,
+	ВложЗапр.АдресПоставки,
+	ВложЗапр.Отделение,
+	ВложЗапр.Номенклатура,
+	ВложЗапр.ХарактеристикаНоменклатуры,
+	ПТЛ_ЖурналУчетаВъездаВыездаАМЗаданияНаПодбор.ЖурналУчетаАМ,
+	// &lt;- Шевченков 20170328 #63491
+	ВложЗапр.Заказ,
+	ВЫБОР
+		КОГДА ТИПЗНАЧЕНИЯ(ВложЗапр.Заказ) = ТИП(Документ.ЗаказПокупателя)
+			ТОГДА ЗаказПокупателя.ВидОперации
+		КОГДА ТИПЗНАЧЕНИЯ(ВложЗапр.Заказ) = ТИП(Документ.ВнутреннийЗаказ)
+			ТОГДА ВнутреннийЗаказ.ВидЗаказа
+		ИНАЧЕ ""
+	КОНЕЦ
+	// -&gt;</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Автомобиль</dataPath>
+		<expression>ПТЛ_ЖурналУчетаВъездаВыездаАМ.ТранспортноеСредство</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Автомобиль</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ДатаПогрузки</dataPath>
+		<expression>ПТЛ_ЖурналУчетаВъездаВыездаАМ.ДатаПогрузки</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата погрузки</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ДЛФ=D</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ВремяПогрузки</dataPath>
+		<expression>ПТЛ_ЖурналУчетаВъездаВыездаАМ.ДатаПогрузки</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Время погрузки</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ДЛФ=T</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>SKU</dataPath>
+		<expression>Сумма(SKU)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесБруттоПлан</dataPath>
+		<expression>Сумма(ВесБруттоПлан)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесБруттоФакт</dataPath>
+		<expression>Сумма(ВесБруттоФакт)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесВсехПоддоновПлан</dataPath>
+		<expression>Сумма(ВесВсехПоддоновПлан)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесВсехПоддоновФакт</dataPath>
+		<expression>Сумма(ВесВсехПоддоновФакт)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесНаборныхУпаковокПлан</dataPath>
+		<expression>Сумма(ВесНаборныхУпаковокПлан)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесНаборныхУпаковокФакт</dataPath>
+		<expression>Сумма(ВесНаборныхУпаковокФакт)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесЦелыхПоддоновПлан</dataPath>
+		<expression>Сумма(ВесЦелыхПоддоновПлан)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесЦелыхПоддоновФакт</dataPath>
+		<expression>Сумма(ВесЦелыхПоддоновФакт)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>НаборныеУпаковкиПлан</dataPath>
+		<expression>Сумма(НаборныеУпаковкиПлан)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>НаборныеУпаковкиФакт</dataPath>
+		<expression>Сумма(НаборныеУпаковкиФакт)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ПаллетМестаПлан</dataPath>
+		<expression>Сумма(ПаллетМестаПлан)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ПаллетМестаФакт</dataPath>
+		<expression>Сумма(ПаллетМестаФакт)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ПоддоныПлан</dataPath>
+		<expression>Сумма(ПоддоныПлан)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ПоддоныФакт</dataPath>
+		<expression>Сумма(ПоддоныФакт)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>УпаковкиПлан</dataPath>
+		<expression>Сумма(УпаковкиПлан)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>УпаковкиФакт</dataPath>
+		<expression>Сумма(УпаковкиФакт)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЦелыеПоддоныПлан</dataPath>
+		<expression>Сумма(ЦелыеПоддоныПлан)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЦелыеПоддоныФакт</dataPath>
+		<expression>Сумма(ЦелыеПоддоныФакт)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ШтукиПлан</dataPath>
+		<expression>Сумма(ШтукиПлан)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ШтукиФакт</dataPath>
+		<expression>Сумма(ШтукиФакт)</expression>
+		<group>ЗаданиеНаПодбор</group>
+		<group>Клиент</group>
+		<group>Клиент Иерархия</group>
+		<group>Отделение</group>
+		<group>ПТЛ_ЖурналУчетаВъездаВыездаАМ</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ВесНеттоПлан</dataPath>
+		<expression>Сумма(ВесНеттоПлан)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВесНеттоФакт</dataPath>
+		<expression>Сумма(ВесНеттоФакт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаБезНДС</dataPath>
+		<expression>Сумма(СуммаБезНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаСНДС</dataPath>
+		<expression>Сумма(СуммаСНДС)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаданиеНаПодбор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Накладная</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Клиент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АдресПоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Автомобиль</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ХарактеристикаНоменклатуры</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ШтукиПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ШтукиФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УпаковкиПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>УпаковкиФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПоддоныПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПоддоныФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>SKU</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЦелыеПоддоныПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЦелыеПоддоныФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПаллетМестаПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПаллетМестаФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вес</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВесБруттоПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВесБруттоФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВесЦелыхПоддоновПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВесЦелыхПоддоновФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВесНаборныхУпаковокПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВесНаборныхУпаковокФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПогрузки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВремяПогрузки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПТЛ_ЖурналУчетаВъездаВыездаАМ</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЗаданиеНаПодбор.Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</dcsset:right>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Отделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НСИ_Отделения.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЗаданиеНаПодбор</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЗаданиеНаПеревозку</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Отделение</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр отгрузок</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Отделение</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Склад</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ЗаданиеНаПодбор</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

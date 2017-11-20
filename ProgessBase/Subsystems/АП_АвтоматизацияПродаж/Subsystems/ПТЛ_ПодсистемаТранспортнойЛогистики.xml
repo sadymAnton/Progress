@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Subsystem uuid="be0f4112-274f-4a43-bbb7-450922d98d62">
+		<Properties>
+			<Name>ПТЛ_ПодсистемаТранспортнойЛогистики</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсистема транспортной логистики</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(ПТЛ) Подсистема транспортной логистики</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПТЛ_ТранспортнаяЛогистика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПТЛ_УсловияПоставки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПТЛ_Водители</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПТЛ_Маршруты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПТЛ_ТипыТранспортныхСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПТЛ_ТранспортныеСредства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПТЛ_ЗаданиеНаПеревозку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПТЛ_ПланДоставки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПТЛ_ПланДоставки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НСИ_ЖДСтанции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПТЛ_ЖурналУчетаВъездаВыездаАМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.ПТЛ_ТранспортнаяЛогистика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПТЛ_СтатусыЗаданияНаПеревозку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПТЛ_СтатусыПланаДоставки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПТЛ_ЗаданияНаПеревозку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПТЛ_ДлительностьДоставки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПТЛ_ОтчетПоЗаданиямНаПеревозку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПТЛ_ПолученныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПТЛ_ОтчетОВыполненнойПеревозке</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПТЛ_ПодборРейсовВОтчетВыполненныхПеревозок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПТЛ_ПодборЗаданийНаПеревозкуВРейсы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПТЛ_Рейсы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПТЛ_ПланОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПТЛ_ЗаявкиНаКомплектацию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПТЛ_ЛогистическийОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НСИ_Округа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НСИ_Районы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПТЛ_ПлановыйРасчетНеобходимогоТранспорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АП_ЯндексКарты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПТЛ_СвязныеЗаданияНаПеревозку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПТЛ_ПланДоставки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПТЛ_ЗагрузкаЗаявкиНаТранспорт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПТЛ_ЗаявкиНаПеревозчикаСборныхГрузов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПТЛ_ЗагрузкаОтчетовОВыполненныхПеревозках</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПТЛ_РеестрВыполненныхРаботПоДоставке</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СП_ЗагрузкаФактКомплектации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПТЛ_ЗагрузкаОкруговИРайонов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПТЛ_ЗаполнитьПланДоставкиИзФайла</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПТЛ_ЗагрузкаВодителейИТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПТЛ_ФормированиеОбщегоПриоритетаОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПТЛ_ВидОперацииЖурналУчетаВъездаВыезда</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПТЛ_КодыПеревозчиков</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

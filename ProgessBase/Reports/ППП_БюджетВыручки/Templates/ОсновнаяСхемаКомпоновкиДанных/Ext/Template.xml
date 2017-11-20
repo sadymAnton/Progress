@@ -1,0 +1,1082 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_АдресПоставки</dataPath>
+			<field>ППП_АдресПоставки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес поставки</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_ВесБрутто</dataPath>
+			<field>ППП_ВесБрутто</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес брутто</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=14</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_ВесНетто</dataPath>
+			<field>ППП_ВесНетто</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес нетто</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=14</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_КаналПродаж</dataPath>
+			<field>ППП_КаналПродаж</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Канал продаж</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_Литры</dataPath>
+			<field>ППП_Литры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Литры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_ПрайсЛист</dataPath>
+			<field>ППП_ПрайсЛист</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прайс лист</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СуммаБюджетРетробонусов</dataPath>
+			<field>ППП_СуммаБюджетРетробонусов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма бюджет ретробонусов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СуммаГросс</dataPath>
+			<field>ППП_СуммаГросс</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма гросс</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СуммаМаркетинговыеУслуги</dataPath>
+			<field>ППП_СуммаМаркетинговыеУслуги</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма маркетинговые услуги</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СуммаПовышенияЦен</dataPath>
+			<field>ППП_СуммаПовышенияЦен</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма повышения цен</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СуммаПрайсЛист</dataPath>
+			<field>ППП_СуммаПрайсЛист</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма прайс лист</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СуммаПромоАкции</dataPath>
+			<field>ППП_СуммаПромоАкции</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма промо акции</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СуммаЭТК</dataPath>
+			<field>ППП_СуммаЭТК</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ЭТК</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_ТоварнаяКатегория</dataPath>
+			<field>ППП_ТоварнаяКатегория</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарная категория</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_КатегорияКлиента</dataPath>
+			<field>НСИ_КатегорияКлиента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Категория клиента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дивизион</dataPath>
+			<field>Дивизион</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Стоимость</dataPath>
+			<field>Стоимость</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выручка нетто</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПланирования</dataPath>
+			<field>ДокументПланирования</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ планирования</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сценарий</dataPath>
+			<field>Сценарий</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_Брендообъем</dataPath>
+			<field>ППП_Брендообъем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Брендообъем</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НСИ_ТорговаяКоманда</dataPath>
+			<field>НСИ_ТорговаяКоманда</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Торговая команда</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтавкаНДС</dataPath>
+			<field>СтавкаНДС</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БазоваяВыручкаСНДС</dataPath>
+			<field>БазоваяВыручкаСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Базовая выручка с НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БюджетРетробонусовСНДС</dataPath>
+			<field>БюджетРетробонусовСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бюджет ретробонусов с НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВыручкаГроссСНДС</dataPath>
+			<field>ВыручкаГроссСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выручка гросс с НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВыручкаНеттоСНДС</dataPath>
+			<field>ВыручкаНеттоСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выручка нетто с НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МаркетинговыеУслугиСНДС</dataPath>
+			<field>МаркетинговыеУслугиСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маркетинговые услуги с НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПромоАкцииСНДС</dataPath>
+			<field>СуммаПромоАкцииСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма промо акции с НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаЭТКСНДС</dataPath>
+			<field>СуммаЭТКСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма ЭТК с НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПромоАкцииСкидкаПослеСчета</dataPath>
+			<field>СуммаПромоАкцииСкидкаПослеСчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПромоАкцииСкидкаПослеСчетаСНДС</dataPath>
+			<field>СуммаПромоАкцииСкидкаПослеСчетаСНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДопСкидка</dataPath>
+			<field>ДопСкидка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СтоимостьСДопСкидкой</dataPath>
+			<field>ППП_СтоимостьСДопСкидкой</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СуммаПредставленность</dataPath>
+			<field>ППП_СуммаПредставленность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СуммаЭТКСкидкаВСчете</dataPath>
+			<field>ППП_СуммаЭТКСкидкаВСчете</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ППП_СуммаRSP</dataPath>
+			<field>ППП_СуммаRSP</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Контрагенты.Дивизион КАК Дивизион,
+	НСИ_Брендообъемы.Ссылка КАК Брендообъем,
+	ВЫБОР
+		КОГДА Контрагенты.Дивизион.Код = "ЗАРУБЕЖЬЕ_ПРГ"
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС0)
+		ИНАЧЕ НСИ_Брендообъемы.СтавкаНДС
+	КОНЕЦ КАК СтавкаНДС,
+	ВЫБОР
+		КОГДА Контрагенты.Дивизион.Код = "ЗАРУБЕЖЬЕ_ПРГ"
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС18_118)
+						ИЛИ НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС18)
+					ТОГДА 0.18
+				КОГДА НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС10_110)
+						ИЛИ НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС10)
+					ТОГДА 0.1
+				КОГДА НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС20_120)
+						ИЛИ НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС20)
+					ТОГДА 0.2
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ КАК СтавкаНДСЧислом
+ПОМЕСТИТЬ втДивизионыИБрендообъемы
+ИЗ
+	Справочник.Контрагенты КАК Контрагенты,
+	Справочник.НСИ_Брендообъемы КАК НСИ_Брендообъемы
+ГДЕ
+	Контрагенты.Покупатель
+
+СГРУППИРОВАТЬ ПО
+	Контрагенты.Дивизион,
+	НСИ_Брендообъемы.Ссылка,
+	ВЫБОР
+		КОГДА Контрагенты.Дивизион.Код = "ЗАРУБЕЖЬЕ_ПРГ"
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС0)
+		ИНАЧЕ НСИ_Брендообъемы.СтавкаНДС
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА Контрагенты.Дивизион.Код = "ЗАРУБЕЖЬЕ_ПРГ"
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС18_118)
+						ИЛИ НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС18)
+					ТОГДА 0.18
+				КОГДА НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС10_110)
+						ИЛИ НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС10)
+					ТОГДА 0.1
+				КОГДА НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС20_120)
+						ИЛИ НСИ_Брендообъемы.СтавкаНДС = ЗНАЧЕНИЕ(Перечисление.СтавкиНДС.НДС20)
+					ТОГДА 0.2
+				ИНАЧЕ 0
+			КОНЕЦ
+	КОНЕЦ
+
+ИНДЕКСИРОВАТЬ ПО
+	Дивизион,
+	Брендообъем
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПланыПродаж.Период,
+	ПланыПродаж.Контрагент,
+	ПланыПродаж.ППП_АдресПоставки,
+	ПланыПродаж.Контрагент.НСИ_ТорговаяКоманда КАК НСИ_ТорговаяКоманда,
+	ПланыПродаж.Контрагент.НСИ_КаналПродаж КАК НСИ_КатегорияКлиента,
+	ВЫБОР
+		КОГДА ПланыПродаж.ППП_АдресПоставки.Дивизион &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПРГДивизионы.ПустаяСсылка)
+			ТОГДА ПланыПродаж.ППП_АдресПоставки.Дивизион
+		ИНАЧЕ ПланыПродаж.Контрагент.Дивизион
+	КОНЕЦ КАК Дивизион,
+	ПланыПродаж.ППП_ТоварнаяКатегория,
+	ПланыПродаж.ППП_Брендообъем КАК ППП_Брендообъем,
+	ПланыПродаж.ППП_АдресПоставки.НСИ_КатегорияКлиента КАК ППП_КаналПродаж,
+	ПланыПродаж.ППП_ПрайсЛист,
+	ПланыПродаж.Количество,
+	ПланыПродаж.ППП_ВесБрутто,
+	ПланыПродаж.ППП_ВесНетто,
+	ПланыПродаж.ППП_Литры,
+	ПланыПродаж.ППП_СуммаПрайсЛист,
+	ПланыПродаж.ППП_СуммаПовышенияЦен,
+	ПланыПродаж.ППП_СуммаПромоАкции,
+	ПланыПродаж.ППП_СуммаГросс,
+	ПланыПродаж.ППП_СуммаБюджетРетробонусов,
+	ПланыПродаж.ППП_СуммаМаркетинговыеУслуги,
+	ПланыПродаж.ППП_СуммаЭТК,
+	ПланыПродаж.Стоимость,
+	ПланыПродаж.Сценарий,
+	ПланыПродаж.ДокументПланирования,
+	ПланыПродаж.ППП_СуммаПромоАкцииСкидкаПослеСчета,
+	ПланыПродаж.ППП_СтоимостьСДопСкидкой,
+	ВЫБОР
+		КОГДА ПланыПродаж.ППП_СтоимостьСДопСкидкой = 0
+			ТОГДА 0
+		ИНАЧЕ ПланыПродаж.ППП_СуммаПовышенияЦен - ПланыПродаж.ППП_СтоимостьСДопСкидкой - ПланыПродаж.ППП_СуммаЭТКСкидкаВСчете - ПланыПродаж.ППП_СуммаПредставленность - ПланыПродаж.ППП_СуммаRSP
+	КОНЕЦ КАК ДопСкидка,
+	ПланыПродаж.ППП_СуммаЭТКСкидкаВСчете,
+	ПланыПродаж.ППП_СуммаПредставленность,
+	ПланыПродаж.ППП_СуммаRSP
+ПОМЕСТИТЬ втПланыПродаж
+ИЗ
+	РегистрНакопления.ПланыПродаж КАК ПланыПродаж
+ГДЕ
+	ПланыПродаж.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+
+ИНДЕКСИРОВАТЬ ПО
+	Дивизион,
+	ППП_Брендообъем
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втПланыПродаж.Период,
+	втПланыПродаж.Контрагент,
+	втПланыПродаж.ППП_АдресПоставки,
+	втПланыПродаж.НСИ_ТорговаяКоманда,
+	втПланыПродаж.НСИ_КатегорияКлиента,
+	втПланыПродаж.Дивизион,
+	втПланыПродаж.ППП_ТоварнаяКатегория,
+	втПланыПродаж.ППП_Брендообъем,
+	втПланыПродаж.ППП_КаналПродаж,
+	втПланыПродаж.ППП_ПрайсЛист,
+	втПланыПродаж.Количество,
+	втПланыПродаж.ППП_ВесБрутто,
+	втПланыПродаж.ППП_ВесНетто,
+	втПланыПродаж.ППП_Литры,
+	втПланыПродаж.ППП_СуммаПрайсЛист,
+	втПланыПродаж.ППП_СуммаПовышенияЦен,
+	втПланыПродаж.ППП_СуммаПромоАкции,
+	втПланыПродаж.ППП_СуммаГросс,
+	втПланыПродаж.ППП_СуммаБюджетРетробонусов,
+	втПланыПродаж.ППП_СуммаМаркетинговыеУслуги,
+	втПланыПродаж.ППП_СуммаЭТК,
+	втПланыПродаж.Стоимость,
+	втПланыПродаж.Сценарий,
+	втПланыПродаж.ДокументПланирования,
+	втДивизионыИБрендообъемы.СтавкаНДС,
+	втПланыПродаж.ППП_СуммаПромоАкцииСкидкаПослеСчета КАК СуммаПромоАкцииСкидкаПослеСчета,
+	втПланыПродаж.ППП_СуммаПовышенияЦен * (1 + втДивизионыИБрендообъемы.СтавкаНДСЧислом) КАК БазоваяВыручкаСНДС,
+	втПланыПродаж.ППП_СуммаПромоАкции * (1 + втДивизионыИБрендообъемы.СтавкаНДСЧислом) КАК СуммаПромоАкцииСНДС,
+	втПланыПродаж.ППП_СуммаПовышенияЦен * (1 + втДивизионыИБрендообъемы.СтавкаНДСЧислом) - втПланыПродаж.ППП_СуммаПромоАкции * (1 + втДивизионыИБрендообъемы.СтавкаНДСЧислом) КАК ВыручкаГроссСНДС,
+	втПланыПродаж.ППП_СуммаМаркетинговыеУслуги * 1.18 КАК МаркетинговыеУслугиСНДС,
+	втПланыПродаж.ППП_СуммаБюджетРетробонусов КАК БюджетРетробонусовСНДС,
+	втПланыПродаж.ППП_СуммаЭТК * 1.18 КАК СуммаЭТКСНДС,
+	втПланыПродаж.ППП_СуммаПовышенияЦен * (1 + втДивизионыИБрендообъемы.СтавкаНДСЧислом) - втПланыПродаж.ППП_СуммаПромоАкции * (1 + втДивизионыИБрендообъемы.СтавкаНДСЧислом) - втПланыПродаж.ППП_СуммаМаркетинговыеУслуги * 1.18 - втПланыПродаж.ППП_СуммаБюджетРетробонусов - втПланыПродаж.ППП_СуммаЭТК * 1.18 КАК ВыручкаНеттоСНДС,
+	втПланыПродаж.ППП_СуммаПромоАкцииСкидкаПослеСчета * (1 + втДивизионыИБрендообъемы.СтавкаНДСЧислом) КАК СуммаПромоАкцииСкидкаПослеСчетаСНДС,
+	втПланыПродаж.ППП_СтоимостьСДопСкидкой,
+	втПланыПродаж.ДопСкидка,
+	втПланыПродаж.ППП_СуммаЭТКСкидкаВСчете,
+	втПланыПродаж.ППП_СуммаПредставленность,
+	втПланыПродаж.ППП_СуммаRSP
+ИЗ
+	втПланыПродаж КАК втПланыПродаж
+		ЛЕВОЕ СОЕДИНЕНИЕ втДивизионыИБрендообъемы КАК втДивизионыИБрендообъемы
+		ПО втПланыПродаж.Дивизион = втДивизионыИБрендообъемы.Дивизион
+			И втПланыПродаж.ППП_Брендообъем = втДивизионыИБрендообъемы.Брендообъем</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ЦенаДоПовышения</dataPath>
+		<expression>ППП_СуммаПрайсЛист/Количество</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Цена брендообъема по прайсу (до повышения)</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=8</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ЦенаСПовышением</dataPath>
+		<expression>ППП_СуммаПовышенияЦен/Количество</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Цена брендообъема по прайсу (с учетом повышения)</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=8</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_ВесБрутто</dataPath>
+		<expression>Сумма(ППП_ВесБрутто)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_ВесНетто</dataPath>
+		<expression>Сумма(ППП_ВесНетто)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_Литры</dataPath>
+		<expression>Сумма(ППП_Литры)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СуммаБюджетРетробонусов</dataPath>
+		<expression>Сумма(ППП_СуммаБюджетРетробонусов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СуммаГросс</dataPath>
+		<expression>Сумма(ППП_СуммаГросс)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СуммаМаркетинговыеУслуги</dataPath>
+		<expression>Сумма(ППП_СуммаМаркетинговыеУслуги)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СуммаПовышенияЦен</dataPath>
+		<expression>Сумма(ППП_СуммаПовышенияЦен)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СуммаПрайсЛист</dataPath>
+		<expression>Сумма(ППП_СуммаПрайсЛист)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СуммаПромоАкции</dataPath>
+		<expression>Сумма(ППП_СуммаПромоАкции)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СуммаЭТК</dataPath>
+		<expression>Сумма(ППП_СуммаЭТК)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Стоимость</dataPath>
+		<expression>Сумма(Стоимость)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЦенаДоПовышения</dataPath>
+		<expression>Сумма(ЦенаДоПовышения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЦенаСПовышением</dataPath>
+		<expression>Сумма(ЦенаСПовышением)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>БазоваяВыручкаСНДС</dataPath>
+		<expression>Сумма(БазоваяВыручкаСНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПромоАкцииСНДС</dataPath>
+		<expression>Сумма(СуммаПромоАкцииСНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВыручкаГроссСНДС</dataPath>
+		<expression>Сумма(ВыручкаГроссСНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>МаркетинговыеУслугиСНДС</dataPath>
+		<expression>Сумма(МаркетинговыеУслугиСНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>БюджетРетробонусовСНДС</dataPath>
+		<expression>Сумма(БюджетРетробонусовСНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаЭТКСНДС</dataPath>
+		<expression>Сумма(СуммаЭТКСНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВыручкаНеттоСНДС</dataPath>
+		<expression>Сумма(ВыручкаНеттоСНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПромоАкцииСкидкаПослеСчета</dataPath>
+		<expression>Сумма(СуммаПромоАкцииСкидкаПослеСчета)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПромоАкцииСкидкаПослеСчетаСНДС</dataPath>
+		<expression>Сумма(СуммаПромоАкцииСкидкаПослеСчетаСНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДопСкидка</dataPath>
+		<expression>Сумма(ДопСкидка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СтоимостьСДопСкидкой</dataPath>
+		<expression>Сумма(ППП_СтоимостьСДопСкидкой)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СуммаЭТКСкидкаВСчете</dataPath>
+		<expression>Сумма(ППП_СуммаЭТКСкидкаВСчете)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СуммаПредставленность</dataPath>
+		<expression>Сумма(ППП_СуммаПредставленность)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ППП_СуммаRSP</dataPath>
+		<expression>Сумма(ППП_СуммаRSP)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_АдресПоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_ВесБрутто</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_ВесНетто</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дивизион</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_КаналПродаж</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_Литры</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_КатегорияКлиента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НСИ_ТорговаяКоманда</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_ПрайсЛист</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Стоимость</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_СуммаБюджетРетробонусов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_СуммаГросс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_СуммаМаркетинговыеУслуги</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_СуммаПовышенияЦен</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_СуммаПрайсЛист</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_СуммаПромоАкции</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_СуммаЭТК</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_ТоварнаяКатегория</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_Брендообъем</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтавкаНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>БазоваяВыручкаСНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаПромоАкцииСНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВыручкаГроссСНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МаркетинговыеУслугиСНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>БюджетРетробонусовСНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаЭТКСНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВыручкаНеттоСНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаПромоАкцииСкидкаПослеСчета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаПромоАкцииСкидкаПослеСчетаСНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДопСкидка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_СуммаЭТКСкидкаВСчете</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_СуммаПредставленность</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ППП_СуммаRSP</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сценарий</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.СценарииПланирования.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Дивизион</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПРГДивизионы.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ППП_КаналПродаж</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НСИ_КаналыПродаж.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">НСИ_ТорговаяКоманда</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НСИ_ТорговыеКоманды.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">НСИ_КатегорияКлиента</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НСИ_КатегорииКлиентов.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ППП_АдресПоставки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бюджет выручки</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Период</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Контрагент.Код</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_АдресПоставки.КодАдреса</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Код адреса</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_АдресПоставки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НСИ_ТорговаяКоманда</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_КаналПродаж</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Дивизион</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_Брендообъем</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Брендообъем</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НСИ_КатегорияКлиента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_ТоварнаяКатегория.Проект</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Проект</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Контрагент.НСИ_Вывеска</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вывеска</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:placement>Auto</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Количество</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_ВесБрутто</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_ВесНетто</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_Литры</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Объем</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_ПрайсЛист</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЦенаДоПовышения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЦенаСПовышением</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_СуммаПовышенияЦен</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Базовая выручка</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_СуммаПромоАкции</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_СуммаГросс</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_СуммаМаркетинговыеУслуги</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_СуммаБюджетРетробонусов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_СуммаЭТК</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Стоимость</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выручка нетто</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СтавкаНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>БазоваяВыручкаСНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПромоАкцииСНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВыручкаГроссСНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>МаркетинговыеУслугиСНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>БюджетРетробонусовСНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаЭТКСНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВыручкаНеттоСНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_СуммаПредставленность</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_СуммаЭТКСкидкаВСчете</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ППП_СуммаRSP</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

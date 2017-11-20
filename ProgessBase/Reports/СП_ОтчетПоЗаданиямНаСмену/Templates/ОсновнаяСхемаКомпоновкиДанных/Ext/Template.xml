@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаСмену</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание на смену</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаЗадания</dataPath>
+			<field>ДатаЗадания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоФакт</dataPath>
+			<field>КоличествоФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Смена</dataPath>
+			<field>Смена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отделение</dataPath>
+			<field>Отделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусДокумента</dataPath>
+			<field>СтатусДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВыпуск</dataPath>
+			<field>КоличествоВыпуск</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПлан</dataPath>
+			<field>КоличествоПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПереместили</dataPath>
+			<field>КоличествоПереместили</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапрос.Ссылка,
+	ВложенныйЗапрос.Номенклатура,
+	ВложенныйЗапрос.Склад,
+	ВложенныйЗапрос.ДатаЗадания,
+	СУММА(ВложенныйЗапрос.КоличествоПлан) КАК КоличествоПлан,
+	СУММА(ВложенныйЗапрос.КоличествоФакт) КАК КоличествоФакт,
+	ВложенныйЗапрос.Смена,
+	ВложенныйЗапрос.Отделение,
+	ВложенныйЗапрос.СтатусДокумента,
+	ВложенныйЗапрос.Подразделение,
+	СУММА(ВложенныйЗапрос.КоличествоВыпуск) КАК КоличествоВыпуск,
+	СУММА(ВложенныйЗапрос.КоличествоПереместили) КАК КоличествоПереместили,
+	ВложенныйЗапрос.ХарактеристикаНоменклатуры
+ИЗ
+	(ВЫБРАТЬ
+		СП_ЗаданиеНаСмену.Ссылка КАК Ссылка,
+		СП_ЗаданиеНаСмену.Номенклатура КАК Номенклатура,
+		СП_ЗаданиеНаСмену.Склад КАК Склад,
+		СП_ЗаданиеНаСмену.ДатаЗадания КАК ДатаЗадания,
+		СП_ЗаданиеНаСмену.Количество КАК КоличествоПлан,
+		СП_ЗаданиеНаСмену.КоличествоФакт КАК КоличествоФакт,
+		СП_ЗаданиеНаСмену.Смена КАК Смена,
+		СП_ЗаданиеНаСмену.Отделение КАК Отделение,
+		СП_ЗаданиеНаСмену.СтатусДокумента КАК СтатусДокумента,
+		СП_ЗаданиеНаСмену.Подразделение КАК Подразделение,
+		0 КАК КоличествоВыпуск,
+		0 КАК КоличествоПереместили,
+		СП_ЗаданиеНаСмену.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры
+	ИЗ
+		Документ.СП_ЗаданиеНаСмену КАК СП_ЗаданиеНаСмену
+	ГДЕ
+		(СП_ЗаданиеНаСмену.ДатаЗадания &lt;= &amp;КонецПериода
+				ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1))
+		И (СП_ЗаданиеНаСмену.ДатаЗадания &gt;= &amp;НачалоПериода
+				ИЛИ &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1))
+		И СП_ЗаданиеНаСмену.Проведен = ИСТИНА
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ВыпускПродукцииПродукция.Ссылка.СП_ЗаданиеНаСмену,
+		ВыпускПродукцииПродукция.Номенклатура,
+		ВыпускПродукцииПродукция.Ссылка.СП_ЗаданиеНаСмену.Склад,
+		ВыпускПродукцииПродукция.Ссылка.СП_ЗаданиеНаСмену.ДатаЗадания,
+		0,
+		0,
+		ВыпускПродукцииПродукция.Ссылка.СП_ЗаданиеНаСмену.Смена,
+		ВыпускПродукцииПродукция.Ссылка.СП_ЗаданиеНаСмену.Отделение,
+		ВыпускПродукцииПродукция.Ссылка.СП_ЗаданиеНаСмену.СтатусДокумента,
+		ВыпускПродукцииПродукция.Ссылка.Подразделение,
+		ВыпускПродукцииПродукция.Количество,
+		0,
+		ВыпускПродукцииПродукция.ХарактеристикаНоменклатуры
+	ИЗ
+		Документ.ВыпускПродукции.Продукция КАК ВыпускПродукцииПродукция
+	ГДЕ
+		ВыпускПродукцииПродукция.Ссылка.Проведен = ИСТИНА
+		И (ВыпускПродукцииПродукция.Ссылка.СП_ЗаданиеНаСмену.ДатаЗадания &lt;= &amp;КонецПериода
+				ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1))
+		И (ВыпускПродукцииПродукция.Ссылка.СП_ЗаданиеНаСмену.ДатаЗадания &gt;= &amp;НачалоПериода
+				ИЛИ &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1))
+		И ВыпускПродукцииПродукция.Ссылка.СП_ЗаданиеНаСмену.Проведен = ИСТИНА
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ПеремещениеТоваровТовары.Ссылка.ДокументОснование.СП_ЗаданиеНаСмену,
+		ПеремещениеТоваровТовары.Номенклатура,
+		ПеремещениеТоваровТовары.Ссылка.ДокументОснование.СП_ЗаданиеНаСмену.Склад,
+		ПеремещениеТоваровТовары.Ссылка.ДокументОснование.СП_ЗаданиеНаСмену.ДатаЗадания,
+		0,
+		0,
+		ПеремещениеТоваровТовары.Ссылка.ДокументОснование.СП_ЗаданиеНаСмену.Смена,
+		ПеремещениеТоваровТовары.Ссылка.ДокументОснование.СП_ЗаданиеНаСмену.Отделение,
+		ПеремещениеТоваровТовары.Ссылка.ДокументОснование.СП_ЗаданиеНаСмену.СтатусДокумента,
+		ПеремещениеТоваровТовары.Ссылка.ДокументОснование.Подразделение,
+		0,
+		ПеремещениеТоваровТовары.Количество,
+		ПеремещениеТоваровТовары.ХарактеристикаНоменклатуры
+	ИЗ
+		Документ.ПеремещениеТоваров.Товары КАК ПеремещениеТоваровТовары
+	ГДЕ
+		ПеремещениеТоваровТовары.Ссылка.ДокументОснование ССЫЛКА Документ.ВыпускПродукции
+		И ПеремещениеТоваровТовары.Ссылка.Проведен = ИСТИНА
+		И (ПеремещениеТоваровТовары.Ссылка.ДокументОснование.СП_ЗаданиеНаСмену.ДатаЗадания &lt;= &amp;КонецПериода
+				ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1))
+		И (ПеремещениеТоваровТовары.Ссылка.ДокументОснование.СП_ЗаданиеНаСмену.ДатаЗадания &gt;= &amp;НачалоПериода
+				ИЛИ &amp;НачалоПериода = ДАТАВРЕМЯ(1, 1, 1))
+		И ПеремещениеТоваровТовары.Ссылка.ДокументОснование.СП_ЗаданиеНаСмену.Проведен = ИСТИНА) КАК ВложенныйЗапрос
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.Ссылка,
+	ВложенныйЗапрос.Номенклатура,
+	ВложенныйЗапрос.Склад,
+	ВложенныйЗапрос.ДатаЗадания,
+	ВложенныйЗапрос.Смена,
+	ВложенныйЗапрос.Отделение,
+	ВложенныйЗапрос.СтатусДокумента,
+	ВложенныйЗапрос.Подразделение,
+	ВложенныйЗапрос.ХарактеристикаНоменклатуры</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоФакт</dataPath>
+		<expression>Сумма(КоличествоФакт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПлан</dataPath>
+		<expression>Сумма(КоличествоПлан)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоВыпуск</dataPath>
+		<expression>Сумма(КоличествоВыпуск)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПереместили</dataPath>
+		<expression>Сумма(КоличествоПереместили)</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Склад</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Подразделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаданиеНаСмену</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаЗадания</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПлан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоФакт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоВыпуск</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПереместили</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Отделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НСИ_Отделения.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Склад</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Склады.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>46bd00a2-e71b-47e1-bcc5-5a26035473d4</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Подразделения.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>947802cb-638b-433d-a7dd-56ab18a6e12f</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>8a7aaa4f-5bb7-4d5d-95bc-9964801b2c12</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:userSettingID>3cd552d3-193c-4d72-85e6-93ba12355677</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Склад</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Подразделение</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Склад</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подразделение</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

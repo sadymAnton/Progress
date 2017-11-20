@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Скидка</dataPath>
+			<field>Скидка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресПоставки</dataPath>
+			<field>АдресПоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЦены</dataPath>
+			<field>ТипЦены</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроектГП</dataPath>
+			<field>ПроектГП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регион</dataPath>
+			<field>Регион</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КаналПродаж</dataPath>
+			<field>КаналПродаж</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УсловиеПоставки</dataPath>
+			<field>УсловиеПоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаСНДС</dataPath>
+			<field>ЦенаСНДС</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапрос.АдресПоставки,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_Регион
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_Регион
+	КОНЕЦ КАК Регион,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_КаналПродаж
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_КаналПродаж
+	КОНЕЦ КАК КаналПродаж,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_УсловияПоставки
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_УсловияПоставки
+	КОНЕЦ КАК УсловиеПоставки,
+	ВложенныйЗапрос.Контрагент,
+	ВложенныйЗапрос.Номенклатура,
+	ВложенныйЗапрос.Номенклатура.Проект КАК ПроектГП,
+	ВложенныйЗапрос.ТипЦены КАК ТипЦены,
+	ВложенныйЗапрос.Цена КАК Цена,
+	ВложенныйЗапрос.Цена КАК ЦенаСНДС,
+	ЕСТЬNULL(СкидкиНаценкиНоменклатурыСрезПоследних.ПроцентСкидкиНаценки, 0) КАК Скидка
+ИЗ
+	(ВЫБРАТЬ
+		ЕСТЬNULL(АдресаПоставки.Ссылка, ЗНАЧЕНИЕ(Справочник.АдресаПоставки.ПустаяСсылка)) КАК АдресПоставки,
+		Контрагенты.Ссылка КАК Контрагент,
+		ЦеныНоменклатурыСрезПоследних.Номенклатура КАК Номенклатура,
+		ЗНАЧЕНИЕ(Справочник.ТипыЦенНоменклатуры.ПустаяСсылка) КАК ТипЦены,
+		0 КАК Цена
+	ИЗ
+		Справочник.Контрагенты КАК Контрагенты
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.АдресаПоставки КАК АдресаПоставки
+			ПО (АдресаПоставки.Владелец = Контрагенты.Ссылка),
+		РегистрСведений.ЦеныНоменклатуры.СрезПоследних КАК ЦеныНоменклатурыСрезПоследних
+	ГДЕ
+		Контрагенты.Покупатель = ИСТИНА) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СкидкиНаценкиНоменклатуры.СрезПоследних КАК СкидкиНаценкиНоменклатурыСрезПоследних
+		ПО (СкидкиНаценкиНоменклатурыСрезПоследних.ДатаОкончания &gt;= &amp;Период)
+			И (ВложенныйЗапрос.Номенклатура = СкидкиНаценкиНоменклатурыСрезПоследних.Номенклатура
+				ИЛИ (СкидкиНаценкиНоменклатурыСрезПоследних.Номенклатура = ЗНАЧЕНИЕ(Справочник.Номенклатура.ПустаяСсылка)
+					И (СкидкиНаценкиНоменклатурыСрезПоследних.ПЦ_ТоварнаяКатегория = ВложенныйЗапрос.Номенклатура.НСИ_ТоварнаяКатегория
+						ИЛИ СкидкиНаценкиНоменклатурыСрезПоследних.ПЦ_Брендообъем = ВложенныйЗапрос.Номенклатура.НСИ_Брендообъем)))
+			И (СкидкиНаценкиНоменклатурыСрезПоследних.ПолучательСкидки = ВложенныйЗапрос.Контрагент
+				ИЛИ СкидкиНаценкиНоменклатурыСрезПоследних.ПолучательСкидки.Владелец = ВложенныйЗапрос.Контрагент)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Цена</dataPath>
+		<expression>Минимум(Цена)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЦенаСНДС</dataPath>
+		<expression>Минимум(ЦенаСНДС)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АдресПоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Скидка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипЦены</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаСНДС</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

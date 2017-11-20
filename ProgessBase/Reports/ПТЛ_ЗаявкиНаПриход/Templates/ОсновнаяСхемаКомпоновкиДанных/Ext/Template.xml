@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Автомобиль</dataPath>
+			<field>Автомобиль</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресПоставки</dataPath>
+			<field>АдресПоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаПеревозку</dataPath>
+			<field>ЗаданиеНаПеревозку</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаПодбор</dataPath>
+			<field>ЗаданиеНаПодбор</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Качество</dataPath>
+			<field>Качество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отделение</dataPath>
+			<field>Отделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Получатель</dataPath>
+			<field>Получатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВремяПрибытияТС</dataPath>
+			<field>ВремяПрибытияТС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаДокументаКонтрагента</dataPath>
+			<field>ДатаДокументаКонтрагента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОтгрузки</dataPath>
+			<field>ДатаОтгрузки</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПрибытияТС</dataPath>
+			<field>ДатаПрибытияТС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерАвтомобиля</dataPath>
+			<field>НомерАвтомобиля</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДокументаКонтрагента</dataPath>
+			<field>НомерДокументаКонтрагента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Примечание</dataPath>
+			<field>Примечание</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФИОВодителя</dataPath>
+			<field>ФИОВодителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Водитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолВоУп</dataPath>
+			<field>КолВоУп</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол-во упаковок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НакладнаяСсылка</dataPath>
+			<field>НакладнаяСсылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Накладная</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХН</dataPath>
+			<field>ХН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика номенклатуры</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидыПричинПретензии</dataPath>
+			<field>ВидыПричинПретензии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПретензии</dataPath>
+			<field>ДокументПретензии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Накладная</dataPath>
+			<field>Накладная</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаПретензии</dataPath>
+			<field>ПричинаПретензии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РешениеПоПретензии</dataPath>
+			<field>РешениеПоПретензии</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаФакт</dataPath>
+			<field>ЦенаФакт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаПеревозкуАдресПоставкиНСИ_АдресДоставки</dataPath>
+			<field>ЗаданиеНаПеревозкуАдресПоставкиНСИ_АдресДоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаданиеНаПеревозкуАдресПоставкиНСИ_Город</dataPath>
+			<field>ЗаданиеНаПеревозкуАдресПоставкиНСИ_Город</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПлан</dataPath>
+			<field>КоличествоПлан</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПолучения</dataPath>
+			<field>ДокументПолучения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументРезерва</dataPath>
+			<field>ДокументРезерва</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусПартии</dataPath>
+			<field>СтатусПартии</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложДок.Документ.Организация КАК Организация,
+	ВложДок.Отделение КАК Отделение,
+	ВложДок.Склад КАК Склад,
+	ВложДок.Документ,
+	ВложДок.Артикул КАК Артикул,
+	ВложДок.Номенклатура КАК Номенклатура,
+	ВложДок.ХарактеристикаНоменклатуры КАК ХН,
+	ВложДок.Количество КАК Количество,
+	ВложДок.КоличествоПлан КАК КоличествоПлан,
+	ВложДок.ФИОВодителя,
+	ВложДок.НомерАвтомобиля,
+	ВложДок.Автомобиль КАК Автомобиль,
+	ВложДок.НомерДокументаКонтрагента,
+	ВложДок.ДатаДокументаКонтрагента,
+	ВложДок.ДатаПрибытияТС,
+	ВложДок.ВремяПрибытияТС,
+	ЗНАЧЕНИЕ(Справочник.СерииНоменклатуры.ПустаяСсылка) КАК СерияНоменклатуры,
+	ВложДок.Примечание,
+	ВложДок.ДатаОтгрузки,
+	ВложДок.ЗаданиеНаПодбор,
+	ВложДок.ЗаданиеНаПеревозку,
+	ВложДок.Получатель,
+	ВложДок.КолВоУп,
+	Накладная.НакладнаяСсылка,
+	ВложДок.ЗаданиеНаПеревозку.АдресПоставки.НСИ_Город,
+	ВложДок.ЗаданиеНаПеревозку.АдресПоставки.НСИ_АдресДоставки
+ИЗ
+	(ВЫБРАТЬ
+		ПТиУ.Регистратор КАК Документ,
+		ПТиУ.Номенклатура.Код КАК Артикул,
+		ПТиУ.Номенклатура КАК Номенклатура,
+		ПТиУ.ХарактеристикаНоменклатуры КАК ХарактеристикаНоменклатуры,
+		СУММА(ПТиУ.КоличествоПриход) КАК Количество,
+		0 КАК КоличествоПлан,
+		ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка) КАК ТЭК,
+		ПТиУ.Регистратор.УЗ_АМ КАК Автомобиль,
+		ПТиУ.Регистратор.Водитель КАК ФИОВодителя,
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0) КАК ДатаПрибытияТС,
+		ПТиУ.Склад.НСИ_Отделение КАК Отделение,
+		ПТиУ.Склад КАК Склад,
+		ЗНАЧЕНИЕ(Документ.СП_ЗаданиеНаПодбор.ПустаяСсылка) КАК НомерДокументаКонтрагента,
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0) КАК ДатаДокументаКонтрагента,
+		"" КАК НомерАвтомобиля,
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0) КАК ВремяПрибытияТС,
+		ЗНАЧЕНИЕ(Справочник.АдресаПоставки.ПустаяСсылка) КАК Примечание,
+		ДАТАВРЕМЯ(1, 1, 1) КАК ДатаОтгрузки,
+		ЗНАЧЕНИЕ(Документ.СП_ЗаданиеНаПодбор.ПустаяСсылка) КАК ЗаданиеНаПодбор,
+		ЗНАЧЕНИЕ(Документ.ПТЛ_ЗаданиеНаПеревозку.ПустаяСсылка) КАК ЗаданиеНаПеревозку,
+		ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка) КАК Получатель,
+		ВЫБОР
+			КОГДА ПТиУ.Номенклатура.ЕдиницаИзмеренияМест.Коэффициент = 0
+				ТОГДА 0
+			ИНАЧЕ СУММА(ПТиУ.КоличествоПриход) / ПТиУ.Номенклатура.ЕдиницаИзмеренияМест.Коэффициент
+		КОНЕЦ КАК КолВоУп
+	ИЗ
+		РегистрНакопления.ТоварыКПолучениюНаСклады.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК ПТиУ
+	ГДЕ
+		ПТиУ.Регистратор ССЫЛКА Документ.ПоступлениеТоваровУслуг
+	
+	СГРУППИРОВАТЬ ПО
+		ПТиУ.Регистратор,
+		ПТиУ.Номенклатура,
+		ПТиУ.ХарактеристикаНоменклатуры,
+		ПТиУ.СерияНоменклатуры,
+		ПТиУ.Регистратор.УЗ_АМ,
+		ПТиУ.Регистратор.Водитель,
+		ПТиУ.Номенклатура.Код,
+		ПТиУ.Склад.НСИ_Отделение,
+		ПТиУ.Склад,
+		ПТиУ.Номенклатура.ЕдиницаИзмеренияМест.Коэффициент
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗаданияНаПодбор.ЗаданиеНаПодбор,
+		ЗаданияНаПодбор.Номенклатура.Код,
+		ЗаданияНаПодбор.Номенклатура,
+		ЗаданияНаПодбор.ХарактеристикаНоменклатуры,
+		СУММА(ЗаданияНаПодбор.КоличествоФактОборот),
+		СУММА(ЗаданияНаПодбор.КоличествоПланОборот),
+		ЕСТЬNULL(ПланыДоставки.ТЭК, ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)),
+		ВЫБОР
+			КОГДА ЗаданияНаПодбор.ЗаданиеНаПодбор.КП_УсловиеПоставки = ЗНАЧЕНИЕ(Перечисление.ПТЛ_УсловияПоставки.Самовывоз)
+				ТОГДА ЕСТЬNULL(ЗаданияНаПодбор.ЗаданиеНаПодбор.Заказ.КП_Водитель, ЗНАЧЕНИЕ(Справочник.ПТЛ_Водители.ПустаяСсылка))
+			ИНАЧЕ ЕСТЬNULL(ПланыДоставки.Водитель, ЗНАЧЕНИЕ(Справочник.ПТЛ_Водители.ПустаяСсылка))
+		КОНЕЦ,
+		ЗаданияНаПеревозку.ЗаданиеНаПеревозку.ТранспортноеСредство,
+		ВЫБОР
+			КОГДА ПланыДоставки.ДатаДоставки ЕСТЬ NULL 
+				ТОГДА ЗаданияНаПодбор.ЗаданиеНаПодбор.ПлановаяДатаОтгрузки
+			ИНАЧЕ ПланыДоставки.ДатаДоставки
+		КОНЕЦ,
+		ЗаданияНаПодбор.ЗаданиеНаПодбор.КП_Отделение,
+		ЗаданияНаПодбор.ЗаданиеНаПодбор.Получатель,
+		ЗаданияНаПодбор.ЗаданиеНаПодбор.Номер,
+		ЗаданияНаПодбор.ЗаданиеНаПодбор.Дата,
+		ВЫБОР
+			КОГДА ЗаданияНаПодбор.ЗаданиеНаПодбор.КП_УсловиеПоставки = ЗНАЧЕНИЕ(Перечисление.ПТЛ_УсловияПоставки.Самовывоз)
+				ТОГДА ЕСТЬNULL(ЗаданияНаПодбор.ЗаданиеНаПодбор.Заказ.КП_ТранспортноеСредство, ЗНАЧЕНИЕ(Справочник.ПТЛ_ТранспортныеСредства.ПустаяСсылка))
+			ИНАЧЕ ЕСТЬNULL(ПланыДоставки.ТранспортноеСредство, ЗНАЧЕНИЕ(Справочник.ПТЛ_ТранспортныеСредства.ПустаяСсылка))
+		КОНЕЦ,
+		ЕСТЬNULL(ПланыДоставки.ВремяПодачиТС, ДАТАВРЕМЯ(1, 1, 1)),
+		ЕСТЬNULL(ЗаданияНаПеревозку.ЗаданиеНаПеревозку.АдресПоставки, ЗНАЧЕНИЕ(Справочник.АдресаПоставки.ПустаяСсылка)),
+		ЕСТЬNULL(ПланыДоставки.ДатаОтгрузки, ДАТАВРЕМЯ(1, 1, 1)),
+		ЕСТЬNULL(ЗаданияНаПодбор.ЗаданиеНаПодбор, ЗНАЧЕНИЕ(Документ.СП_ЗаданиеНаПодбор.ПустаяСсылка)),
+		ЕСТЬNULL(ЗаданияНаПеревозку.ЗаданиеНаПеревозку, ЗНАЧЕНИЕ(Документ.ПТЛ_ЗаданиеНаПеревозку.ПустаяСсылка)),
+		ЕСТЬNULL(ЗаданияНаПеревозку.ЗаданиеНаПеревозку.Получатель, ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)),
+		ВЫБОР
+			КОГДА ЗаданияНаПодбор.Номенклатура.ЕдиницаИзмеренияМест.Коэффициент = 0
+				ТОГДА 0
+			ИНАЧЕ СУММА(ЗаданияНаПодбор.КоличествоПланОборот) / ЗаданияНаПодбор.Номенклатура.ЕдиницаИзмеренияМест.Коэффициент
+		КОНЕЦ
+	ИЗ
+		РегистрНакопления.СП_ЗаданияНаПодбор.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК ЗаданияНаПодбор
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ПТЛ_ЗаданияНаПеревозку.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК ЗаданияНаПеревозку
+			ПО ЗаданияНаПодбор.ЗаданиеНаПодбор = ЗаданияНаПеревозку.ЗаданиеНаПодбор
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ПТЛ_ПланДоставки КАК ПланыДоставки
+			ПО ЗаданияНаПодбор.ЗаданиеНаПодбор = ПланыДоставки.ЗаданиеНаПодбор
+	ГДЕ
+		ЗаданияНаПодбор.ЗаданиеНаПодбор.ВидОперации = ЗНАЧЕНИЕ(Перечисление.СП_ВидыОперацииЗаданияНаПодбор.ПеремещениеНаСклад)
+	
+	СГРУППИРОВАТЬ ПО
+		ЗаданияНаПодбор.ЗаданиеНаПодбор,
+		ЗаданияНаПодбор.Номенклатура,
+		ЗаданияНаПодбор.ХарактеристикаНоменклатуры,
+		ЗаданияНаПеревозку.ЗаданиеНаПеревозку.ТранспортноеСредство,
+		ЗаданияНаПодбор.Номенклатура.Код,
+		ЗаданияНаПодбор.ЗаданиеНаПодбор.КП_Отделение,
+		ЗаданияНаПодбор.ЗаданиеНаПодбор.Получатель,
+		ПланыДоставки.ДатаДоставки,
+		ВЫБОР
+			КОГДА ПланыДоставки.ДатаДоставки ЕСТЬ NULL 
+				ТОГДА ЗаданияНаПодбор.ЗаданиеНаПодбор.ПлановаяДатаОтгрузки
+			ИНАЧЕ ПланыДоставки.ДатаДоставки
+		КОНЕЦ,
+		ВЫБОР
+			КОГДА ЗаданияНаПодбор.ЗаданиеНаПодбор.КП_УсловиеПоставки = ЗНАЧЕНИЕ(Перечисление.ПТЛ_УсловияПоставки.Самовывоз)
+				ТОГДА ЕСТЬNULL(ЗаданияНаПодбор.ЗаданиеНаПодбор.Заказ.КП_Водитель, ЗНАЧЕНИЕ(Справочник.ПТЛ_Водители.ПустаяСсылка))
+			ИНАЧЕ ЕСТЬNULL(ПланыДоставки.Водитель, ЗНАЧЕНИЕ(Справочник.ПТЛ_Водители.ПустаяСсылка))
+		КОНЕЦ,
+		ВЫБОР
+			КОГДА ЗаданияНаПодбор.ЗаданиеНаПодбор.КП_УсловиеПоставки = ЗНАЧЕНИЕ(Перечисление.ПТЛ_УсловияПоставки.Самовывоз)
+				ТОГДА ЕСТЬNULL(ЗаданияНаПодбор.ЗаданиеНаПодбор.Заказ.КП_ТранспортноеСредство, ЗНАЧЕНИЕ(Справочник.ПТЛ_ТранспортныеСредства.ПустаяСсылка))
+			ИНАЧЕ ЕСТЬNULL(ПланыДоставки.ТранспортноеСредство, ЗНАЧЕНИЕ(Справочник.ПТЛ_ТранспортныеСредства.ПустаяСсылка))
+		КОНЕЦ,
+		ЗаданияНаПодбор.ЗаданиеНаПодбор.Номер,
+		ЗаданияНаПодбор.ЗаданиеНаПодбор.Дата,
+		ЕСТЬNULL(ПланыДоставки.ВремяПодачиТС, ДАТАВРЕМЯ(1, 1, 1)),
+		ЕСТЬNULL(ЗаданияНаПеревозку.ЗаданиеНаПеревозку.АдресПоставки, ЗНАЧЕНИЕ(Справочник.АдресаПоставки.ПустаяСсылка)),
+		ЕСТЬNULL(ПланыДоставки.ДатаОтгрузки, ДАТАВРЕМЯ(1, 1, 1)),
+		ЕСТЬNULL(ЗаданияНаПеревозку.ЗаданиеНаПеревозку, ЗНАЧЕНИЕ(Документ.ПТЛ_ЗаданиеНаПеревозку.ПустаяСсылка)),
+		ЕСТЬNULL(ЗаданияНаПеревозку.ЗаданиеНаПеревозку.Получатель, ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)),
+		ЕСТЬNULL(ПланыДоставки.ТЭК, ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)),
+		ЗаданияНаПодбор.Номенклатура.ЕдиницаИзмеренияМест.Коэффициент
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Претензии.ДокументПретензии,
+		Претензии.Номенклатура.Код,
+		Претензии.Номенклатура,
+		Претензии.ХарактеристикаНоменклатуры,
+		СУММА(Претензии.КоличествоВозвратОборот),
+		0,
+		Претензии.ДокументПретензии.ТЭК,
+		Претензии.ДокументПретензии.Водитель,
+		Претензии.ДокументПретензии.ТранспортноеСредство,
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0),
+		Претензии.ДокументПретензии.КП_Отделение,
+		Претензии.ДокументПретензии.СкладПретензии,
+		ЗНАЧЕНИЕ(Документ.СП_ЗаданиеНаПодбор.ПустаяСсылка),
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0),
+		"",
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0),
+		ЗНАЧЕНИЕ(Справочник.АдресаПоставки.ПустаяСсылка),
+		ДАТАВРЕМЯ(1, 1, 1),
+		ЗНАЧЕНИЕ(Документ.СП_ЗаданиеНаПодбор.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Документ.ПТЛ_ЗаданиеНаПеревозку.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка),
+		ВЫБОР
+			КОГДА Претензии.Номенклатура.ЕдиницаИзмеренияМест.Коэффициент = 0
+				ТОГДА 0
+			ИНАЧЕ СУММА(Претензии.КоличествоВозвратОборот) / Претензии.Номенклатура.ЕдиницаИзмеренияМест.Коэффициент
+		КОНЕЦ
+	ИЗ
+		РегистрНакопления.ПР_Претензии.Обороты(&amp;НачалоПериода, &amp;КонецПериода, , ) КАК Претензии
+	ГДЕ
+		НЕ Претензии.КоличествоВозвратОборот = 0
+	
+	СГРУППИРОВАТЬ ПО
+		Претензии.ДокументПретензии,
+		Претензии.Номенклатура,
+		Претензии.ХарактеристикаНоменклатуры,
+		Претензии.ДокументПретензии.ТранспортноеСредство,
+		Претензии.ДокументПретензии.Водитель,
+		Претензии.Номенклатура.Код,
+		Претензии.ДокументПретензии.КП_Отделение,
+		Претензии.ДокументПретензии.СкладПретензии,
+		Претензии.ДокументПретензии.ТЭК,
+		Претензии.Номенклатура.ЕдиницаИзмеренияМест.Коэффициент) КАК ВложДок
+		ПОЛНОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ЗаказыВлож.Заказ КАК Заказ,
+			ЗаказыВлож.НакладнаяСсылка КАК НакладнаяСсылка
+		ИЗ
+			(ВЫБРАТЬ
+				РТиУ.Ссылка.Сделка КАК Заказ,
+				МАКСИМУМ(РТиУ.Ссылка) КАК НакладнаяСсылка
+			ИЗ
+				Документ.РеализацияТоваровУслуг.Товары КАК РТиУ
+			ГДЕ
+				РТиУ.Ссылка.Проведен
+			
+			СГРУППИРОВАТЬ ПО
+				РТиУ.Ссылка.Сделка
+			
+			ОБЪЕДИНИТЬ ВСЕ
+			
+			ВЫБРАТЬ
+				ПТиУ.Ссылка.ВнутреннийЗаказ,
+				МАКСИМУМ(ПТиУ.Ссылка)
+			ИЗ
+				Документ.ПеремещениеТоваров.Товары КАК ПТиУ
+			ГДЕ
+				ПТиУ.Ссылка.Проведен
+			
+			СГРУППИРОВАТЬ ПО
+				ПТиУ.Ссылка.ВнутреннийЗаказ) КАК ЗаказыВлож) КАК Накладная
+		ПО (Накладная.Заказ = ВложДок.ЗаданиеНаПеревозку.Заказ)
+ГДЕ
+	НЕ ВложДок.Номенклатура ЕСТЬ NULL </query>
+	</dataSet>
+	<totalField>
+		<dataPath>КолВоУп</dataPath>
+		<expression>Сумма(КолВоУп)</expression>
+		<group>Документ</group>
+		<group>ЗаданиеНаПеревозку</group>
+		<group>ЗаданиеНаПодбор</group>
+		<group>НакладнаяСсылка</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Получатель</group>
+		<group>Получатель Иерархия</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ХН</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+		<group>Документ</group>
+		<group>ЗаданиеНаПеревозку</group>
+		<group>ЗаданиеНаПодбор</group>
+		<group>НакладнаяСсылка</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Получатель</group>
+		<group>Получатель Иерархия</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ХН</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоПлан</dataPath>
+		<expression>Сумма(КоличествоПлан)</expression>
+		<group>Документ</group>
+		<group>ЗаданиеНаПеревозку</group>
+		<group>ЗаданиеНаПодбор</group>
+		<group>НакладнаяСсылка</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>Организация</group>
+		<group>Отделение</group>
+		<group>Получатель</group>
+		<group>Получатель Иерархия</group>
+		<group>Склад</group>
+		<group>Склад Иерархия</group>
+		<group>ХН</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Отделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Склад</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Документ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Артикул</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ХН</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПлан</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КолВоУп</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Автомобиль</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФИОВодителя</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПрибытияТС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВремяПрибытияТС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Получатель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СерияНоменклатуры</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаданиеНаПеревозкуАдресПоставкиНСИ_АдресДоставки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаданиеНаПеревозкуАдресПоставкиНСИ_Город</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Отделение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.НСИ_Отделения.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Склад</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Отделение</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Склад</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ХН</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Количество</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupPlacement">Begin</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesPlacement">Horizontally</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявки на приход</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesAutoPosition">AfterAllFields</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

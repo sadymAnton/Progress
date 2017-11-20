@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресПоставки</dataPath>
+			<field>АдресПоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КаналПродаж</dataPath>
+			<field>КаналПродаж</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регион</dataPath>
+			<field>Регион</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Скидка</dataPath>
+			<field>Скидка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЦены</dataPath>
+			<field>ТипЦены</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УсловиеПоставки</dataPath>
+			<field>УсловиеПоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаСНДС</dataPath>
+			<field>ЦенаСНДС</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапрос.АдресПоставки,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_Регион
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_Регион
+	КОНЕЦ КАК Регион,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_КаналПродаж
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_КаналПродаж
+	КОНЕЦ КАК КаналПродаж,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.АдресПоставки ЕСТЬ NULL 
+			ТОГДА ВложенныйЗапрос.Контрагент.НСИ_УсловияПоставки
+		ИНАЧЕ ВложенныйЗапрос.АдресПоставки.НСИ_УсловияПоставки
+	КОНЕЦ КАК УсловиеПоставки,
+	ВложенныйЗапрос.Контрагент,
+	ВложенныйЗапрос.ТипЦены КАК ТипЦены,
+	ВложенныйЗапрос.Цена КАК Цена,
+	ВложенныйЗапрос.Цена КАК ЦенаСНДС,
+	ЕСТЬNULL(СкидкиНаценкиНоменклатурыСрезПоследних.ПроцентСкидкиНаценки, 0) КАК Скидка
+ИЗ
+	(ВЫБРАТЬ
+		ЕСТЬNULL(АдресаПоставки.Ссылка, ЗНАЧЕНИЕ(Справочник.АдресаПоставки.ПустаяСсылка)) КАК АдресПоставки,
+		Контрагенты.Ссылка КАК Контрагент,
+		ЗНАЧЕНИЕ(Справочник.ТипыЦенНоменклатуры.ПустаяСсылка) КАК ТипЦены,
+		0 КАК Цена
+	ИЗ
+		Справочник.Контрагенты КАК Контрагенты
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.АдресаПоставки КАК АдресаПоставки
+			ПО (АдресаПоставки.Владелец = Контрагенты.Ссылка)
+	ГДЕ
+		Контрагенты.Покупатель = ИСТИНА
+		И Контрагенты.Ссылка = &amp;КонтрагентОтбор) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СкидкиНаценкиНоменклатуры.СрезПоследних КАК СкидкиНаценкиНоменклатурыСрезПоследних
+		ПО (СкидкиНаценкиНоменклатурыСрезПоследних.ДатаОкончания &gt;= &amp;Период)
+			И (СкидкиНаценкиНоменклатурыСрезПоследних.ПолучательСкидки = ВложенныйЗапрос.Контрагент
+				ИЛИ СкидкиНаценкиНоменклатурыСрезПоследних.ПолучательСкидки.Владелец = ВложенныйЗапрос.Контрагент)</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">2015-06-30T23:59:59</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонтрагентОтбор</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контрагент отбор</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Контрагенты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows"/>
+	</settingsVariant>
+</DataCompositionSchema>
