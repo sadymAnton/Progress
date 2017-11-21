@@ -343,6 +343,42 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
+					<Attribute uuid="2c9337f8-f098-488e-9a56-34d7a54c8183">
+						<Properties>
+							<Name>ЕдиницаИзмеренияПоКлассификатору</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Единица измерения по классификатору</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
 					<Attribute uuid="8f8ca283-d9aa-4ab0-93e2-d513a717ad37">
 						<Properties>
 							<Name>unitUUID</Name>
@@ -350,6 +386,46 @@
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Unit UUID</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>36</v8:Length>
+									<v8:AllowedLength>Fixed</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:type="xs:string">                                    </FillValue>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
+					<Attribute uuid="b88c9559-e293-4768-8d1e-a0cbda56a61b">
+						<Properties>
+							<Name>unitGUID</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Unit GUID</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -809,6 +885,47 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
+					<Attribute uuid="c75d4c30-fcf2-4eeb-9e0c-659aeb060927">
+						<Properties>
+							<Name>КоличествоВДокументе</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество в документе</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:decimal</v8:Type>
+								<v8:NumberQualifiers>
+									<v8:Digits>12</v8:Digits>
+									<v8:FractionDigits>3</v8:FractionDigits>
+									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+								</v8:NumberQualifiers>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:nil="true"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
 					<Attribute uuid="358e8e67-44be-4025-ba3d-8f1ab7d4e79c">
 						<Properties>
 							<Name>productItemUUID</Name>
@@ -1117,6 +1234,46 @@
 							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 						</Properties>
 					</Attribute>
+					<Attribute uuid="52c55fbf-1c8e-4d6f-be6b-0a82e6485ea4">
+						<Properties>
+							<Name>GTIN</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GTIN</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>14</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
+							</Type>
+							<PasswordMode>false</PasswordMode>
+							<Format/>
+							<EditFormat/>
+							<ToolTip/>
+							<MarkNegatives>false</MarkNegatives>
+							<Mask/>
+							<MultiLine>false</MultiLine>
+							<ExtendedEdit>false</ExtendedEdit>
+							<MinValue xsi:nil="true"/>
+							<MaxValue xsi:nil="true"/>
+							<FillFromFillingValue>false</FillFromFillingValue>
+							<FillValue xsi:type="xs:string"/>
+							<FillChecking>DontCheck</FillChecking>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ChoiceParameterLinks/>
+							<ChoiceParameters/>
+							<QuickChoice>Auto</QuickChoice>
+							<CreateOnInput>Auto</CreateOnInput>
+							<ChoiceForm/>
+							<LinkByType/>
+							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+						</Properties>
+					</Attribute>
 				</ChildObjects>
 			</TabularSection>
 			<Form>Меркурий_Сообщение</Form>
@@ -1127,12 +1284,26 @@
 			<Form>Меркурий_ФормаВводаРеквизитовИПроверкиПодключения</Form>
 			<Form>Меркурий_ПросмотрProductItem</Form>
 			<Form>Меркурий_СоответствиеНоменклатуры</Form>
+			<Form>Меркурий_ВыборПартии</Form>
+			<Form>Меркурий_ПросмотрХС</Form>
+			<Form>КлиентскийМодульEDI</Form>
 			<Form>__________________________УправляемыеФормы__________________________</Form>
+			<Form>Меркурий_СообщениеУправляемая</Form>
 			<Form>Меркурий_НастройкаУправляемая</Form>
+			<Form>Меркурий_ХС_ПлощадкаУправляемая</Form>
 			<Form>Меркурий_ВыборХСПлощадкиУправляемая</Form>
 			<Form>ПриветствиеУправляемая</Form>
+			<Form>Меркурий_НоменклатураВыборУправляемая</Form>
 			<Form>Меркурий_ФормаВводаРеквизитовИПроверкиПодключенияУправляемая</Form>
+			<Form>Меркурий_ПросмотрProductItemУправляемая</Form>
+			<Form>Меркурий_СоответствиеНоменклатурыУправляемая</Form>
+			<Form>Меркурий_ВыборПартииУправляемая</Form>
+			<Form>Меркурий_ЕдиницаМеркурийВыборУправляемая</Form>
+			<Form>Меркурий_ПросмотрХСУправляемая</Form>
+			<Form>КлиентскийМодульEDI_Управляемая</Form>
+			<Form>Меркурий_ВводКоэффициента</Form>
 			<Template>ОписаниеКоммита</Template>
+			<Template>ОбновлениеДляХраненияДанных</Template>
 			<Template>ШаблонПодключаемогоМодуляМеркурий</Template>
 			<Template>ТипыОбъектов</Template>
 			<Template>КонвертацияBase64</Template>
@@ -1143,6 +1314,8 @@
 			<Template>КомпонентаПечатиQRКода</Template>
 			<Template>ВнешняяПечатнаяФормаВСД</Template>
 			<Template>МакетРасхожденийВходящегоВСД</Template>
+			<Template>ВидимостьДоступностьКолонокТабличныхЧастей</Template>
+			<Template>______________________________XSD_и_WSDL_14______________________________</Template>
 			<Template>СхемаМеркурий1</Template>
 			<Template>СхемаМеркурий2</Template>
 			<Template>СхемаМеркурий3</Template>
@@ -1153,11 +1326,28 @@
 			<Template>СхемаМеркурий8</Template>
 			<Template>СхемаМеркурий9</Template>
 			<Template>СхемаМеркурий10</Template>
+			<Template>____________________________Тестовые____________________________</Template>
 			<Template>EnterpriseService_test_14</Template>
 			<Template>DictionaryService_test_14</Template>
 			<Template>ProductService_test_14</Template>
 			<Template>IkarService_test_14</Template>
 			<Template>ApplicationManagementsService_test_14</Template>
+			<Template>____________________________Боевые____________________________</Template>
+			<Template>EnterpriseService_prod_14</Template>
+			<Template>DictionaryService_prod_14</Template>
+			<Template>ProductService_prod_14</Template>
+			<Template>IkarService_prod_14</Template>
+			<Template>ApplicationManagementsService_prod_14</Template>
+			<Template>______________________________XSD_и_WSDL_20______________________________</Template>
+			<Template>СхемаМеркурий20_1</Template>
+			<Template>СхемаМеркурий20_2</Template>
+			<Template>СхемаМеркурий20_3</Template>
+			<Template>СхемаМеркурий20_4</Template>
+			<Template>СхемаМеркурий20_5</Template>
+			<Template>СхемаМеркурий20_6</Template>
+			<Template>____________________________Тестовые_____________________________</Template>
+			<Template>ApplicationManagementService_test_20</Template>
+			<Template>RegionalizationService_test_20</Template>
 		</ChildObjects>
 	</DataProcessor>
 </MetaDataObject>

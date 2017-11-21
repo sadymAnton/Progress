@@ -193,6 +193,7 @@
 			<Subsystem>ТП_ИнтеграцияСТендернойПлощадкой</Subsystem>
 			<Subsystem>УСЗ_УправлениеСкладскимиЗапасами</Subsystem>
 			<Subsystem>Вет_КонтурМеркурий</Subsystem>
+			<Subsystem>ВетеринарнаяИнформация</Subsystem>
 			<StyleItem>ПлановыйНеутвержденныйПоказатель</StyleItem>
 			<StyleItem>ПлановыйУтвержденныйПоказатель</StyleItem>
 			<StyleItem>ПользовательБезУчетнойЗаписи</StyleItem>
@@ -1231,6 +1232,7 @@
 			<Role>ПРГ_СправочникГруппировкаНоменклатуры</Role>
 			<Role>ПРГ_СотрудникиСкладаСиМ</Role>
 			<Role>ПРГ_ЧтениеРегистровУдержаний</Role>
+			<Role>Вет_Пользователь</Role>
 			<CommonTemplate>Аккредитив</CommonTemplate>
 			<CommonTemplate>АнализУчтеннойВРасчетеСреднегоСкидки</CommonTemplate>
 			<CommonTemplate>ДоговорЗайма</CommonTemplate>
@@ -1847,6 +1849,9 @@
 			<CommonModule>МЗ_МолочныйЗавод</CommonModule>
 			<CommonModule>ТП_ИнтеграцияСТендернойПлощадкойОбщий</CommonModule>
 			<CommonModule>ТП_ИнтеграцияСТендернойПлощадкойJSON</CommonModule>
+			<CommonModule>Вет_ВзаимодействиеСИС</CommonModule>
+			<CommonModule>Вет_ВзаимодействиеСКонтуром</CommonModule>
+			<CommonModule>Вет_УправлениеЛокальнымиПартиями</CommonModule>
 			<ExchangePlan>ОбменССайтомЗаказами</ExchangePlan>
 			<ExchangePlan>ОбменССайтомТоварами</ExchangePlan>
 			<ExchangePlan>ОбменУППУПП</ExchangePlan>
@@ -2353,6 +2358,7 @@
 			<CommonForm>ХодВыполненияОбработкиДанных</CommonForm>
 			<CommonForm>РасшифровкаРегламентированногоОтчетаЗарплата</CommonForm>
 			<CommonForm>РедактированиеДатыВыплатыСотрудников</CommonForm>
+			<CommonForm>Вет_СопоставлениеСерийНоменклатурыСВСД</CommonForm>
 			<Catalog>AVT_ЛокальныеНормативныеАкты</Catalog>
 			<Catalog>AVT_НалоговыйКлассификатор</Catalog>
 			<Catalog>AVT_СистемыОплаты</Catalog>
@@ -2758,6 +2764,8 @@
 			<Catalog>ПРГБизнесПроекты</Catalog>
 			<Catalog>ПРГ_ПравилаПереносаПроводокМУ</Catalog>
 			<Catalog>ПРГ_ШкалыНачисленияБонусов</Catalog>
+			<Catalog>Вет_Партии</Catalog>
+			<Catalog>Вет_ВСД</Catalog>
 			<Document>ABCКлассификацияПокупателей</Document>
 			<Document>АвансовыйОтчет</Document>
 			<Document>AVT_РегистрацияБольничныхЛистов</Document>
@@ -3943,6 +3951,8 @@
 			<Enum>ТипыСведенийСЗВ_КОРР</Enum>
 			<Enum>ППП_ВидДополнительнойСкидкиДляПланирования</Enum>
 			<Enum>ПРГ_ВариантыРассылки</Enum>
+			<Enum>Вет_ТипПартии</Enum>
+			<Enum>Вет_ВидДвиженияПартии</Enum>
 			<Report>ABCАнализПокупателей</Report>
 			<Report>ABCАнализПродаж</Report>
 			<Report>XYZABCАнализПродаж</Report>
@@ -5329,6 +5339,7 @@
 			<InformationRegister>ПРГ_НастройкиПравилПереносаПроводокМУ</InformationRegister>
 			<InformationRegister>ПРГ_СоответствиеБонусовИШкал</InformationRegister>
 			<InformationRegister>Вет_КаталогПродукции</InformationRegister>
+			<InformationRegister>Вет_ДвижениеПоПартиям</InformationRegister>
 			<AccumulationRegister>АвансовыеПлатежиИностранцевПоНДФЛ</AccumulationRegister>
 			<AccumulationRegister>БракВПроизводстве</AccumulationRegister>
 			<AccumulationRegister>БракВПроизводствеБухгалтерскийУчет</AccumulationRegister>
